@@ -1,0 +1,882 @@
+I 21:42:41.003 ECHOES touch-start x=0.9313 y=0.2064
+I 21:42:41.099 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:42:41.099 ECHOES replay from=complete run=4
+I 21:42:41.100 ECHOES state[after-replay] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:42:41.100 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:42:50.722 ECHOES hover target=left-pad
+I 21:43:06.542 ECHOES touch-start x=0.1549 y=0.3666
+I 21:43:06.622 ECHOES select-piece piece=pillar rot=0
+I 21:43:06.623 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:43:07.078 ECHOES hover target=left-pad
+I 21:43:07.455 ECHOES touch-start x=0.3620 y=0.6980
+I 21:43:07.477 ECHOES trigger-start target=left-pad
+I 21:43:07.552 ECHOES select-target target=left-pad
+I 21:43:07.552 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:43:08.723 ECHOES hover target=right-pad
+I 21:43:09.477 ECHOES touch-start x=0.9265 y=0.7542
+I 21:43:09.574 ECHOES attempt n=1 run=4 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:43:09.574 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:43:09.574 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:09.574 ECHOES progress before=0 after=1
+I 21:43:09.574 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:43:09.925 ECHOES touch-start x=0.9265 y=0.7542
+I 21:43:09.995 ECHOES attempt n=2 run=4 step=2 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 21:43:09.995 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:09.995 ECHOES progress before=1 after=1
+I 21:43:09.995 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:43:11.144 ECHOES hover target=right-pad
+I 21:43:13.029 ECHOES touch-start x=0.1626 y=0.3674
+I 21:43:13.103 ECHOES select-piece piece=pillar rot=0
+I 21:43:13.104 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:43:13.589 ECHOES hover target=right-pad
+I 21:43:13.945 ECHOES touch-start x=0.7339 y=0.6862
+I 21:43:13.966 ECHOES trigger-start target=right-pad
+I 21:43:14.019 ECHOES select-target target=right-pad
+I 21:43:14.019 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:43:14.545 ECHOES touch-start x=0.9083 y=0.7576
+I 21:43:14.642 ECHOES attempt n=3 run=4 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:43:14.642 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:43:14.642 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:14.642 ECHOES progress before=1 after=2
+I 21:43:14.642 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:14.688 ECHOES touch-start x=0.9131 y=0.7617
+I 21:43:14.779 ECHOES attempt n=4 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:14.779 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:14.779 ECHOES progress before=2 after=2
+I 21:43:14.779 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:14.841 ECHOES touch-start x=0.8891 y=0.7567
+I 21:43:14.914 ECHOES attempt n=5 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:14.914 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:14.914 ECHOES progress before=2 after=2
+I 21:43:14.914 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:14.954 ECHOES touch-start x=0.8834 y=0.7550
+I 21:43:15.050 ECHOES attempt n=6 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.050 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.050 ECHOES progress before=2 after=2
+I 21:43:15.050 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:15.113 ECHOES touch-start x=0.9083 y=0.7592
+I 21:43:15.207 ECHOES attempt n=7 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.207 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.207 ECHOES progress before=2 after=2
+I 21:43:15.208 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:15.269 ECHOES touch-start x=0.9160 y=0.7584
+I 21:43:15.361 ECHOES attempt n=8 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.361 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.361 ECHOES progress before=2 after=2
+I 21:43:15.361 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:15.425 ECHOES touch-start x=0.9380 y=0.7609
+I 21:43:15.512 ECHOES attempt n=9 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.512 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.512 ECHOES progress before=2 after=2
+I 21:43:15.512 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:15.575 ECHOES touch-start x=0.9390 y=0.7609
+I 21:43:15.650 ECHOES attempt n=10 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.650 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.651 ECHOES progress before=2 after=2
+I 21:43:15.651 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:15.711 ECHOES touch-start x=0.9419 y=0.7609
+I 21:43:15.799 ECHOES attempt n=11 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:15.799 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:15.799 ECHOES progress before=2 after=2
+I 21:43:15.799 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:17.587 ECHOES callback-due name=clear-success-note run=4
+I 21:43:17.587 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:43:18.898 ECHOES touch-start x=0.1521 y=0.5982
+I 21:43:19.022 ECHOES select-piece piece=pedestal rot=0
+I 21:43:19.022 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=null feedback=""
+I 21:43:19.135 ECHOES hover target=beam-seat
+I 21:43:19.542 ECHOES touch-start x=0.4626 y=0.5881
+I 21:43:19.565 ECHOES trigger-start target=beam-seat
+I 21:43:19.614 ECHOES select-target target=beam-seat
+I 21:43:19.615 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback=""
+I 21:43:20.432 ECHOES touch-start x=0.9543 y=0.7391
+I 21:43:20.507 ECHOES attempt n=12 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:20.507 ECHOES progress before=2 after=2
+I 21:43:20.507 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:20.899 ECHOES touch-start x=0.9514 y=0.7408
+I 21:43:21.021 ECHOES attempt n=13 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:21.021 ECHOES progress before=2 after=2
+I 21:43:21.021 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:21.179 ECHOES touch-start x=0.9514 y=0.7408
+I 21:43:21.311 ECHOES attempt n=14 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:21.311 ECHOES progress before=2 after=2
+I 21:43:21.311 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:21.810 ECHOES hover target=beam-seat
+I 21:43:22.589 ECHOES touch-start x=0.9121 y=0.6451
+I 21:43:22.661 ECHOES turn delta=90 rot=90
+I 21:43:22.661 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=90 target=beam-seat feedback=""
+I 21:43:22.661 ECHOES callback-due name=clear-success-note run=4
+I 21:43:22.661 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:43:23.234 ECHOES touch-start x=0.9131 y=0.7475
+I 21:43:23.330 ECHOES attempt n=15 run=4 step=3 piece=pedestal rot=90 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:23.330 ECHOES progress before=2 after=2
+I 21:43:23.330 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=90 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:23.574 ECHOES touch-start x=0.9217 y=0.6443
+I 21:43:23.695 ECHOES turn delta=90 rot=180
+I 21:43:23.695 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=180 target=beam-seat feedback=""
+I 21:43:23.971 ECHOES touch-start x=0.9352 y=0.7156
+I 21:43:24.041 ECHOES attempt n=16 run=4 step=3 piece=pedestal rot=180 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:24.042 ECHOES progress before=2 after=2
+I 21:43:24.042 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=180 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:24.260 ECHOES touch-start x=0.9399 y=0.6309
+I 21:43:24.330 ECHOES turn delta=90 rot=270
+I 21:43:24.330 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=270 target=beam-seat feedback=""
+I 21:43:24.632 ECHOES touch-start x=0.9371 y=0.7173
+I 21:43:24.728 ECHOES attempt n=17 run=4 step=3 piece=pedestal rot=270 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:24.728 ECHOES progress before=2 after=2
+I 21:43:24.728 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=270 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:25.075 ECHOES touch-start x=0.9457 y=0.6468
+I 21:43:25.173 ECHOES turn delta=90 rot=0
+I 21:43:25.174 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback=""
+I 21:43:25.479 ECHOES touch-start x=0.9438 y=0.7307
+I 21:43:25.601 ECHOES attempt n=18 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:25.601 ECHOES progress before=2 after=2
+I 21:43:25.601 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:26.234 ECHOES touch-start x=0.9198 y=0.3960
+I 21:43:26.898 ECHOES touch-start x=0.9217 y=0.5151
+I 21:43:27.021 ECHOES turn delta=-90 rot=270
+I 21:43:27.022 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=270 target=beam-seat feedback=""
+I 21:43:27.607 ECHOES touch-start x=0.9093 y=0.6032
+I 21:43:27.750 ECHOES turn delta=90 rot=0
+I 21:43:27.750 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback=""
+I 21:43:28.013 ECHOES touch-start x=0.9141 y=0.7248
+I 21:43:28.152 ECHOES attempt n=19 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:28.152 ECHOES progress before=2 after=2
+I 21:43:28.152 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:29.542 ECHOES touch-start x=0.9141 y=0.7315
+I 21:43:29.640 ECHOES attempt n=20 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:29.640 ECHOES progress before=2 after=2
+I 21:43:29.641 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:29.840 ECHOES touch-start x=0.9141 y=0.7324
+I 21:43:29.951 ECHOES attempt n=21 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:29.951 ECHOES progress before=2 after=2
+I 21:43:29.951 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:30.173 ECHOES touch-start x=0.9141 y=0.7324
+I 21:43:30.269 ECHOES attempt n=22 run=4 step=3 piece=pedestal rot=0 target=beam-seat accepted=false mismatch=piece differing=piece msg="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:30.269 ECHOES progress before=2 after=2
+I 21:43:30.269 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=pedestal rot=0 target=beam-seat feedback="Not this piece: that is the flat square pedestal. Choose the long beam."
+I 21:43:32.187 ECHOES touch-start x=0.9505 y=0.1174
+I 21:43:32.285 ECHOES undo removed=p2-right-pillar wasComplete=false before=2 after=1
+I 21:43:32.285 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Right pad. Step 2 is open again."
+I 21:43:33.122 ECHOES hover target=right-pad
+I 21:43:33.722 ECHOES touch-start x=0.1636 y=0.4857
+I 21:43:33.840 ECHOES select-piece piece=beam rot=90
+I 21:43:33.840 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=beam rot=90 target=null feedback=""
+I 21:43:34.017 ECHOES hover target=right-pad
+I 21:43:34.499 ECHOES touch-start x=0.9342 y=0.7685
+I 21:43:34.640 ECHOES attempt n=23 run=4 step=2 piece=beam rot=90 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick an attachment first: use the right pillar attachment."
+I 21:43:34.641 ECHOES progress before=1 after=1
+I 21:43:34.641 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=beam rot=90 target=null feedback="Pick an attachment first: use the right pillar attachment."
+I 21:43:35.810 ECHOES touch-start x=0.1751 y=0.3540
+I 21:43:35.883 ECHOES select-piece piece=pillar rot=0
+I 21:43:35.884 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:43:36.211 ECHOES hover target=right-pad
+I 21:43:36.386 ECHOES touch-start x=0.7310 y=0.6837
+I 21:43:36.408 ECHOES trigger-start target=right-pad
+I 21:43:36.484 ECHOES select-target target=right-pad
+I 21:43:36.484 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:43:36.831 ECHOES touch-start x=0.9054 y=0.7265
+I 21:43:36.948 ECHOES attempt n=24 run=4 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:43:36.948 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:43:36.948 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:36.948 ECHOES progress before=1 after=2
+I 21:43:36.948 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:38.410 ECHOES touch-start x=0.9265 y=0.7341
+I 21:43:38.508 ECHOES attempt n=25 run=4 step=3 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the long beam."
+I 21:43:38.508 ECHOES confirm-ignored nothing selected; success note kept
+I 21:43:38.508 ECHOES progress before=2 after=2
+I 21:43:38.508 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:43:38.815 ECHOES hover target=beam-seat
+I 21:43:39.518 ECHOES touch-start x=0.1645 y=0.4706
+I 21:43:39.638 ECHOES select-piece piece=beam rot=90
+I 21:43:39.638 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 21:43:39.988 ECHOES touch-start x=0.4684 y=0.5235
+I 21:43:40.192 ECHOES hover target=beam-seat
+I 21:43:40.369 ECHOES touch-start x=0.5460 y=0.5822
+I 21:43:40.390 ECHOES trigger-start target=beam-seat
+I 21:43:40.488 ECHOES select-target target=beam-seat
+I 21:43:40.488 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 21:43:40.920 ECHOES touch-start x=0.7741 y=0.7122
+I 21:43:41.241 ECHOES touch-start x=0.9074 y=0.7676
+I 21:43:41.312 ECHOES attempt n=26 run=4 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:43:41.312 ECHOES progress before=2 after=2
+I 21:43:41.312 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:43:42.231 ECHOES hover target=beam-seat
+I 21:43:42.677 ECHOES touch-start x=0.9246 y=0.5126
+I 21:43:42.773 ECHOES turn delta=-90 rot=0
+I 21:43:42.773 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=0 target=beam-seat feedback=""
+I 21:43:43.231 ECHOES touch-start x=0.9179 y=0.7282
+I 21:43:43.330 ECHOES attempt n=27 run=4 step=3 piece=beam rot=0 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:43:43.330 ECHOES accepted placement=p3-beam rot=0 count=3
+I 21:43:43.330 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:43.331 ECHOES progress before=2 after=3
+I 21:43:43.331 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 21:43:44.921 ECHOES touch-start x=0.1549 y=0.6141
+I 21:43:44.965 ECHOES callback-due name=clear-success-note run=4
+I 21:43:44.965 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:43:45.018 ECHOES select-piece piece=pedestal rot=0
+I 21:43:45.018 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 21:43:45.173 ECHOES hover target=pedestal-seat
+I 21:43:45.370 ECHOES touch-start x=0.5843 y=0.5327
+I 21:43:45.389 ECHOES trigger-start target=pedestal-seat
+I 21:43:45.463 ECHOES select-target target=pedestal-seat
+I 21:43:45.464 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 21:43:46.344 ECHOES touch-start x=0.9553 y=0.7685
+I 21:43:46.439 ECHOES attempt n=28 run=4 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:43:46.439 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 21:43:46.439 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:46.439 ECHOES progress before=3 after=4
+I 21:43:46.439 ECHOES state[after-confirm] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 21:43:47.433 ECHOES touch-start x=0.1617 y=0.7450
+I 21:43:47.509 ECHOES select-piece piece=marker rot=180
+I 21:43:47.509 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 21:43:47.705 ECHOES hover target=marker-seat
+I 21:43:48.099 ECHOES touch-start x=0.5786 y=0.4983
+I 21:43:48.121 ECHOES trigger-start target=marker-seat
+I 21:43:48.195 ECHOES select-target target=marker-seat
+I 21:43:48.195 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback=""
+I 21:43:49.388 ECHOES touch-start x=0.9198 y=0.7475
+I 21:43:49.510 ECHOES attempt n=29 run=4 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:43:49.510 ECHOES progress before=4 after=4
+I 21:43:49.510 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:43:50.922 ECHOES touch-start x=0.9342 y=0.6485
+I 21:43:50.995 ECHOES turn delta=90 rot=270
+I 21:43:50.995 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback=""
+I 21:43:51.347 ECHOES callback-due name=clear-success-note run=4
+I 21:43:51.347 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:43:51.456 ECHOES touch-start x=0.9275 y=0.7492
+I 21:43:51.551 ECHOES attempt n=30 run=4 step=5 piece=marker rot=270 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:43:51.552 ECHOES progress before=4 after=4
+I 21:43:51.552 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:43:52.476 ECHOES touch-start x=0.9352 y=0.6586
+I 21:43:52.550 ECHOES turn delta=90 rot=0
+I 21:43:52.551 ECHOES state[after-turn] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 21:43:52.781 ECHOES touch-start x=0.9352 y=0.6586
+I 21:43:53.702 ECHOES touch-start x=0.9352 y=0.7366
+I 21:43:53.796 ECHOES attempt n=31 run=4 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:43:53.796 ECHOES accepted placement=p5-marker rot=0 count=5
+I 21:43:53.796 ECHOES complete run=4 accepted=5 placedObjects=5
+I 21:43:53.796 ECHOES callback-scheduled name=clear-success-note run=4 delay=8s
+I 21:43:53.796 ECHOES progress before=4 after=5
+I 21:43:53.797 ECHOES state[after-confirm] run=4 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 21:43:54.450 ECHOES callback-due name=clear-success-note run=4
+I 21:43:54.450 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:44:01.812 ECHOES callback-due name=clear-success-note run=4
+I 21:44:01.812 ECHOES state[after-success-note-cleared] run=4 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback=""
+I 21:44:23.962 ECHOES touch-start x=0.9754 y=0.0747
+I 21:44:24.041 ECHOES undo removed=p5-marker wasComplete=true before=5 after=4
+I 21:44:24.041 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Undone: removed the wedge marker from Marker seat. Step 5 is open again."
+I 21:44:24.411 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:24.485 ECHOES undo removed=p4-pedestal wasComplete=false before=4 after=3
+I 21:44:24.485 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Undone: removed the flat square pedestal from Pedestal seat. Step 4 is open again."
+I 21:44:24.663 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:24.805 ECHOES undo removed=p3-beam wasComplete=false before=3 after=2
+I 21:44:24.805 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Undone: removed the long beam from Beam seat. Step 3 is open again."
+I 21:44:24.938 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:25.051 ECHOES undo removed=p2-right-pillar wasComplete=false before=2 after=1
+I 21:44:25.051 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Right pad. Step 2 is open again."
+I 21:44:25.226 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:25.334 ECHOES undo removed=p1-left-pillar wasComplete=false before=1 after=0
+I 21:44:25.335 ECHOES state[after-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:25.513 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:25.625 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:25.625 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:25.839 ECHOES touch-start x=0.9447 y=0.0889
+I 21:44:25.935 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:25.935 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:25.960 ECHOES touch-start x=0.9390 y=0.0923
+I 21:44:26.071 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:26.071 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:26.320 ECHOES touch-start x=0.9332 y=0.0956
+I 21:44:26.436 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:26.436 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:26.619 ECHOES touch-start x=0.9332 y=0.0956
+I 21:44:26.734 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:26.735 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:26.972 ECHOES touch-start x=0.9332 y=0.0956
+I 21:44:27.152 ECHOES undo-blocked reason=no-accepted-placement
+I 21:44:27.152 ECHOES state[blocked-undo] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:44:27.920 ECHOES touch-start x=0.9150 y=0.2483
+I 21:44:28.018 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:44:28.018 ECHOES replay from=active run=5
+I 21:44:28.018 ECHOES state[after-replay] run=5 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:44:28.018 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:44:28.498 ECHOES touch-start x=0.9141 y=0.2282
+I 21:44:28.622 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:28.622 ECHOES replay from=active run=6
+I 21:44:28.622 ECHOES state[after-replay] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:44:28.623 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:28.845 ECHOES touch-start x=0.9141 y=0.2282
+I 21:44:29.055 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:29.055 ECHOES replay from=active run=7
+I 21:44:29.055 ECHOES state[after-replay] run=7 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:44:29.055 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:29.475 ECHOES touch-start x=0.9380 y=0.3104
+I 21:44:29.897 ECHOES touch-start x=0.9246 y=0.2408
+I 21:44:30.014 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:44:30.014 ECHOES replay from=active run=8
+I 21:44:30.014 ECHOES state[after-replay] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:44:30.014 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:44:30.827 ECHOES touch-start x=0.9352 y=0.7332
+I 21:44:30.947 ECHOES attempt n=1 run=8 step=1 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 21:44:30.948 ECHOES progress before=0 after=0
+I 21:44:30.948 ECHOES state[after-confirm] run=8 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Pick a piece first: choose the square pillar."
+I 21:44:31.273 ECHOES touch-start x=0.9342 y=0.6678
+I 21:44:31.368 ECHOES turn-ignored no candidate
+I 21:44:31.676 ECHOES touch-start x=0.9361 y=0.5294
+I 21:44:31.772 ECHOES turn-ignored no candidate
+I 21:44:31.987 ECHOES touch-start x=0.9313 y=0.3406
+I 21:44:33.363 ECHOES touch-start x=0.1760 y=0.2349
+I 21:44:33.490 ECHOES pause step=1 accepted=0
+I 21:44:33.490 ECHOES state[after-pause] run=8 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Pick a piece from the palette first, then turn it."
+I 21:44:34.116 ECHOES touch-start x=0.9582 y=0.2441
+I 21:44:34.236 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:34.236 ECHOES replay from=paused run=9
+I 21:44:34.236 ECHOES state[after-replay] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:44:34.236 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 21:44:35.516 ECHOES touch-start x=0.1617 y=0.3733
+I 21:44:35.615 ECHOES select-piece piece=pillar rot=0
+I 21:44:35.615 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:44:36.029 ECHOES hover target=left-pad
+I 21:44:36.386 ECHOES touch-start x=0.3351 y=0.6653
+I 21:44:36.411 ECHOES trigger-start target=left-pad
+I 21:44:36.510 ECHOES select-target target=left-pad
+I 21:44:36.511 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:44:37.073 ECHOES touch-start x=0.1645 y=0.3800
+I 21:44:37.171 ECHOES select-piece piece=pillar rot=0
+I 21:44:37.171 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:44:37.303 ECHOES hover target=right-pad
+I 21:44:37.651 ECHOES hover target=right-pad
+I 21:44:37.837 ECHOES touch-start x=0.7684 y=0.7131
+I 21:44:37.859 ECHOES trigger-start target=right-pad
+I 21:44:37.912 ECHOES select-target target=right-pad
+I 21:44:37.912 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback=""
+I 21:44:39.050 ECHOES touch-start x=0.9399 y=0.7710
+I 21:44:39.147 ECHOES attempt n=1 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:39.148 ECHOES progress before=0 after=0
+I 21:44:39.148 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:39.388 ECHOES hover target=right-pad
+I 21:44:39.586 ECHOES hover target=left-pad
+I 21:44:41.716 ECHOES hover target=right-pad
+I 21:44:42.361 ECHOES touch-start x=0.9562 y=0.7659
+I 21:44:42.438 ECHOES attempt n=2 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:42.438 ECHOES progress before=0 after=0
+I 21:44:42.438 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:42.657 ECHOES touch-start x=0.9543 y=0.7659
+I 21:44:42.772 ECHOES attempt n=3 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:42.772 ECHOES progress before=0 after=0
+I 21:44:42.772 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:42.989 ECHOES touch-start x=0.9447 y=0.7634
+I 21:44:43.063 ECHOES attempt n=4 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:43.063 ECHOES progress before=0 after=0
+I 21:44:43.063 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:43.281 ECHOES touch-start x=0.9447 y=0.7634
+I 21:44:43.356 ECHOES attempt n=5 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:43.357 ECHOES progress before=0 after=0
+I 21:44:43.357 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:43.699 ECHOES touch-start x=0.9495 y=0.6745
+I 21:44:43.773 ECHOES turn delta=90 rot=90
+I 21:44:43.773 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=90 target=right-pad feedback=""
+I 21:44:44.100 ECHOES touch-start x=0.9361 y=0.7710
+I 21:44:44.217 ECHOES attempt n=6 run=9 step=1 piece=pillar rot=90 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:44.217 ECHOES progress before=0 after=0
+I 21:44:44.217 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=90 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:44.585 ECHOES touch-start x=0.9256 y=0.6820
+I 21:44:44.726 ECHOES turn delta=90 rot=180
+I 21:44:44.726 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=180 target=right-pad feedback=""
+I 21:44:45.095 ECHOES touch-start x=0.9189 y=0.7567
+I 21:44:45.194 ECHOES attempt n=7 run=9 step=1 piece=pillar rot=180 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:45.194 ECHOES progress before=0 after=0
+I 21:44:45.194 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=180 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:45.481 ECHOES touch-start x=0.9419 y=0.6602
+I 21:44:45.555 ECHOES turn delta=90 rot=270
+I 21:44:45.555 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=right-pad feedback=""
+I 21:44:45.811 ECHOES touch-start x=0.9342 y=0.7324
+I 21:44:45.947 ECHOES attempt n=8 run=9 step=1 piece=pillar rot=270 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:45.948 ECHOES progress before=0 after=0
+I 21:44:45.948 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:46.186 ECHOES touch-start x=0.9380 y=0.6359
+I 21:44:46.283 ECHOES turn delta=90 rot=0
+I 21:44:46.283 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback=""
+I 21:44:46.546 ECHOES touch-start x=0.9323 y=0.7332
+I 21:44:46.665 ECHOES attempt n=9 run=9 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:46.666 ECHOES progress before=0 after=0
+I 21:44:46.666 ECHOES state[after-confirm] run=9 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 21:44:47.251 ECHOES touch-start x=0.9227 y=0.5352
+I 21:44:47.371 ECHOES turn delta=-90 rot=270
+I 21:44:47.371 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=right-pad feedback=""
+I 21:44:47.871 ECHOES touch-start x=0.9275 y=0.7122
+I 21:44:48.406 ECHOES touch-start x=0.9045 y=0.3549
+I 21:44:49.651 ECHOES hover target=left-pad
+I 21:44:49.850 ECHOES hover target=right-pad
+I 21:44:50.251 ECHOES touch-start x=0.7780 y=0.7181
+I 21:44:50.272 ECHOES trigger-start target=right-pad
+I 21:44:50.368 ECHOES select-target target=right-pad
+I 21:44:50.368 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=right-pad feedback=""
+I 21:44:50.694 ECHOES hover target=left-pad
+I 21:44:50.962 ECHOES touch-start x=0.3198 y=0.7047
+I 21:44:50.985 ECHOES trigger-start target=left-pad
+I 21:44:51.058 ECHOES select-target target=left-pad
+I 21:44:51.058 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=left-pad feedback=""
+I 21:44:52.006 ECHOES hover target=right-pad
+I 21:44:52.694 ECHOES touch-start x=0.8930 y=0.7450
+I 21:44:52.793 ECHOES attempt n=10 run=9 step=1 piece=pillar rot=270 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:44:52.793 ECHOES accepted placement=p1-left-pillar rot=270 count=1
+I 21:44:52.793 ECHOES callback-scheduled name=clear-success-note run=9 delay=8s
+I 21:44:52.793 ECHOES progress before=0 after=1
+I 21:44:52.793 ECHOES state[after-confirm] run=9 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:44:53.652 ECHOES touch-start x=0.9237 y=0.7475
+I 21:44:53.749 ECHOES attempt n=11 run=9 step=2 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 21:44:53.750 ECHOES confirm-ignored nothing selected; success note kept
+I 21:44:53.750 ECHOES progress before=1 after=1
+I 21:44:53.750 ECHOES state[after-confirm] run=9 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:44:54.405 ECHOES touch-start x=0.1808 y=0.3633
+I 21:44:54.505 ECHOES select-piece piece=pillar rot=0
+I 21:44:54.506 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:44:55.096 ECHOES hover target=right-pad
+I 21:44:55.316 ECHOES touch-start x=0.7176 y=0.6812
+I 21:44:55.340 ECHOES trigger-start target=right-pad
+I 21:44:55.393 ECHOES select-target target=right-pad
+I 21:44:55.393 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:44:56.316 ECHOES touch-start x=0.9160 y=0.7643
+I 21:44:56.437 ECHOES attempt n=12 run=9 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:44:56.437 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:44:56.437 ECHOES callback-scheduled name=clear-success-note run=9 delay=8s
+I 21:44:56.437 ECHOES progress before=1 after=2
+I 21:44:56.438 ECHOES state[after-confirm] run=9 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:44:56.570 ECHOES hover target=beam-seat
+I 21:44:57.050 ECHOES touch-start x=0.1760 y=0.4874
+I 21:44:57.147 ECHOES select-piece piece=beam rot=90
+I 21:44:57.148 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 21:44:57.346 ECHOES hover target=beam-seat
+I 21:44:57.588 ECHOES touch-start x=0.4492 y=0.6082
+I 21:44:57.610 ECHOES trigger-start target=beam-seat
+I 21:44:57.704 ECHOES select-target target=beam-seat
+I 21:44:57.704 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 21:44:58.428 ECHOES touch-start x=0.8757 y=0.6510
+I 21:44:58.548 ECHOES turn delta=90 rot=180
+I 21:44:58.548 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 21:44:58.961 ECHOES touch-start x=0.9169 y=0.7584
+I 21:44:59.061 ECHOES attempt n=13 run=9 step=3 piece=beam rot=180 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:44:59.061 ECHOES accepted placement=p3-beam rot=180 count=3
+I 21:44:59.062 ECHOES callback-scheduled name=clear-success-note run=9 delay=8s
+I 21:44:59.062 ECHOES progress before=2 after=3
+I 21:44:59.062 ECHOES state[after-confirm] run=9 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 21:44:59.672 ECHOES touch-start x=0.1569 y=0.5948
+I 21:44:59.815 ECHOES select-piece piece=pedestal rot=0
+I 21:44:59.816 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 21:45:00.010 ECHOES hover target=pedestal-seat
+I 21:45:00.227 ECHOES touch-start x=0.5383 y=0.5512
+I 21:45:00.250 ECHOES trigger-start target=pedestal-seat
+I 21:45:00.345 ECHOES select-target target=pedestal-seat
+I 21:45:00.346 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 21:45:00.806 ECHOES callback-due name=clear-success-note run=9
+I 21:45:00.806 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:45:01.159 ECHOES touch-start x=0.9534 y=0.7760
+I 21:45:01.256 ECHOES attempt n=14 run=9 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:45:01.256 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 21:45:01.256 ECHOES callback-scheduled name=clear-success-note run=9 delay=8s
+I 21:45:01.257 ECHOES progress before=3 after=4
+I 21:45:01.257 ECHOES state[after-confirm] run=9 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 21:45:02.162 ECHOES touch-start x=0.2096 y=0.7223
+I 21:45:02.259 ECHOES select-piece piece=marker rot=180
+I 21:45:02.259 ECHOES state[after-select-piece] run=9 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 21:45:02.412 ECHOES hover target=marker-seat
+I 21:45:02.672 ECHOES touch-start x=0.5642 y=0.4757
+I 21:45:02.694 ECHOES trigger-start target=marker-seat
+I 21:45:02.816 ECHOES select-target target=marker-seat
+I 21:45:02.816 ECHOES state[after-select-target] run=9 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback=""
+I 21:45:03.936 ECHOES touch-start x=0.9572 y=0.6451
+I 21:45:04.036 ECHOES turn delta=90 rot=270
+I 21:45:04.036 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback=""
+I 21:45:04.451 ECHOES callback-due name=clear-success-note run=9
+I 21:45:04.451 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:45:05.540 ECHOES touch-start x=0.9275 y=0.6443
+I 21:45:05.636 ECHOES turn delta=90 rot=0
+I 21:45:05.637 ECHOES state[after-turn] run=9 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 21:45:06.118 ECHOES touch-start x=0.9342 y=0.7466
+I 21:45:06.235 ECHOES attempt n=15 run=9 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:45:06.236 ECHOES accepted placement=p5-marker rot=0 count=5
+I 21:45:06.236 ECHOES complete run=9 accepted=5 placedObjects=5
+I 21:45:06.236 ECHOES callback-scheduled name=clear-success-note run=9 delay=8s
+I 21:45:06.236 ECHOES progress before=4 after=5
+I 21:45:06.236 ECHOES state[after-confirm] run=9 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 21:45:07.072 ECHOES callback-due name=clear-success-note run=9
+I 21:45:07.072 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:45:09.271 ECHOES callback-due name=clear-success-note run=9
+I 21:45:09.272 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:45:14.249 ECHOES callback-due name=clear-success-note run=9
+I 21:45:14.249 ECHOES state[after-success-note-cleared] run=9 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback=""
+I 21:48:16.777 Lens has been reset
+I 21:48:16.790 Lens has been reset
+I 21:48:17.441 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 21:48:17.441 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 21:48:17.442 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:48:17.945 ECHOES screen target:left-pad x=0.3503 y=0.7120 enabled=true
+I 21:48:17.945 ECHOES screen target:right-pad x=0.7496 y=0.7140 enabled=true
+I 21:48:17.945 ECHOES screen target:beam-seat x=0.5495 y=0.6055 enabled=false
+I 21:48:17.945 ECHOES screen target:pedestal-seat x=0.5496 y=0.5564 enabled=false
+I 21:48:17.945 ECHOES screen target:marker-seat x=0.5496 y=0.5144 enabled=false
+I 21:48:17.945 ECHOES screen piece:pillar x=0.1699 y=0.3666 enabled=true
+I 21:48:17.945 ECHOES screen piece:beam x=0.1716 y=0.4929 enabled=true
+I 21:48:17.945 ECHOES screen piece:pedestal x=0.1732 y=0.6180 enabled=true
+I 21:48:17.945 ECHOES screen piece:marker x=0.1748 y=0.7418 enabled=true
+I 21:48:17.945 ECHOES screen control:Turn Left x=0.9321 y=0.5225 enabled=true
+I 21:48:17.945 ECHOES screen control:Turn Right x=0.9301 y=0.6408 enabled=true
+I 21:48:17.945 ECHOES screen control:Confirm x=0.9281 y=0.7580 enabled=true
+I 21:48:17.945 ECHOES screen control:Help x=0.1665 y=0.1084 enabled=true
+I 21:48:17.945 ECHOES screen control:Pause x=0.1680 y=0.2208 enabled=true
+I 21:48:17.945 ECHOES screen control:Undo x=0.9394 y=0.1045 enabled=true
+I 21:48:17.945 ECHOES screen control:Replay x=0.9374 y=0.2184 enabled=true
+I 21:48:19.884 ECHOES touch-start x=0.1664 y=0.3775
+I 21:48:19.956 ECHOES select-piece piece=pillar rot=0
+I 21:48:19.956 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:48:20.132 ECHOES hover target=left-pad
+I 21:48:20.391 ECHOES touch-start x=0.3438 y=0.6820
+I 21:48:20.413 ECHOES trigger-start target=left-pad
+I 21:48:20.485 ECHOES select-target target=left-pad
+I 21:48:20.485 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:48:20.886 ECHOES hover target=right-pad
+I 21:48:21.500 ECHOES touch-start x=0.9486 y=0.7542
+I 21:48:21.553 ECHOES attempt n=1 run=1 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:21.553 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:48:21.554 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:21.554 ECHOES progress before=0 after=1
+I 21:48:21.554 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:48:22.812 ECHOES touch-start x=0.9601 y=0.0914
+I 21:48:22.933 ECHOES undo removed=p1-left-pillar wasComplete=false before=1 after=0
+I 21:48:22.933 ECHOES state[after-undo] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:24.192 ECHOES touch-start x=0.1502 y=0.3658
+I 21:48:24.308 ECHOES select-piece piece=pillar rot=0
+I 21:48:24.308 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:48:24.527 ECHOES hover target=left-pad
+I 21:48:25.063 ECHOES touch-start x=0.3629 y=0.7039
+I 21:48:25.084 ECHOES trigger-start target=left-pad
+I 21:48:25.135 ECHOES select-target target=left-pad
+I 21:48:25.136 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:48:25.656 ECHOES hover target=right-pad
+I 21:48:25.968 ECHOES touch-start x=0.9562 y=0.7634
+I 21:48:26.039 ECHOES attempt n=2 run=1 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:26.040 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:48:26.040 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:26.040 ECHOES progress before=0 after=1
+I 21:48:26.040 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:48:26.216 ECHOES hover target=right-pad
+I 21:48:26.813 ECHOES touch-start x=0.1617 y=0.3809
+I 21:48:26.886 ECHOES select-piece piece=pillar rot=0
+I 21:48:26.887 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:48:27.130 ECHOES hover target=right-pad
+I 21:48:27.549 ECHOES hover target=right-pad
+I 21:48:27.878 ECHOES touch-start x=0.7665 y=0.7139
+I 21:48:27.900 ECHOES trigger-start target=right-pad
+I 21:48:27.947 ECHOES select-target target=right-pad
+I 21:48:27.947 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:48:28.591 ECHOES touch-start x=0.9131 y=0.7584
+I 21:48:28.686 ECHOES attempt n=3 run=1 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:28.687 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:48:28.687 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:28.687 ECHOES progress before=1 after=2
+I 21:48:28.687 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:48:29.570 ECHOES callback-due name=clear-success-note run=1
+I 21:48:29.570 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:29.792 ECHOES touch-start x=0.9495 y=0.1174
+I 21:48:29.842 ECHOES undo removed=p2-right-pillar wasComplete=false before=2 after=1
+I 21:48:29.842 ECHOES state[after-undo] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Right pad. Step 2 is open again."
+I 21:48:30.042 ECHOES touch-start x=0.9495 y=0.1174
+I 21:48:30.155 ECHOES undo removed=p1-left-pillar wasComplete=false before=1 after=0
+I 21:48:30.155 ECHOES state[after-undo] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:30.334 ECHOES touch-start x=0.9495 y=0.1174
+I 21:48:30.445 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:30.445 ECHOES state[blocked-undo] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:31.612 ECHOES touch-start x=0.1396 y=0.3574
+I 21:48:31.708 ECHOES select-piece piece=pillar rot=0
+I 21:48:31.708 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:48:32.040 ECHOES hover target=left-pad
+I 21:48:32.235 ECHOES touch-start x=0.3265 y=0.6888
+I 21:48:32.257 ECHOES trigger-start target=left-pad
+I 21:48:32.327 ECHOES select-target target=left-pad
+I 21:48:32.327 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:48:33.057 ECHOES hover target=right-pad
+I 21:48:33.769 ECHOES touch-start x=0.9294 y=0.7794
+I 21:48:33.887 ECHOES attempt n=4 run=1 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:33.887 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:48:33.887 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:33.887 ECHOES progress before=0 after=1
+I 21:48:33.887 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:48:34.042 ECHOES callback-due name=clear-success-note run=1
+I 21:48:34.042 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:34.085 ECHOES hover target=right-pad
+I 21:48:34.568 ECHOES touch-start x=0.1875 y=0.3498
+I 21:48:34.640 ECHOES select-piece piece=pillar rot=0
+I 21:48:34.640 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:48:35.103 ECHOES hover target=right-pad
+I 21:48:35.257 ECHOES touch-start x=0.7435 y=0.6737
+I 21:48:35.280 ECHOES trigger-start target=right-pad
+I 21:48:35.372 ECHOES select-target target=right-pad
+I 21:48:35.372 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:48:36.103 ECHOES touch-start x=0.9409 y=0.7592
+I 21:48:36.179 ECHOES attempt n=5 run=1 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:36.179 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:48:36.179 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:36.179 ECHOES progress before=1 after=2
+I 21:48:36.179 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:48:36.376 ECHOES hover target=beam-seat
+I 21:48:36.704 ECHOES callback-due name=clear-success-note run=1
+I 21:48:36.704 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:36.768 ECHOES touch-start x=0.1722 y=0.4690
+I 21:48:36.866 ECHOES select-piece piece=beam rot=90
+I 21:48:36.867 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 21:48:36.976 ECHOES hover target=beam-seat
+I 21:48:37.302 ECHOES touch-start x=0.5403 y=0.5839
+I 21:48:37.325 ECHOES trigger-start target=beam-seat
+I 21:48:37.396 ECHOES select-target target=beam-seat
+I 21:48:37.397 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 21:48:38.591 ECHOES touch-start x=0.9083 y=0.7500
+I 21:48:38.687 ECHOES attempt n=6 run=1 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:38.687 ECHOES progress before=2 after=2
+I 21:48:38.687 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:38.888 ECHOES touch-start x=0.9083 y=0.7500
+I 21:48:39.001 ECHOES attempt n=7 run=1 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.002 ECHOES progress before=2 after=2
+I 21:48:39.002 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.044 ECHOES touch-start x=0.9141 y=0.7517
+I 21:48:39.136 ECHOES attempt n=8 run=1 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.137 ECHOES progress before=2 after=2
+I 21:48:39.137 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.353 ECHOES touch-start x=0.9179 y=0.7542
+I 21:48:39.443 ECHOES attempt n=9 run=1 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.444 ECHOES progress before=2 after=2
+I 21:48:39.444 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:48:39.881 ECHOES touch-start x=0.9399 y=0.6544
+I 21:48:39.952 ECHOES turn delta=90 rot=180
+I 21:48:39.952 ECHOES state[after-turn] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 21:48:40.659 ECHOES touch-start x=0.9352 y=0.7634
+I 21:48:40.729 ECHOES attempt n=10 run=1 step=3 piece=beam rot=180 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:48:40.729 ECHOES accepted placement=p3-beam rot=180 count=3
+I 21:48:40.729 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:40.730 ECHOES progress before=2 after=3
+I 21:48:40.730 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 21:48:41.812 ECHOES touch-start x=0.1732 y=0.6267
+I 21:48:41.909 ECHOES select-piece piece=pedestal rot=0
+I 21:48:41.909 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 21:48:41.909 ECHOES callback-due name=clear-success-note run=1
+I 21:48:41.909 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:42.062 ECHOES hover target=pedestal-seat
+I 21:48:42.347 ECHOES touch-start x=0.5508 y=0.5185
+I 21:48:42.368 ECHOES trigger-start target=pedestal-seat
+I 21:48:42.439 ECHOES select-target target=pedestal-seat
+I 21:48:42.439 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 21:48:43.348 ECHOES touch-start x=0.9879 y=0.7802
+I 21:48:43.442 ECHOES attempt n=11 run=1 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:48:43.442 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 21:48:43.442 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 21:48:43.443 ECHOES progress before=3 after=4
+I 21:48:43.443 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 21:48:44.191 ECHOES callback-due name=clear-success-note run=1
+I 21:48:44.191 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:44.391 ECHOES touch-start x=0.1866 y=0.7609
+I 21:48:44.486 ECHOES select-piece piece=marker rot=180
+I 21:48:44.486 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 21:48:44.971 ECHOES hover target=marker-seat
+I 21:48:45.190 ECHOES touch-start x=0.5058 y=0.5092
+I 21:48:45.219 ECHOES trigger-start target=marker-seat
+I 21:48:45.241 ECHOES select-target target=marker-seat
+I 21:48:45.241 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback=""
+I 21:48:46.410 ECHOES touch-start x=0.9601 y=0.7617
+I 21:48:46.484 ECHOES attempt n=12 run=1 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:46.484 ECHOES progress before=4 after=4
+I 21:48:46.484 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.147 ECHOES touch-start x=0.9610 y=0.7626
+I 21:48:47.243 ECHOES attempt n=13 run=1 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.243 ECHOES progress before=4 after=4
+I 21:48:47.243 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.462 ECHOES touch-start x=0.9610 y=0.7643
+I 21:48:47.554 ECHOES attempt n=14 run=1 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.554 ECHOES progress before=4 after=4
+I 21:48:47.554 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.819 ECHOES touch-start x=0.9610 y=0.7643
+I 21:48:47.892 ECHOES attempt n=15 run=1 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:47.892 ECHOES progress before=4 after=4
+I 21:48:47.892 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:48.109 ECHOES touch-start x=0.9601 y=0.7634
+I 21:48:48.199 ECHOES attempt n=16 run=1 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:48.199 ECHOES progress before=4 after=4
+I 21:48:48.199 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:48:48.747 ECHOES callback-due name=clear-success-note run=1
+I 21:48:48.747 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:48:48.835 ECHOES touch-start x=0.9256 y=0.6594
+I 21:48:48.929 ECHOES turn delta=90 rot=270
+I 21:48:48.929 ECHOES state[after-turn] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback=""
+I 21:48:49.325 ECHOES touch-start x=0.9256 y=0.7492
+I 21:48:49.417 ECHOES attempt n=17 run=1 step=5 piece=marker rot=270 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:49.417 ECHOES progress before=4 after=4
+I 21:48:49.417 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:49.642 ECHOES touch-start x=0.9256 y=0.7492
+I 21:48:49.711 ECHOES attempt n=18 run=1 step=5 piece=marker rot=270 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:49.712 ECHOES progress before=4 after=4
+I 21:48:49.712 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:49.952 ECHOES touch-start x=0.9256 y=0.7492
+I 21:48:50.023 ECHOES attempt n=19 run=1 step=5 piece=marker rot=270 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:50.023 ECHOES progress before=4 after=4
+I 21:48:50.023 ECHOES state[after-confirm] run=1 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:48:51.123 ECHOES touch-start x=0.9534 y=0.2248
+I 21:48:51.220 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:48:51.220 ECHOES replay from=correction run=2
+I 21:48:51.220 ECHOES state[after-replay] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:48:51.220 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,-0.00,3.00)
+I 21:48:51.460 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=1 currentRun=2
+I 21:48:51.460 ECHOES state[after-stale-callback] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 21:48:51.971 ECHOES hover target=left-pad
+I 21:48:52.767 ECHOES touch-start x=0.1454 y=0.3414
+I 21:48:52.860 ECHOES select-piece piece=pillar rot=0
+I 21:48:52.861 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:48:53.948 ECHOES hover target=left-pad
+I 21:48:54.412 ECHOES touch-start x=0.3601 y=0.7215
+I 21:48:54.436 ECHOES trigger-start target=left-pad
+I 21:48:54.485 ECHOES select-target target=left-pad
+I 21:48:54.485 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:48:54.703 ECHOES hover target=right-pad
+I 21:48:55.369 ECHOES touch-start x=0.9610 y=0.7651
+I 21:48:55.441 ECHOES attempt n=1 run=2 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:48:55.442 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:48:55.442 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:48:55.442 ECHOES progress before=0 after=1
+I 21:48:55.442 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:48:56.079 ECHOES touch-start x=0.9380 y=0.0956
+I 21:48:56.151 ECHOES undo removed=p1-left-pillar wasComplete=false before=1 after=0
+I 21:48:56.152 ECHOES state[after-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:56.374 ECHOES touch-start x=0.9371 y=0.0956
+I 21:48:56.468 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:56.468 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:56.687 ECHOES touch-start x=0.9409 y=0.1007
+I 21:48:56.807 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:56.807 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:57.002 ECHOES touch-start x=0.9409 y=0.1007
+I 21:48:57.095 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:57.096 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:57.333 ECHOES touch-start x=0.9409 y=0.1007
+I 21:48:57.448 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:57.449 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:57.665 ECHOES touch-start x=0.9409 y=0.1007
+I 21:48:57.758 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:57.758 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:57.977 ECHOES touch-start x=0.9409 y=0.1015
+I 21:48:58.068 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:58.068 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:58.591 ECHOES touch-start x=0.9409 y=0.1040
+I 21:48:58.663 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:58.663 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:48:58.914 ECHOES touch-start x=0.9409 y=0.1040
+I 21:48:59.218 ECHOES touch-start x=0.9409 y=0.1040
+I 21:48:59.287 ECHOES undo-blocked reason=no-accepted-placement
+I 21:48:59.287 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Undone: removed the square pillar from Left pad. Step 1 is open again."
+I 21:49:00.149 ECHOES touch-start x=0.1645 y=0.3591
+I 21:49:00.243 ECHOES select-piece piece=pillar rot=0
+I 21:49:00.243 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 21:49:00.834 ECHOES hover target=left-pad
+I 21:49:01.302 ECHOES touch-start x=0.3716 y=0.7013
+I 21:49:01.325 ECHOES trigger-start target=left-pad
+I 21:49:01.415 ECHOES select-target target=left-pad
+I 21:49:01.415 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 21:49:02.436 ECHOES hover target=right-pad
+I 21:49:02.747 ECHOES touch-start x=0.9189 y=0.7634
+I 21:49:02.799 ECHOES attempt n=2 run=2 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:49:02.799 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 21:49:02.799 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:49:02.799 ECHOES progress before=0 after=1
+I 21:49:02.800 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 21:49:03.443 ECHOES callback-due name=clear-success-note run=2
+I 21:49:03.443 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:49:03.488 ECHOES hover target=right-pad
+I 21:49:04.011 ECHOES touch-start x=0.1578 y=0.3700
+I 21:49:04.082 ECHOES select-piece piece=pillar rot=0
+I 21:49:04.083 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 21:49:04.243 ECHOES hover target=right-pad
+I 21:49:04.658 ECHOES touch-start x=0.7454 y=0.7542
+I 21:49:04.679 ECHOES trigger-start target=right-pad
+I 21:49:04.729 ECHOES select-target target=right-pad
+I 21:49:04.729 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 21:49:05.390 ECHOES touch-start x=0.9265 y=0.7768
+I 21:49:05.510 ECHOES attempt n=3 run=2 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 21:49:05.510 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 21:49:05.510 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:49:05.510 ECHOES progress before=1 after=2
+I 21:49:05.510 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 21:49:05.992 ECHOES hover target=beam-seat
+I 21:49:06.434 ECHOES touch-start x=0.1693 y=0.4891
+I 21:49:06.507 ECHOES select-piece piece=beam rot=90
+I 21:49:06.507 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 21:49:06.684 ECHOES hover target=beam-seat
+I 21:49:06.900 ECHOES touch-start x=0.4760 y=0.5940
+I 21:49:06.923 ECHOES trigger-start target=beam-seat
+I 21:49:06.996 ECHOES select-target target=beam-seat
+I 21:49:06.996 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 21:49:07.944 ECHOES touch-start x=0.9198 y=0.7576
+I 21:49:08.038 ECHOES attempt n=4 run=2 step=3 piece=beam rot=90 target=beam-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:49:08.039 ECHOES progress before=2 after=2
+I 21:49:08.039 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback="Wrong turn: at 90° the long beam runs front to back. Turn the beam so it spans both pillars."
+I 21:49:08.435 ECHOES touch-start x=0.9323 y=0.6535
+I 21:49:08.505 ECHOES turn delta=90 rot=180
+I 21:49:08.506 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 21:49:08.923 ECHOES touch-start x=0.9342 y=0.7609
+I 21:49:09.018 ECHOES attempt n=5 run=2 step=3 piece=beam rot=180 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:49:09.019 ECHOES accepted placement=p3-beam rot=180 count=3
+I 21:49:09.019 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:49:09.019 ECHOES progress before=2 after=3
+I 21:49:09.019 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 21:49:09.679 ECHOES touch-start x=0.2038 y=0.6216
+I 21:49:09.775 ECHOES select-piece piece=pedestal rot=0
+I 21:49:09.775 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 21:49:09.972 ECHOES hover target=pedestal-seat
+I 21:49:10.257 ECHOES touch-start x=0.5134 y=0.5503
+I 21:49:10.279 ECHOES trigger-start target=pedestal-seat
+I 21:49:10.353 ECHOES select-target target=pedestal-seat
+I 21:49:10.354 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 21:49:10.812 ECHOES callback-due name=clear-success-note run=2
+I 21:49:10.812 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:49:11.077 ECHOES touch-start x=0.9189 y=0.7643
+I 21:49:11.172 ECHOES attempt n=6 run=2 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:49:11.172 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 21:49:11.172 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:49:11.173 ECHOES progress before=3 after=4
+I 21:49:11.173 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 21:49:12.258 ECHOES touch-start x=0.1856 y=0.7450
+I 21:49:12.352 ECHOES select-piece piece=marker rot=180
+I 21:49:12.352 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 21:49:12.556 ECHOES hover target=marker-seat
+I 21:49:12.792 ECHOES touch-start x=0.5566 y=0.4832
+I 21:49:12.812 ECHOES trigger-start target=marker-seat
+I 21:49:12.883 ECHOES select-target target=marker-seat
+I 21:49:12.883 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback=""
+I 21:49:13.527 ECHOES callback-due name=clear-success-note run=2
+I 21:49:13.528 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:49:13.905 ECHOES touch-start x=0.9601 y=0.6460
+I 21:49:14.775 ECHOES touch-start x=0.9342 y=0.6451
+I 21:49:15.774 ECHOES touch-start x=0.9131 y=0.6485
+I 21:49:16.501 ECHOES touch-start x=0.9419 y=0.7601
+I 21:49:16.618 ECHOES attempt n=7 run=2 step=5 piece=marker rot=180 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:49:16.619 ECHOES progress before=4 after=4
+I 21:49:16.619 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=marker-seat feedback="Wrong turn: at 180° the wedge marker points away from FRONT. Turn it so its tip points to FRONT."
+I 21:49:17.034 ECHOES callback-due name=clear-success-note run=2
+I 21:49:17.034 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:49:17.434 ECHOES touch-start x=0.9256 y=0.6451
+I 21:49:17.507 ECHOES turn delta=90 rot=270
+I 21:49:17.507 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback=""
+I 21:49:18.480 ECHOES touch-start x=0.9256 y=0.7601
+I 21:49:18.599 ECHOES attempt n=8 run=2 step=5 piece=marker rot=270 target=marker-seat accepted=false mismatch=orientation differing=orientation msg="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:49:18.599 ECHOES progress before=4 after=4
+I 21:49:18.599 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=marker-seat feedback="Wrong turn: at 270° the wedge marker points right. Turn it so its tip points to FRONT."
+I 21:49:19.191 ECHOES callback-due name=clear-success-note run=2
+I 21:49:19.191 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 21:49:19.436 ECHOES touch-start x=0.9265 y=0.6468
+I 21:49:19.529 ECHOES turn delta=90 rot=0
+I 21:49:19.530 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 21:49:20.257 ECHOES touch-start x=0.9380 y=0.7584
+I 21:49:20.372 ECHOES attempt n=9 run=2 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 21:49:20.372 ECHOES accepted placement=p5-marker rot=0 count=5
+I 21:49:20.372 ECHOES complete run=2 accepted=5 placedObjects=5
+I 21:49:20.372 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 21:49:20.372 ECHOES progress before=4 after=5
+I 21:49:20.373 ECHOES state[after-confirm] run=2 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 21:49:28.391 ECHOES callback-due name=clear-success-note run=2
+I 21:49:28.391 ECHOES state[after-success-note-cleared] run=2 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback=""

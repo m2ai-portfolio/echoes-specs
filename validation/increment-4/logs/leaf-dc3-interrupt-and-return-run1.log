@@ -1,0 +1,142 @@
+I 17:14:18.993 LEAF I [DefaultLeafScenarioManager] [  0.000s]RUNS: dc3-interrupt-and-return with args: []
+I 17:14:18.993 LEAF I [DefaultLeafScenarioManager] [  0.000s]Running with runner config: {"__leaf__log_level":"INFO","__leaf__timeout_secs":"600","__leaf__diagnostic_policy":"fallback","__leaf__diagnostic_report_duration_ms":"-1"}
+I 17:14:18.996 ECHOES screen target:left-pad x=0.2915 y=0.8173 enabled=true
+I 17:14:18.996 ECHOES screen target:right-pad x=0.7085 y=0.8173 enabled=true
+I 17:14:18.996 ECHOES screen target:beam-seat x=0.5000 y=0.7043 enabled=false
+I 17:14:18.997 ECHOES screen target:pedestal-seat x=0.5000 y=0.6530 enabled=false
+I 17:14:18.997 ECHOES screen target:marker-seat x=0.5000 y=0.6093 enabled=false
+I 17:14:18.997 ECHOES screen piece:pillar x=0.1065 y=0.4563 enabled=true
+I 17:14:18.997 ECHOES screen piece:beam x=0.1065 y=0.5874 enabled=true
+I 17:14:18.997 ECHOES screen piece:pedestal x=0.1065 y=0.7185 enabled=true
+I 17:14:18.997 ECHOES screen piece:marker x=0.1065 y=0.8495 enabled=true
+I 17:14:18.997 ECHOES screen control:Turn Left x=0.8935 y=0.6168 enabled=true
+I 17:14:18.997 ECHOES screen control:Turn Right x=0.8935 y=0.7395 enabled=true
+I 17:14:18.997 ECHOES screen control:Confirm x=0.8935 y=0.8621 enabled=true
+I 17:14:18.997 ECHOES screen control:Help x=0.1065 y=0.1925 enabled=true
+I 17:14:18.997 ECHOES screen control:Pause x=0.1065 y=0.3067 enabled=true
+I 17:14:18.997 ECHOES screen control:Undo x=0.8935 y=0.1925 enabled=true
+I 17:14:18.997 ECHOES screen control:Replay x=0.8935 y=0.3067 enabled=true
+I 17:14:20.500 ECHOES leaf NOTE dc3-interrupt-and-return · BEGIN run=1 mode=active step=1 accepted=0 placed=0 piece=null rot=0 target=null feedback=""
+I 17:14:20.500 ECHOES leaf CHECK PASS dc3-interrupt-and-return · lens can start with valid task data · canStart=true
+I 17:14:20.623 ECHOES help-open step=1 accepted=0
+I 17:14:20.623 ECHOES state[after-help-open] run=1 mode=help overlay=help complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 17:14:20.838 ECHOES leaf CHECK PASS dc3-interrupt-and-return · help at step 1 explains the pillar and left pad · Piece: the square pillar ("Pillar" in Pieces).
+I 17:14:20.961 ECHOES help-close step=1 accepted=0
+I 17:14:20.962 ECHOES state[after-help-close] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 17:14:21.160 ECHOES leaf CHECK PASS dc3-interrupt-and-return · close help at step 1 returns to step 1
+I 17:14:21.281 ECHOES select-piece piece=pillar rot=0
+I 17:14:21.281 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:14:21.511 ECHOES hover target=left-pad
+I 17:14:21.557 ECHOES trigger-start target=left-pad
+I 17:14:21.618 ECHOES select-target target=left-pad
+I 17:14:21.618 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:14:21.941 ECHOES attempt n=1 run=1 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:14:21.942 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:14:21.942 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 17:14:21.942 ECHOES progress before=0 after=1
+I 17:14:21.942 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:14:22.265 ECHOES select-piece piece=pillar rot=0
+I 17:14:22.265 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 17:14:22.522 ECHOES hover target=right-pad
+I 17:14:22.569 ECHOES trigger-start target=right-pad
+I 17:14:22.616 ECHOES select-target target=right-pad
+I 17:14:22.616 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 17:14:22.953 ECHOES attempt n=2 run=1 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:14:22.954 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 17:14:22.954 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 17:14:22.954 ECHOES progress before=1 after=2
+I 17:14:22.954 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 17:14:23.288 ECHOES select-piece piece=beam rot=90
+I 17:14:23.288 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 17:14:23.627 ECHOES turn delta=90 rot=180
+I 17:14:23.627 ECHOES state[after-turn] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=null feedback=""
+I 17:14:23.870 ECHOES hover target=beam-seat
+I 17:14:23.917 ECHOES trigger-start target=beam-seat
+I 17:14:23.963 ECHOES select-target target=beam-seat
+I 17:14:23.963 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:24.164 ECHOES leaf NOTE dc3-interrupt-and-return · candidate before help: run=1 mode=active step=3 accepted=2 placed=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:24.295 ECHOES help-open step=3 accepted=2
+I 17:14:24.295 ECHOES state[after-help-open] run=1 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:24.502 ECHOES leaf CHECK PASS dc3-interrupt-and-return · help opens with current piece, turn, attachment · Piece: the long beam ("Beam" in Pieces).
+I 17:14:24.502 ECHOES leaf CHECK PASS dc3-interrupt-and-return · help keeps instruction, candidate line, and build visible · Chosen: long beam at 180° (spans left to right) · Beam seat
+I 17:14:24.502 ECHOES leaf CHECK PASS dc3-interrupt-and-return · clear route back: the Help button reads Close help · Close help
+I 17:14:24.502 ECHOES leaf CHECK PASS dc3-interrupt-and-return · task controls read as disabled during help
+I 17:14:24.632 ECHOES confirm-blocked reason=help accepted=2
+I 17:14:24.632 ECHOES state[blocked-confirm] run=1 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:24.961 ECHOES turn-blocked reason=help
+I 17:14:24.961 ECHOES state[blocked-turn] run=1 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:25.297 ECHOES select-piece-blocked reason=help
+I 17:14:25.297 ECHOES state[blocked-select-piece] run=1 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:25.635 ECHOES undo-blocked reason=help
+I 17:14:25.971 ECHOES pause-blocked reason=help
+I 17:14:26.173 ECHOES leaf CHECK PASS dc3-interrupt-and-return · Confirm, Turn, palette, Undo, Pause during help change nothing · {"run":1,"step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":["Placed p1-left-pillar","Placed p2-right-pillar"],"piece":"beam","rot":180,"target":"beam-seat","instruction":"Lay the long beam across both pillar tops.","status":"Chosen: long beam at 180° (spans left to right) · Beam seat","staging":[true,"Beam","Turned 180°"],"feedback":""}
+I 17:14:26.174 ECHOES leaf CHECK PASS dc3-interrupt-and-return · help never accepts a placement
+I 17:14:26.175 ECHOES leaf CHECK PASS dc3-interrupt-and-return · targets not selectable while help is open
+I 17:14:26.308 ECHOES help-close step=3 accepted=2
+I 17:14:26.308 ECHOES state[after-help-close] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:26.506 ECHOES leaf CHECK PASS dc3-interrupt-and-return · close help restores the same objective and candidate · {"run":1,"step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":["Placed p1-left-pillar","Placed p2-right-pillar"],"piece":"beam","rot":180,"target":"beam-seat","instruction":"Lay the long beam across both pillar tops.","status":"Chosen: long beam at 180° (spans left to right) · Beam seat","staging":[true,"Beam","Turned 180°"],"feedback":""}
+I 17:14:26.633 ECHOES pause step=3 accepted=2
+I 17:14:26.633 ECHOES state[after-pause] run=1 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:26.845 ECHOES leaf CHECK PASS dc3-interrupt-and-return · unmistakable paused state · PAUSED · Step 3 of 5 · 2 placed
+I 17:14:26.845 ECHOES leaf CHECK PASS dc3-interrupt-and-return · pause hides targets and the ghost, keeps the candidate card
+I 17:14:26.845 ECHOES leaf CHECK PASS dc3-interrupt-and-return · clear route back: the Pause button reads Resume
+I 17:14:26.845 ECHOES leaf CHECK PASS dc3-interrupt-and-return · pause states what is kept · Kept: 2 placed, Step 3, your beam at 180°. Press Resume to go on.
+I 17:14:26.966 ECHOES confirm-blocked reason=paused accepted=2
+I 17:14:26.966 ECHOES state[blocked-confirm] run=1 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:27.302 ECHOES turn-blocked reason=paused
+I 17:14:27.302 ECHOES state[blocked-turn] run=1 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:27.638 ECHOES select-piece-blocked reason=paused
+I 17:14:27.638 ECHOES state[blocked-select-piece] run=1 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:27.960 ECHOES undo-blocked reason=paused
+I 17:14:28.298 ECHOES help-blocked reason=paused
+I 17:14:28.500 ECHOES leaf CHECK PASS dc3-interrupt-and-return · Confirm, Turn, palette, Undo, Help while paused change nothing · {"run":1,"step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":["Placed p1-left-pillar","Placed p2-right-pillar"],"piece":"beam","rot":180,"target":"beam-seat","instruction":"Paused. Nothing can be placed until you press Resume.","status":"Chosen: long beam at 180° (spans left to right) · Beam seat","staging":[true,"Beam","Turned 180°"],"feedback":""}
+I 17:14:28.620 ECHOES resume step=3 accepted=2
+I 17:14:28.621 ECHOES state[after-resume] run=1 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:14:28.837 ECHOES leaf CHECK PASS dc3-interrupt-and-return · resume restores the same progress, objective, candidate, turn · {"run":1,"step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":["Placed p1-left-pillar","Placed p2-right-pillar"],"piece":"beam","rot":180,"target":"beam-seat","instruction":"Lay the long beam across both pillar tops.","status":"Chosen: long beam at 180° (spans left to right) · Beam seat","staging":[true,"Beam","Turned 180°"],"feedback":""}
+I 17:14:28.959 ECHOES attempt n=3 run=1 step=3 piece=beam rot=180 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:14:28.959 ECHOES accepted placement=p3-beam rot=180 count=3
+I 17:14:28.959 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 17:14:28.959 ECHOES progress before=2 after=3
+I 17:14:28.959 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 17:14:29.174 ECHOES leaf CHECK PASS dc3-interrupt-and-return · after resume the kept candidate is accepted once · run=1 mode=active step=4 accepted=3 placed=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 17:14:29.297 ECHOES select-piece piece=pedestal rot=0
+I 17:14:29.297 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 17:14:29.529 ECHOES hover target=pedestal-seat
+I 17:14:29.586 ECHOES trigger-start target=pedestal-seat
+I 17:14:29.633 ECHOES select-target target=pedestal-seat
+I 17:14:29.633 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 17:14:29.941 ECHOES callback-due name=clear-success-note run=1
+I 17:14:29.941 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 17:14:29.956 ECHOES attempt n=4 run=1 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:14:29.956 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 17:14:29.956 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 17:14:29.957 ECHOES progress before=3 after=4
+I 17:14:29.957 ECHOES state[after-confirm] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 17:14:30.280 ECHOES select-piece piece=marker rot=180
+I 17:14:30.280 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 17:14:30.614 ECHOES turn delta=90 rot=270
+I 17:14:30.614 ECHOES state[after-turn] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=null feedback=""
+I 17:14:30.955 ECHOES turn delta=90 rot=0
+I 17:14:30.955 ECHOES state[after-turn] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=null feedback=""
+I 17:14:30.955 ECHOES callback-due name=clear-success-note run=1
+I 17:14:30.955 ECHOES callback-superseded name=clear-success-note (the note was already replaced)
+I 17:14:31.199 ECHOES hover target=marker-seat
+I 17:14:31.245 ECHOES trigger-start target=marker-seat
+I 17:14:31.291 ECHOES select-target target=marker-seat
+I 17:14:31.292 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 17:14:31.616 ECHOES attempt n=5 run=1 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:14:31.617 ECHOES accepted placement=p5-marker rot=0 count=5
+I 17:14:31.617 ECHOES complete run=1 accepted=5 placedObjects=5
+I 17:14:31.617 ECHOES callback-scheduled name=clear-success-note run=1 delay=8s
+I 17:14:31.617 ECHOES progress before=4 after=5
+I 17:14:31.618 ECHOES state[after-confirm] run=1 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 17:14:31.844 ECHOES leaf CHECK PASS dc3-interrupt-and-return · complete before help
+I 17:14:31.969 ECHOES help-open step=6 accepted=5
+I 17:14:31.970 ECHOES state[after-help-open] run=1 mode=help overlay=help complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 17:14:32.199 ECHOES leaf CHECK PASS dc3-interrupt-and-return · help at completion uses its own text and does not change progress · All 5 placements are accepted. Undo reopens the last one; Replay starts over. Help never places a piece.
+I 17:14:32.325 ECHOES help-close step=6 accepted=5
+I 17:14:32.326 ECHOES state[after-help-close] run=1 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 17:14:32.523 ECHOES leaf CHECK PASS dc3-interrupt-and-return · close help at completion returns to completion · Signal Arch v1 · Complete · 5 of 5 placed
+I 17:14:32.524 ECHOES leaf END dc3-interrupt-and-return pass=21 fail=0
+I 17:14:32.524 LEAF I [DefaultLeafScenarioManager] [ 13.531s]PASSED: dc3-interrupt-and-return
+I 17:14:32.524 LEAF I [DefaultLeafScenarioManager] [ 13.531s][dc3-interrupt-and-return] PASSED

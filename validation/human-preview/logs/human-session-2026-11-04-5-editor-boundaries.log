@@ -1,0 +1,15 @@
+I 22:46:43.680  [MCP] Client connected: claude-code v2.1.318
+I 22:46:43.709  [MCP] Client initialized notification received
+I 22:47:31.081  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/12d49c2a-38e0-ebda-6eaa-01aabf188c95/5e6b191ff86f36580ebcf5670240670a/Data/README.md'.
+I 22:47:31.084  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/2bab9858-6160-404c-99dc-6cb711ec8c6c/d432ac817be50bea100543c90da2f297/Data/README.md'.
+I 22:47:31.086  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/08ea13fc-f2e3-4358-80eb-6ee7b74c2ff3/6b2f8c59a0c0b0ec70c47523d1bc433c/Data/README.md'.
+I 22:47:31.088  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/c67fc993-37ce-45c0-bf12-d779d147a6be/2b42f8ce8483a825c71178a1daaa5b7c/Data/README.md'.
+I 22:47:31.089  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/d452a8a1-6742-4084-8cf6-84d3407f6757/4bf4c8c3c680c450eded54289a2e81d2/Data/README.md'.
+I 22:49:21.373  [MCP] Client connected: claude-code v2.1.318
+I 22:49:21.419  [MCP] Client initialized notification received
+I 22:49:53.754  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/12d49c2a-38e0-ebda-6eaa-01aabf188c95/5e6b191ff86f36580ebcf5670240670a/Data/README.md'.
+I 22:49:53.757  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/2bab9858-6160-404c-99dc-6cb711ec8c6c/d432ac817be50bea100543c90da2f297/Data/README.md'.
+I 22:49:53.759  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/08ea13fc-f2e3-4358-80eb-6ee7b74c2ff3/6b2f8c59a0c0b0ec70c47523d1bc433c/Data/README.md'.
+I 22:49:53.761  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/c67fc993-37ce-45c0-bf12-d779d147a6be/2b42f8ce8483a825c71178a1daaa5b7c/Data/README.md'.
+I 22:49:53.762  [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes/Assets/../Cache/d452a8a1-6742-4084-8cf6-84d3407f6757/4bf4c8c3c680c450eded54289a2e81d2/Data/README.md'.
+I 22:52:50  [capture] CapturePanelScreenshotTool Preview 3 by this agent (tool-result file written 22:52:50.755; no log line emitted) -> validation/human-preview/captures/a1-human-hold-candidate-target-instruction.png

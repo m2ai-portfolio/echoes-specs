@@ -1,0 +1,53 @@
+I 16:55:21.657 LEAF I [DefaultLeafScenarioManager] [ 28.592s][dc4-replay-cleanly] PASSED
+I 16:55:23.953 Lens has been reset
+I 16:55:23.961 Lens has been reset
+I 16:55:24.644 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 16:55:24.645 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 16:55:24.645 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 16:55:25.825 LEAF I [DefaultLeafScenarioManager] [  0.000s]RUNS: dc5-sequence-guards with args: []
+I 16:55:25.825 LEAF I [DefaultLeafScenarioManager] [  0.001s]Running with runner config: {"__leaf__log_level":"INFO","__leaf__timeout_secs":"180","__leaf__diagnostic_policy":"fallback","__leaf__diagnostic_report_duration_ms":"-1"}
+I 16:55:25.828 ECHOES screen target:left-pad x=0.2915 y=0.8173 enabled=true
+I 16:55:25.828 ECHOES screen target:right-pad x=0.7085 y=0.8173 enabled=true
+I 16:55:25.828 ECHOES screen target:beam-seat x=0.5000 y=0.7043 enabled=false
+I 16:55:25.828 ECHOES screen target:pedestal-seat x=0.5000 y=0.6530 enabled=false
+I 16:55:25.828 ECHOES screen target:marker-seat x=0.5000 y=0.6093 enabled=false
+I 16:55:25.828 ECHOES screen piece:pillar x=0.1065 y=0.5336 enabled=true
+I 16:55:25.828 ECHOES screen piece:beam x=0.1065 y=0.6596 enabled=true
+I 16:55:25.828 ECHOES screen piece:pedestal x=0.1065 y=0.7857 enabled=true
+I 16:55:25.828 ECHOES screen piece:marker x=0.1065 y=0.9117 enabled=true
+I 16:55:25.828 ECHOES screen control:Turn Left x=0.8935 y=0.6891 enabled=true
+I 16:55:25.828 ECHOES screen control:Turn Right x=0.8935 y=0.8067 enabled=true
+I 16:55:25.828 ECHOES screen control:Confirm x=0.8935 y=0.9243 enabled=true
+I 16:55:25.829 ECHOES screen control:Help x=0.1065 y=0.2748 enabled=true
+I 16:55:25.829 ECHOES screen control:Pause x=0.1065 y=0.3840 enabled=true
+I 16:55:25.829 ECHOES screen control:Undo x=0.8935 y=0.2748 enabled=true
+I 16:55:25.829 ECHOES screen control:Replay x=0.8935 y=0.3840 enabled=true
+I 16:55:27.354 ECHOES leaf NOTE dc5-sequence-guards · BEGIN run=1 mode=active step=1 accepted=0 placed=0 piece=null rot=0 target=null feedback=""
+I 16:55:27.354 ECHOES leaf CHECK PASS dc5-sequence-guards · lens can start with valid task data · canStart=true
+I 16:55:28.062 Lens has been reset
+I 16:55:28.069 Lens has been reset
+I 16:55:28.079 Lens has been reset
+I 16:55:28.932 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 16:55:28.933 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 16:55:28.933 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 16:55:30.631 ECHOES screen target:left-pad x=0.2915 y=0.8173 enabled=true
+I 16:55:30.631 ECHOES screen target:right-pad x=0.7085 y=0.8173 enabled=true
+I 16:55:30.632 ECHOES screen target:beam-seat x=0.5000 y=0.7043 enabled=false
+I 16:55:30.632 ECHOES screen target:pedestal-seat x=0.5000 y=0.6530 enabled=false
+I 16:55:30.632 ECHOES screen target:marker-seat x=0.5000 y=0.6093 enabled=false
+I 16:55:30.632 ECHOES screen piece:pillar x=0.1065 y=0.5336 enabled=true
+I 16:55:30.632 ECHOES screen piece:beam x=0.1065 y=0.6596 enabled=true
+I 16:55:30.632 ECHOES screen piece:pedestal x=0.1065 y=0.7857 enabled=true
+I 16:55:30.632 ECHOES screen piece:marker x=0.1065 y=0.9117 enabled=true
+I 16:55:30.632 ECHOES screen control:Turn Left x=0.8935 y=0.6891 enabled=true
+I 16:55:30.632 ECHOES screen control:Turn Right x=0.8935 y=0.8067 enabled=true
+I 16:55:30.632 ECHOES screen control:Confirm x=0.8935 y=0.9243 enabled=true
+I 16:55:30.632 ECHOES screen control:Help x=0.1065 y=0.2748 enabled=true
+I 16:55:30.632 ECHOES screen control:Pause x=0.1065 y=0.3840 enabled=true
+I 16:55:30.632 ECHOES screen control:Undo x=0.8935 y=0.2748 enabled=true
+I 16:55:30.632 ECHOES screen control:Replay x=0.8935 y=0.3840 enabled=true
+I 16:55:41.662 Lens has been reset
+I 16:55:41.670 Lens has been reset
+I 16:55:42.353 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 16:55:42.354 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 16:55:42.354 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)

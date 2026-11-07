@@ -1,0 +1,11 @@
+I 22:52:24.799 ECHOES hover target=left-pad
+I 22:52:26.888 ECHOES touch-start x=0.2508 y=0.3758
+I 22:52:27.115 ECHOES select-piece piece=pillar rot=0
+I 22:52:27.116 ECHOES state[after-select-piece] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 22:52:32.157 ECHOES hover target=left-pad
+I 22:52:32.712 ECHOES hover target=left-pad
+I 22:52:33.109 ECHOES touch-start x=0.3706 y=0.6208
+I 22:52:33.133 ECHOES trigger-start target=left-pad
+I 22:52:33.295 ECHOES select-target target=left-pad
+I 22:52:33.295 ECHOES state[after-select-target] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 22:53:10.712 ECHOES hover target=right-pad

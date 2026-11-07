@@ -1,0 +1,85 @@
+I 22:43:21.152 ECHOES touch-start x=0.9208 y=0.0965
+I 22:43:21.312 ECHOES undo removed=p5-marker wasComplete=true before=5 after=4
+I 22:43:21.312 ECHOES state[after-undo] run=5 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Undone: removed the wedge marker from Marker seat. Step 5 is open again."
+I 22:43:24.545 ECHOES touch-start x=0.9074 y=0.2366
+I 22:43:24.754 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 22:43:24.754 ECHOES replay from=active run=6
+I 22:43:24.754 ECHOES state[after-replay] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 22:43:24.754 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(-0.00,0.00,3.00)
+I 22:43:26.595 ECHOES touch-start x=0.1827 y=0.3674
+I 22:43:26.802 ECHOES select-piece piece=pillar rot=0
+I 22:43:26.802 ECHOES state[after-select-piece] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 22:43:28.193 ECHOES hover target=right-pad
+I 22:43:28.641 ECHOES hover target=right-pad
+I 22:43:31.167 ECHOES touch-start x=0.8949 y=0.5210
+I 22:43:31.331 ECHOES turn delta=-90 rot=270
+I 22:43:31.332 ECHOES state[after-turn] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:33.037 ECHOES touch-start x=0.1176 y=0.2013
+I 22:43:33.200 ECHOES pause step=1 accepted=0
+I 22:43:33.200 ECHOES state[after-pause] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:35.331 ECHOES touch-start x=0.6476 y=0.2282
+I 22:43:36.284 ECHOES touch-start x=0.6457 y=0.2282
+I 22:43:37.796 ECHOES touch-start x=0.9409 y=0.3633
+I 22:43:38.508 ECHOES touch-start x=0.9419 y=0.3616
+I 22:43:39.944 ECHOES touch-start x=0.9582 y=0.3540
+I 22:43:40.420 ECHOES touch-start x=0.9572 y=0.3557
+I 22:43:40.823 ECHOES touch-start x=0.9572 y=0.3557
+I 22:43:53.909 ECHOES touch-start x=0.8594 y=0.7122
+I 22:43:54.025 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:54.025 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:54.550 ECHOES touch-start x=0.8441 y=0.6963
+I 22:43:54.711 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:54.712 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:56.085 ECHOES touch-start x=0.8642 y=0.6829
+I 22:43:56.271 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:56.271 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:56.950 ECHOES touch-start x=0.8642 y=0.6829
+I 22:43:57.071 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:57.071 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:57.442 ECHOES touch-start x=0.8642 y=0.6829
+I 22:43:57.600 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:57.600 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:43:57.952 ECHOES touch-start x=0.8642 y=0.6829
+I 22:43:58.155 ECHOES confirm-blocked reason=paused accepted=0
+I 22:43:58.155 ECHOES state[blocked-confirm] run=6 mode=paused overlay=paused complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:44:00.173 ECHOES touch-start x=0.2278 y=0.2492
+I 22:44:00.339 ECHOES resume step=1 accepted=0
+I 22:44:00.339 ECHOES state[after-resume] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=270 target=null feedback=""
+I 22:44:42.131 ECHOES hover target=left-pad
+I 22:44:45.281 ECHOES touch-start x=0.1827 y=0.3683
+I 22:44:45.450 ECHOES select-piece piece=pillar rot=0
+I 22:44:45.450 ECHOES state[after-select-piece] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 22:44:46.441 ECHOES hover target=right-pad
+I 22:44:46.684 ECHOES hover target=right-pad
+I 22:44:47.284 ECHOES touch-start x=0.7070 y=0.6535
+I 22:44:47.308 ECHOES trigger-start target=right-pad
+I 22:44:47.449 ECHOES select-target target=right-pad
+I 22:44:47.449 ECHOES state[after-select-target] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback=""
+I 22:44:49.132 ECHOES hover target=left-pad
+I 22:44:49.842 ECHOES hover target=left-pad
+I 22:44:50.309 ECHOES touch-start x=0.3706 y=0.6435
+I 22:44:50.331 ECHOES trigger-start target=left-pad
+I 22:44:50.451 ECHOES select-target target=left-pad
+I 22:44:50.451 ECHOES state[after-select-target] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 22:45:30.248 Lens has been reset
+I 22:45:30.253 Lens has been reset
+I 22:45:30.260 Lens has been reset
+I 22:45:30.994 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 22:45:30.994 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 22:45:30.994 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.52,-0.00,20.99)
+I 22:45:31.499 ECHOES screen target:left-pad x=0.3749 y=0.6621 enabled=true
+I 22:45:31.500 ECHOES screen target:right-pad x=0.7083 y=0.6635 enabled=true
+I 22:45:31.500 ECHOES screen target:beam-seat x=0.5413 y=0.5729 enabled=false
+I 22:45:31.500 ECHOES screen target:pedestal-seat x=0.5413 y=0.5318 enabled=false
+I 22:45:31.500 ECHOES screen target:marker-seat x=0.5414 y=0.4968 enabled=false
+I 22:45:31.500 ECHOES screen piece:pillar x=0.2232 y=0.3734 enabled=true
+I 22:45:31.500 ECHOES screen piece:beam x=0.2244 y=0.4794 enabled=true
+I 22:45:31.500 ECHOES screen piece:pedestal x=0.2256 y=0.5845 enabled=true
+I 22:45:31.500 ECHOES screen piece:marker x=0.2267 y=0.6887 enabled=true
+I 22:45:31.500 ECHOES screen control:Turn Left x=0.8619 y=0.5040 enabled=true
+I 22:45:31.500 ECHOES screen control:Turn Right x=0.8605 y=0.6033 enabled=true
+I 22:45:31.500 ECHOES screen control:Confirm x=0.8591 y=0.7017 enabled=true
+I 22:45:31.500 ECHOES screen control:Help x=0.2209 y=0.1573 enabled=true
+I 22:45:31.500 ECHOES screen control:Pause x=0.2219 y=0.2514 enabled=true
+I 22:45:31.500 ECHOES screen control:Undo x=0.8670 y=0.1546 enabled=true
+I 22:45:31.500 ECHOES screen control:Replay x=0.8656 y=0.2497 enabled=true

@@ -1,0 +1,17 @@
+# Editor events for Matthew's human re-check of c602ee8 on 2026-11-06 (window 21:33:00 to 21:50:36 Central). Source:
+# LensStudioLog-2026-11-06-20-57-54-706-22375.txt (same editor session as the A9 viewers; md5 bd8429cee2bcb3d975a2d72b72387828,
+# 3269252 bytes, when copied at the start of Increment 16). Analytics bodies are omitted.
+# HEAD during the window was f42cb1e (docs only; lens code and scene = c602ee8). 0ef4f9b was committed at 21:50:34, after the last input.
+I 21:32:45.794  Last LENSSTUDIO_AI_TOOL_CALL in the file (run_leaf_scenario, Increment 15 agent). None after it until the window ends.
+I 21:32:59.966  LeafPlugin: dc5-full-story completed (end of the Increment 15 agent's LEAF regression)
+#   21:33:02.342-21:33:07.451  ECHOES stale-callback-dropped x4 (run 2, no input): residue of the agent's last LEAF run. Excluded from the extract.
+#   No log line of any kind between 21:33:07.451 and 21:45:33.236.
+I 21:45:33.236  OAuthController token refresh (scheduled at 20:57:56 for 21:45:33); Authorized
+W 21:45:34.085  MyLenses Authorization: Avatar URL is empty (editor account plugin, not the lens)
+I 21:45:34.238  Lens has been reset (x3 to 21:45:34.250; OAuth-refresh reset, 1.0 s after the refresh; no input follows it)
+I 21:46:46.818  Lens has been reset (x2; operator Preview reset: no OAuth event near it, no MCP client connected)
+#   Human input (touch-start) runs 21:46:51.403 to 21:49:12.665: 40 touches, all on lens run 1 except the final Replay.
+#   Last ECHOES line 21:49:17.090 (stale success-note callback dropped after Replay, as designed).
+I 21:50:36.974  [MCP] Client connected: claude-code v2.1.318 (this Increment 16 agent; the window ends here)
+# LENSSTUDIO_AI_TOOL_CALL events in the window: 0. No injection, LEAF run, or capture occurred in it.
+# No [Preview N] E/W/F line and no lens network line in the window.

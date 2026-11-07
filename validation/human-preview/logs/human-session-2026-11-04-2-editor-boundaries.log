@@ -1,0 +1,11 @@
+I 21:22:57.477 Es::Mcp::McpHttpServer::handleInitialize] [MCP] Client connected: claude-code v2.1.318
+I 21:22:57.510 Es::Mcp::McpHttpServer::handleRpcObject] [MCP] Client initialized notification received
+I 21:24:29.061 ${CONFIG_DIR}/Bundle/Plugins/Core Chat Tools@5.23.0@4a94ee4bebe57e29680af619d7bb8019/Core-ChatTools/chatTools-bundle.js:20791 tryGetReadme] [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes
+I 21:24:29.064 ${CONFIG_DIR}/Bundle/Plugins/Core Chat Tools@5.23.0@4a94ee4bebe57e29680af619d7bb8019/Core-ChatTools/chatTools-bundle.js:20791 tryGetReadme] [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes
+I 21:24:29.067 ${CONFIG_DIR}/Bundle/Plugins/Core Chat Tools@5.23.0@4a94ee4bebe57e29680af619d7bb8019/Core-ChatTools/chatTools-bundle.js:20791 tryGetReadme] [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes
+I 21:24:29.069 ${CONFIG_DIR}/Bundle/Plugins/Core Chat Tools@5.23.0@4a94ee4bebe57e29680af619d7bb8019/Core-ChatTools/chatTools-bundle.js:20791 tryGetReadme] [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes
+I 21:24:29.071 ${CONFIG_DIR}/Bundle/Plugins/Core Chat Tools@5.23.0@4a94ee4bebe57e29680af619d7bb8019/Core-ChatTools/chatTools-bundle.js:20791 tryGetReadme] [CoreChatTools] Looking for README file at 'C:/Users/matth/Echoes
+I 21:48:16.777 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:48:16.790 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:50:23.309 Es::Mcp::McpHttpServer::handleInitialize] [MCP] Client connected: claude-code v2.1.318
+I 21:50:23.359 Es::Mcp::McpHttpServer::handleRpcObject] [MCP] Client initialized notification received

@@ -1,0 +1,14 @@
+# Editor events in the session 8 window (23:10:39 to 23:30:00 Central, 2026-11-04), taken from byte 8145643 onward in
+# LensStudioLog-2026-11-02-23-40-28-082-6e6d2.txt. Analytics bodies are omitted.
+# The window starts at the Increment 12 agent's MCP connect. That agent's only tool call was ListInstalledPackagesTool
+# (read-only) at 23:11:25; it committed at 23:12:04. No other LENSSTUDIO_AI_TOOL_CALL event appears in the window.
+I 23:10:39.824  [MCP] Client connected: claude-code v2.1.318 (Increment 12 agent; the window starts here)
+I 23:11:25.877  LENSSTUDIO_AI_TOOL_CALL tool_name=ListInstalledPackagesTool read_only=true (Increment 12 agent; README lookups 23:11:25.892-.902)
+I 23:27:36.284  ECHOES replay from=active run=3 (human Replay in the session 7 lens instance, before the reset; not part of an operator-reset run)
+I 23:27:38.645  Lens has been reset   (operator Preview reset; no OAuth line nearby; next OAuth 23:35:29; no MCP tool call since 23:11:25)
+I 23:27:38.661  Lens has been reset
+I 23:30:00.862  [MCP] Client connected: claude-code v2.1.318 (this agent; the window ends here)
+# The last human ECHOES line is 23:29:27.835 (Replay from complete). The log had not grown by 23:30:46 (size 8217925 bytes).
+# After the window, this agent's only MCP call was ListInstalledPackagesTool (read-only).
+# The only E/W lines in the window are editor analytics ("Host requires authentication"). There is no [Preview N] E/W/F line.
+# The OAuth refresh scheduled for 23:35:29 had not fired when the window closed, so it split no run.

@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/612d2649-4ee1-442a-a96e-c15cc41b8c30>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6d46a39f-b116-4db9-b465-a7ea3e0c789d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6d46a39f-b116-4db9-b465-a7ea3e0c789d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e6dbc2fb-f476-46bb-8559-a911d6adba56
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e6dbc2fb-f476-46bb-8559-a911d6adba56>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 0778d5bf-bd31-42da-830a-a2e5f0a12464
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    runStateTests: false
+    taskVariant: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - taskVariant: valid
+      runStateTests: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"Echoes — Signal Arch v1 controller"}'
+    - '// @ui {"widget":"separator"}'
+    - "// @input string taskVariant = \"valid\" {\"hint\":\"Task data variant. Keep 'valid' for the demo; the others are deliberately broken configurations used to check the cannot-start state.\", \"widget\":\"combobox\", \"values\":[{\"label\":\"valid\", \"value\":\"valid\"}, {\"label\":\"missing-piece\", \"value\":\"missing-piece\"}, {\"label\":\"missing-target\", \"value\":\"missing-target\"}, {\"label\":\"empty-sequence\", \"value\":\"empty-sequence\"}]}"
+    - "// @input bool runStateTests {\"hint\":\"Test fixture only. When on, the lens runs its focused state assertions at start (logged as 'ECHOES test …') and replays to a clean start. Keep off for the demo.\"}"

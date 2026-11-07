@@ -1,0 +1,18 @@
+I 20:15:28.401 StudioPlugins/MyLenses/Impl/Src/OAuthController.cpp:441 Es::MyLenses::OAuthController::refreshTokens::::operator()] Requesting tokens refresh: Attempt N: 0
+I 20:15:28.755 Es::MyLenses::OAuthController::handleAuthorizationResult] tokens are valid
+I 20:15:28.755 Es::MyLenses::OAuthController::handleTokensChanged] Handling authorized tokens
+I 20:15:28.756 Es::MyLenses::OAuthController::handleAuthorized] Authorized
+I 20:15:28.756 Es::MyLenses::OAuthController::startTokensRefreshing] Next OAuth token refresh: Thu Nov 5 03:05:28 2026 GMT
+I 20:15:29.382 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 20:15:29.388 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 20:15:29.396 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:05:28.752 StudioPlugins/MyLenses/Impl/Src/OAuthController.cpp:441 Es::MyLenses::OAuthController::refreshTokens::::operator()] Requesting tokens refresh: Attempt N: 0
+I 21:05:29.063 Es::MyLenses::OAuthController::handleAuthorizationResult] tokens are valid
+I 21:05:29.063 Es::MyLenses::OAuthController::handleTokensChanged] Handling authorized tokens
+I 21:05:29.063 Es::MyLenses::OAuthController::handleAuthorized] Authorized
+I 21:05:29.063 Es::MyLenses::OAuthController::startTokensRefreshing] Next OAuth token refresh: Thu Nov 5 03:55:29 2026 GMT
+I 21:05:29.633 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:05:29.639 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:05:29.647 Es::Preview::PreviewWorker::onSceneCreated] Lens has been reset
+I 21:22:57.477 Es::Mcp::McpHttpServer::handleInitialize] [MCP] Client connected: claude-code v2.1.318
+I 21:22:57.510 Es::Mcp::McpHttpServer::handleRpcObject] [MCP] Client initialized notification received

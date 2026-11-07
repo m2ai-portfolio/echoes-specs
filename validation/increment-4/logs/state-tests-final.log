@@ -1,0 +1,304 @@
+I 17:15:52.192 Lens has been reset
+I 17:15:52.200 Lens has been reset
+I 17:15:52.847 ECHOES start task=signal-arch v1 variant=valid canStart=true
+I 17:15:52.848 ECHOES state[initial] run=1 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback=""
+I 17:15:52.848 ECHOES pose[start] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.485 ECHOES screen target:left-pad x=0.2915 y=0.8173 enabled=true
+I 17:15:54.486 ECHOES screen target:right-pad x=0.7085 y=0.8173 enabled=true
+I 17:15:54.486 ECHOES screen target:beam-seat x=0.5000 y=0.7043 enabled=false
+I 17:15:54.486 ECHOES screen target:pedestal-seat x=0.5000 y=0.6530 enabled=false
+I 17:15:54.486 ECHOES screen target:marker-seat x=0.5000 y=0.6093 enabled=false
+I 17:15:54.486 ECHOES screen piece:pillar x=0.1065 y=0.4563 enabled=true
+I 17:15:54.486 ECHOES screen piece:beam x=0.1065 y=0.5874 enabled=true
+I 17:15:54.486 ECHOES screen piece:pedestal x=0.1065 y=0.7185 enabled=true
+I 17:15:54.486 ECHOES screen piece:marker x=0.1065 y=0.8495 enabled=true
+I 17:15:54.486 ECHOES screen control:Turn Left x=0.8935 y=0.6168 enabled=true
+I 17:15:54.486 ECHOES screen control:Turn Right x=0.8935 y=0.7395 enabled=true
+I 17:15:54.486 ECHOES screen control:Confirm x=0.8935 y=0.8621 enabled=true
+I 17:15:54.486 ECHOES screen control:Help x=0.1065 y=0.1925 enabled=true
+I 17:15:54.486 ECHOES screen control:Pause x=0.1065 y=0.3067 enabled=true
+I 17:15:54.486 ECHOES screen control:Undo x=0.8935 y=0.1925 enabled=true
+I 17:15:54.486 ECHOES screen control:Replay x=0.8935 y=0.3067 enabled=true
+I 17:15:54.488 ECHOES test BEGIN state suite
+I 17:15:54.488 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.488 ECHOES replay from=active run=2
+I 17:15:54.488 ECHOES state[after-replay] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.489 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.489 ECHOES undo-blocked reason=no-accepted-placement
+I 17:15:54.489 ECHOES state[blocked-undo] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.489 ECHOES test PASS A6 undo at zero does nothing · {"run":2,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.490 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.490 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.490 ECHOES select-target target=right-pad
+I 17:15:54.491 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback=""
+I 17:15:54.491 ECHOES attempt n=1 run=2 step=1 piece=pillar rot=0 target=right-pad accepted=false mismatch=target differing=target msg="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 17:15:54.491 ECHOES progress before=0 after=0
+I 17:15:54.491 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback="Not yet: that is the right pillar attachment. Use the left pillar attachment first."
+I 17:15:54.491 ECHOES test PASS A4 out-of-order target does not advance · Not yet: that is the right pillar attachment. Use the left pillar attachment first.
+I 17:15:54.491 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.492 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=right-pad feedback=""
+I 17:15:54.492 ECHOES select-target target=left-pad
+I 17:15:54.492 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:15:54.492 ECHOES attempt n=2 run=2 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.492 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:15:54.493 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.493 ECHOES progress before=0 after=1
+I 17:15:54.493 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.493 ECHOES attempt n=3 run=2 step=2 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 17:15:54.493 ECHOES confirm-ignored nothing selected; success note kept
+I 17:15:54.493 ECHOES progress before=1 after=1
+I 17:15:54.493 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.493 ECHOES attempt n=4 run=2 step=2 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 17:15:54.493 ECHOES confirm-ignored nothing selected; success note kept
+I 17:15:54.493 ECHOES progress before=1 after=1
+I 17:15:54.494 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.494 ECHOES test PASS A4 duplicate confirm advances once · {"run":2,"overlay":"none","step":1,"ids":["p1-left-pillar"],"placed":1,"piece":null,"rot":0,"target":null}
+I 17:15:54.494 ECHOES test PASS A4 prefix 1 incomplete
+I 17:15:54.494 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.494 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.494 ECHOES select-target-ignored target=left-pad reason=unavailable
+I 17:15:54.494 ECHOES test PASS A4 stale target event ignored · {"run":2,"overlay":"none","step":1,"ids":["p1-left-pillar"],"placed":1,"piece":"pillar","rot":0,"target":null}
+I 17:15:54.494 ECHOES attempt n=5 run=2 step=2 piece=pillar rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick an attachment first: use the right pillar attachment."
+I 17:15:54.494 ECHOES progress before=1 after=1
+I 17:15:54.494 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback="Pick an attachment first: use the right pillar attachment."
+I 17:15:54.494 ECHOES test PASS A4 stale target cannot accept step 2 · Pick an attachment first: use the right pillar attachment.
+I 17:15:54.494 ECHOES select-target target=right-pad
+I 17:15:54.495 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 17:15:54.495 ECHOES stale-selection-dropped pieceStamp=2:1 targetStamp=2:0 now=2:1
+I 17:15:54.495 ECHOES attempt n=6 run=2 step=2 piece=null rot=0 target=null accepted=false mismatch=incomplete differing=incomplete msg="Pick a piece first: choose the square pillar."
+I 17:15:54.495 ECHOES progress before=1 after=1
+I 17:15:54.495 ECHOES state[after-confirm] run=2 mode=correction overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Pick a piece first: choose the square pillar."
+I 17:15:54.495 ECHOES test PASS A4 selection stamped in preceding step cannot accept · {"run":2,"overlay":"none","step":1,"ids":["p1-left-pillar"],"placed":1,"piece":null,"rot":0,"target":null}
+I 17:15:54.495 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.495 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.495 ECHOES select-target target=right-pad
+I 17:15:54.496 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=right-pad feedback=""
+I 17:15:54.496 ECHOES attempt n=7 run=2 step=2 piece=pillar rot=0 target=right-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.497 ECHOES accepted placement=p2-right-pillar rot=0 count=2
+I 17:15:54.497 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.497 ECHOES progress before=1 after=2
+I 17:15:54.497 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Placed: square pillar on Right pad. 2 of 5 accepted. Next step is shown above."
+I 17:15:54.497 ECHOES test PASS A4 prefix 2 incomplete
+I 17:15:54.497 ECHOES select-target-ignored target=pedestal-seat reason=unavailable
+I 17:15:54.497 ECHOES test PASS A4 out-of-order later target not selectable
+I 17:15:54.497 ECHOES select-piece piece=beam rot=90
+I 17:15:54.497 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 17:15:54.497 ECHOES select-target target=beam-seat
+I 17:15:54.498 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.498 ECHOES help-open step=3 accepted=2
+I 17:15:54.498 ECHOES state[after-help-open] run=2 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.498 ECHOES test PASS A5 help open · Piece: the long beam ("Beam" in Pieces).
+I 17:15:54.498 ECHOES confirm-blocked reason=help accepted=2
+I 17:15:54.498 ECHOES state[blocked-confirm] run=2 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.499 ECHOES turn-blocked reason=help
+I 17:15:54.499 ECHOES state[blocked-turn] run=2 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.499 ECHOES select-piece-blocked reason=help
+I 17:15:54.499 ECHOES state[blocked-select-piece] run=2 mode=help overlay=help complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.499 ECHOES test PASS A5 help blocks placement and edits
+I 17:15:54.499 ECHOES help-close step=3 accepted=2
+I 17:15:54.499 ECHOES state[after-help-close] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=beam-seat feedback=""
+I 17:15:54.499 ECHOES test PASS A5 help close restores exact state · {"run":2,"overlay":"none","step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":2,"piece":"beam","rot":90,"target":"beam-seat"}
+I 17:15:54.499 ECHOES turn delta=90 rot=180
+I 17:15:54.500 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.500 ECHOES pause step=3 accepted=2
+I 17:15:54.500 ECHOES state[after-pause] run=2 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.500 ECHOES test PASS A5 paused · PAUSED · Step 3 of 5 · 2 placed
+I 17:15:54.500 ECHOES confirm-blocked reason=paused accepted=2
+I 17:15:54.500 ECHOES state[blocked-confirm] run=2 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.500 ECHOES turn-blocked reason=paused
+I 17:15:54.500 ECHOES state[blocked-turn] run=2 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.500 ECHOES select-target-blocked reason=paused
+I 17:15:54.500 ECHOES state[blocked-select-target] run=2 mode=paused overlay=paused complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.501 ECHOES undo-blocked reason=paused
+I 17:15:54.501 ECHOES help-blocked reason=paused
+I 17:15:54.501 ECHOES test PASS A5 pause blocks placement, turn, undo, help
+I 17:15:54.501 ECHOES resume step=3 accepted=2
+I 17:15:54.501 ECHOES state[after-resume] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=beam-seat feedback=""
+I 17:15:54.501 ECHOES test PASS A5 resume restores exact state · {"run":2,"overlay":"none","step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":2,"piece":"beam","rot":180,"target":"beam-seat"}
+I 17:15:54.501 ECHOES attempt n=8 run=2 step=3 piece=beam rot=180 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.501 ECHOES accepted placement=p3-beam rot=180 count=3
+I 17:15:54.502 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.502 ECHOES progress before=2 after=3
+I 17:15:54.502 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 17:15:54.502 ECHOES test PASS A4 prefix 3 incomplete
+I 17:15:54.502 ECHOES select-piece piece=pedestal rot=0
+I 17:15:54.502 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 17:15:54.502 ECHOES undo removed=p3-beam wasComplete=false before=3 after=2
+I 17:15:54.503 ECHOES state[after-undo] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=null rot=0 target=null feedback="Undone: removed the long beam from Beam seat. Step 3 is open again."
+I 17:15:54.503 ECHOES test PASS A6 undo intermediate removes only latest · {"run":2,"overlay":"none","step":2,"ids":["p1-left-pillar","p2-right-pillar"],"placed":2,"piece":null,"rot":0,"target":null}
+I 17:15:54.503 ECHOES select-piece piece=beam rot=90
+I 17:15:54.503 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=90 target=null feedback=""
+I 17:15:54.503 ECHOES turn delta=90 rot=180
+I 17:15:54.503 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=180 target=null feedback=""
+I 17:15:54.503 ECHOES turn delta=90 rot=270
+I 17:15:54.503 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=270 target=null feedback=""
+I 17:15:54.503 ECHOES turn delta=90 rot=0
+I 17:15:54.504 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=0 target=null feedback=""
+I 17:15:54.504 ECHOES select-target target=beam-seat
+I 17:15:54.504 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=3 accepted=2 ids=[p1-left-pillar,p2-right-pillar] placedObjects=2 piece=beam rot=0 target=beam-seat feedback=""
+I 17:15:54.504 ECHOES attempt n=9 run=2 step=3 piece=beam rot=0 target=beam-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.504 ECHOES accepted placement=p3-beam rot=0 count=3
+I 17:15:54.504 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.504 ECHOES progress before=2 after=3
+I 17:15:54.504 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=null rot=0 target=null feedback="Placed: long beam on Beam seat. 3 of 5 accepted. Next step is shown above."
+I 17:15:54.504 ECHOES test PASS A6 re-place after undo reaches next state once
+I 17:15:54.504 ECHOES select-piece piece=pedestal rot=0
+I 17:15:54.505 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=null feedback=""
+I 17:15:54.505 ECHOES select-target target=pedestal-seat
+I 17:15:54.505 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=4 accepted=3 ids=[p1-left-pillar,p2-right-pillar,p3-beam] placedObjects=3 piece=pedestal rot=0 target=pedestal-seat feedback=""
+I 17:15:54.505 ECHOES attempt n=10 run=2 step=4 piece=pedestal rot=0 target=pedestal-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.505 ECHOES accepted placement=p4-pedestal rot=0 count=4
+I 17:15:54.505 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.505 ECHOES progress before=3 after=4
+I 17:15:54.505 ECHOES state[after-confirm] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Placed: flat square pedestal on Pedestal seat. 4 of 5 accepted. Next step is shown above."
+I 17:15:54.505 ECHOES test PASS A4 prefix 4 incomplete
+I 17:15:54.505 ECHOES select-piece piece=marker rot=180
+I 17:15:54.505 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 17:15:54.505 ECHOES turn delta=90 rot=270
+I 17:15:54.506 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=null feedback=""
+I 17:15:54.506 ECHOES turn delta=90 rot=0
+I 17:15:54.506 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=null feedback=""
+I 17:15:54.506 ECHOES select-target target=marker-seat
+I 17:15:54.506 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 17:15:54.506 ECHOES attempt n=11 run=2 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.506 ECHOES accepted placement=p5-marker rot=0 count=5
+I 17:15:54.506 ECHOES complete run=2 accepted=5 placedObjects=5
+I 17:15:54.506 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.506 ECHOES progress before=4 after=5
+I 17:15:54.507 ECHOES state[after-confirm] run=2 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 17:15:54.507 ECHOES test PASS A4 complete after all five, scene agrees · {"run":2,"overlay":"none","step":5,"ids":["p1-left-pillar","p2-right-pillar","p3-beam","p4-pedestal","p5-marker"],"placed":5,"piece":null,"rot":0,"target":null}
+I 17:15:54.507 ECHOES confirm-ignored all placements accepted
+I 17:15:54.507 ECHOES select-piece-blocked reason=complete
+I 17:15:54.507 ECHOES test PASS A4 completion blocks further input
+I 17:15:54.507 ECHOES undo removed=p5-marker wasComplete=true before=5 after=4
+I 17:15:54.507 ECHOES state[after-undo] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=null rot=0 target=null feedback="Undone: removed the wedge marker from Marker seat. Step 5 is open again."
+I 17:15:54.507 ECHOES test PASS A6 undo after completion reopens final placement · {"run":2,"overlay":"none","step":4,"ids":["p1-left-pillar","p2-right-pillar","p3-beam","p4-pedestal"],"placed":4,"piece":null,"rot":0,"target":null}
+I 17:15:54.507 ECHOES select-piece piece=marker rot=180
+I 17:15:54.507 ECHOES state[after-select-piece] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=180 target=null feedback=""
+I 17:15:54.507 ECHOES turn delta=90 rot=270
+I 17:15:54.507 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=270 target=null feedback=""
+I 17:15:54.507 ECHOES turn delta=90 rot=0
+I 17:15:54.508 ECHOES state[after-turn] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=null feedback=""
+I 17:15:54.508 ECHOES select-target target=marker-seat
+I 17:15:54.508 ECHOES state[after-select-target] run=2 mode=active overlay=none complete=false step=5 accepted=4 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal] placedObjects=4 piece=marker rot=0 target=marker-seat feedback=""
+I 17:15:54.508 ECHOES attempt n=12 run=2 step=5 piece=marker rot=0 target=marker-seat accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.508 ECHOES accepted placement=p5-marker rot=0 count=5
+I 17:15:54.508 ECHOES complete run=2 accepted=5 placedObjects=5
+I 17:15:54.508 ECHOES callback-scheduled name=clear-success-note run=2 delay=8s
+I 17:15:54.508 ECHOES progress before=4 after=5
+I 17:15:54.508 ECHOES state[after-confirm] run=2 mode=complete overlay=none complete=true step=done accepted=5 ids=[p1-left-pillar,p2-right-pillar,p3-beam,p4-pedestal,p5-marker] placedObjects=5 piece=null rot=0 target=null feedback="Placed: wedge marker on Marker seat. 5 of 5 accepted."
+I 17:15:54.508 ECHOES test PASS A6 re-place final reaches completion once
+I 17:15:54.508 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.508 ECHOES replay from=complete run=3
+I 17:15:54.509 ECHOES state[after-replay] run=3 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.509 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.509 ECHOES test PASS A7 replay from completion · {"run":3,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.509 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.509 ECHOES state[after-select-piece] run=3 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.509 ECHOES select-target target=left-pad
+I 17:15:54.509 ECHOES state[after-select-target] run=3 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:15:54.509 ECHOES attempt n=1 run=3 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.510 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:15:54.510 ECHOES callback-scheduled name=clear-success-note run=3 delay=8s
+I 17:15:54.510 ECHOES progress before=0 after=1
+I 17:15:54.510 ECHOES state[after-confirm] run=3 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.510 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.510 ECHOES state[after-select-piece] run=3 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.510 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.510 ECHOES replay from=active run=4
+I 17:15:54.510 ECHOES state[after-replay] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.510 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.510 ECHOES test PASS A7 replay from active · {"run":4,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.510 ECHOES select-piece piece=beam rot=90
+I 17:15:54.511 ECHOES state[after-select-piece] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=beam rot=90 target=null feedback=""
+I 17:15:54.511 ECHOES select-target target=left-pad
+I 17:15:54.511 ECHOES state[after-select-target] run=4 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=beam rot=90 target=left-pad feedback=""
+I 17:15:54.511 ECHOES attempt n=1 run=4 step=1 piece=beam rot=90 target=left-pad accepted=false mismatch=piece differing=piece msg="Not this piece: that is the long beam. Choose the square pillar."
+I 17:15:54.511 ECHOES progress before=0 after=0
+I 17:15:54.511 ECHOES state[after-confirm] run=4 mode=correction overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=beam rot=90 target=left-pad feedback="Not this piece: that is the long beam. Choose the square pillar."
+I 17:15:54.511 ECHOES test PASS A7 correction state reached · Not this piece: that is the long beam. Choose the square pillar.
+I 17:15:54.511 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.511 ECHOES replay from=correction run=5
+I 17:15:54.511 ECHOES state[after-replay] run=5 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.511 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.511 ECHOES test PASS A7 replay from correction · {"run":5,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.511 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.512 ECHOES state[after-select-piece] run=5 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.512 ECHOES select-target target=left-pad
+I 17:15:54.512 ECHOES state[after-select-target] run=5 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:15:54.512 ECHOES attempt n=1 run=5 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.512 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:15:54.512 ECHOES callback-scheduled name=clear-success-note run=5 delay=8s
+I 17:15:54.512 ECHOES progress before=0 after=1
+I 17:15:54.512 ECHOES state[after-confirm] run=5 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.512 ECHOES help-open step=2 accepted=1
+I 17:15:54.512 ECHOES state[after-help-open] run=5 mode=help overlay=help complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.513 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.513 ECHOES replay from=help run=6
+I 17:15:54.513 ECHOES state[after-replay] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.513 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.513 ECHOES test PASS A7 replay from help · {"run":6,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.513 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.513 ECHOES state[after-select-piece] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.513 ECHOES select-target target=left-pad
+I 17:15:54.513 ECHOES state[after-select-target] run=6 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:15:54.513 ECHOES attempt n=1 run=6 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.513 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:15:54.513 ECHOES callback-scheduled name=clear-success-note run=6 delay=8s
+I 17:15:54.514 ECHOES progress before=0 after=1
+I 17:15:54.514 ECHOES state[after-confirm] run=6 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.514 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.514 ECHOES state[after-select-piece] run=6 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.514 ECHOES turn delta=90 rot=90
+I 17:15:54.514 ECHOES state[after-turn] run=6 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=90 target=null feedback=""
+I 17:15:54.514 ECHOES select-target target=right-pad
+I 17:15:54.514 ECHOES state[after-select-target] run=6 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=90 target=right-pad feedback=""
+I 17:15:54.514 ECHOES pause step=2 accepted=1
+I 17:15:54.514 ECHOES state[after-pause] run=6 mode=paused overlay=paused complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=pillar rot=90 target=right-pad feedback=""
+I 17:15:54.514 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.515 ECHOES replay from=paused run=7
+I 17:15:54.515 ECHOES state[after-replay] run=7 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.515 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.515 ECHOES test PASS A7 replay from pause · {"run":7,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:15:54.515 ECHOES test PASS A7 assembly world position unchanged by replays · (0.00,-24.25,-90.00) -> (0.00,-24.25,-90.00)
+I 17:15:54.515 ECHOES select-piece piece=pillar rot=0
+I 17:15:54.515 ECHOES state[after-select-piece] run=7 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=null feedback=""
+I 17:15:54.515 ECHOES select-target target=left-pad
+I 17:15:54.515 ECHOES state[after-select-target] run=7 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=pillar rot=0 target=left-pad feedback=""
+I 17:15:54.515 ECHOES attempt n=1 run=7 step=1 piece=pillar rot=0 target=left-pad accepted=true mismatch=none differing= msg="Placed."
+I 17:15:54.515 ECHOES accepted placement=p1-left-pillar rot=0 count=1
+I 17:15:54.516 ECHOES callback-scheduled name=clear-success-note run=7 delay=8s
+I 17:15:54.516 ECHOES progress before=0 after=1
+I 17:15:54.516 ECHOES state[after-confirm] run=7 mode=active overlay=none complete=false step=2 accepted=1 ids=[p1-left-pillar] placedObjects=1 piece=null rot=0 target=null feedback="Placed: square pillar on Left pad. 1 of 5 accepted. Next step is shown above."
+I 17:15:54.516 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:15:54.516 ECHOES replay from=active run=8
+I 17:15:54.516 ECHOES state[after-replay] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:15:54.516 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:16:02.497 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.497 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.497 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.497 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.497 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.497 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.497 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.497 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=2 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=3 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=5 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.498 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=6 currentRun=8
+I 17:16:02.498 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:02.499 ECHOES stale-callback-dropped name=clear-success-note scheduledRun=7 currentRun=8
+I 17:16:02.499 ECHOES state[after-stale-callback] run=8 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:03.507 ECHOES test PASS A7 stale delayed callback cannot mutate new run · {"run":8,"overlay":"none","step":0,"ids":[],"placed":0,"piece":null,"rot":0,"target":null}
+I 17:16:03.507 ECHOES pose[before-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:16:03.508 ECHOES replay from=active run=9
+I 17:16:03.508 ECHOES state[after-replay] run=9 mode=active overlay=none complete=false step=1 accepted=0 ids=[] placedObjects=0 piece=null rot=0 target=null feedback="Started over: Step 1 of 5. Pieces and choices are cleared."
+I 17:16:03.508 ECHOES pose[after-replay] buildWorld=(0.00,-24.25,-90.00) buildRotY=0.0 camera=(0.00,0.00,0.00)
+I 17:16:03.508 ECHOES test END pass=31 fail=0

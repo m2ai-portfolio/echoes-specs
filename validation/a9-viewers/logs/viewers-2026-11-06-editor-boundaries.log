@@ -1,0 +1,19 @@
+# Editor events for the A9 viewer window on 2026-11-06 (20:57:54 to 21:17:46 Central). Source:
+# LensStudioLog-2026-11-06-20-57-54-706-22375.txt (whole file; md5 df959cde5f5d9a8c9dd95bc4d2c88fba when copied at the
+# start of Increment 15). Analytics bodies are omitted. HEAD during the window was 525fb2a (a9c013f was committed at 21:17:43).
+I 20:57:54.766  Lens Studio process starts (new editor session)
+I 20:57:56.245  OAuthController Authorized; Next OAuth token refresh: Sat Nov 7 03:45:33 2026 GMT (21:45:33 Central, after the window)
+I 20:57:56.247  [MCP] Server started: http://localhost:50040/mcp   (server only; no client connected until 21:17:46)
+I 20:58:10.824  "Opening project "Echoes"" finished in 14.59 s
+I 20:58:12.811  Lens has been reset (x7 to 20:58:13.380; project-open startup, not an operator reset)
+I 20:58:14.268  ECHOES start task=signal-arch v1 variant=valid canStart=true  (lens run 1 of viewer 1's segment)
+#   20:58:21.911-.913  W  Agents-Docs plugin could not fetch AGENTS.md / editor.d.ts from Contentful (editor plugin, not the lens)
+#   21:00:29.130-.131  W  GLSLPreprocessor system-include warnings (editor shader cache, not the lens)
+#   Human input (touch-start) runs 20:59:16.672 to 21:02:53.493 (viewer 1 segment).
+#   No input from 21:02:53.638 to 21:04:10.183 (76.5 s): the inferred seat change. Nothing in the log marks who operated.
+I 21:04:43.999  Lens has been reset (x2; operator Preview reset: no OAuth event near it, no MCP client connected)
+#   Human input runs 21:04:10.183 to 21:05:15.825 (second segment). Last ECHOES line 21:05:22.865 (success note cleared).
+#   No log line of any kind between 21:05:22.865 and 21:17:46.820.
+I 21:17:46.820  [MCP] Client connected: claude-code v2.1.318 (this Increment 15 agent; the window ends here)
+# LENSSTUDIO_AI_TOOL_CALL events in the whole file: 0. No injection, LEAF run, or capture occurred in the window.
+# No [Preview N] E/W/F line and no lens network line in the window.
