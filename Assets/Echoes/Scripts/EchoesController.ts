@@ -33,16 +33,38 @@
 // (active work, piece + attachment chosen, no open correction), the Confirm
 // label now pulses gently and the status gains a line "Press Confirm to place".
 // The cue is re-evaluated on every refresh: any state change re-phases or stops it.
+//
+// Increment 22 (richness pass 1, visual only): a workshop set, piece finishes,
+// a fresnel ghost preview, a slate base with an inlaid FRONT arrow, and soft
+// contact shadows, all built by EchoesLook.ts. Task state, placement rules,
+// text, control positions, and colliders are unchanged.
+//
+// Increment 23 (mission layer): the same task, wrapped in a repair story. A dark
+// relay beacon stands to the right (EchoesMission.ts); a short intro in Echoes'
+// voice opens the panel until the first accepted placement; every instruction,
+// correction, help, pause, undo, replay, and completion string speaks as Echoes;
+// completion lights the beacon (reversed by Undo, reset by Replay); accepted
+// pieces settle with a pulse ring; select/accept/error sounds play. The state
+// machine, placement rules, correction priority, control positions, and the
+// disclosure line are unchanged.
 
 import {Interactable} from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable"
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider"
 import {BackPlate} from "SpectaclesUIKit.lspkg/Scripts/BackPlate"
 import {Button} from "SpectaclesUIKit.lspkg/Scripts/Components/Button/Button"
+import {boxMesh, MeshAccumulator} from "./EchoesMeshes"
+import {EchoesLook} from "./EchoesLook"
+import {EchoesMission} from "./EchoesMission"
 import {Attempt, evaluateAttempt} from "./PlacementRules"
 import {normalizeRotation, PieceDef, SIGNAL_ARCH_V1, TargetDef, TaskDef, validateTask} from "./SignalArchTask"
 
 const PIECE_MAT = requireAsset("../Materials/EchoesPiece.mat") as Material
 const GHOST_MAT = requireAsset("../Materials/EchoesGhost.mat") as Material
+// Increment 22: candidate ghost preview uses a fresnel shader (faint fill,
+// bright rim and edges); see Materials/echoes_ghost_fresnel.graphShader.
+const GHOST_FRESNEL_MAT = requireAsset("../Materials/EchoesGhostFresnel.mat") as Material
+const GHOST_TINT = new vec4(0.82, 0.94, 1.0, 0.9)
+const SOFT_SHADOW_MAT = requireAsset("../Materials/EchoesSoftShadow.mat") as Material
 
 const DEG = Math.PI / 180
 
@@ -98,6 +120,14 @@ const CONFIRM_CUE_LINE = "\nPress Confirm to place"
 /** How long the "Placed: …" note stays before getting out of the way (s). */
 const SUCCESS_NOTE_SECONDS = 8
 
+/** Increment 23: the story intro in Echoes' voice (correction area, until the first accepted placement). */
+const INTRO_TEXT = "The relay's beacon went dark. Rebuild the signal arch with me \u2014 I'll keep your place."
+/** Increment 23: completion headline (instruction line) once the arch is complete. */
+const COMPLETE_HEADLINE = "SIGNAL RESTORED \u2014 the relay is back online."
+/** The intro gives way to the compact panel with this fade-in (s). */
+const INTRO_FADE_SECONDS = 0.45
+const DISCLOSURE_TEXT = "Virtual build demo \u00b7 enlarged pieces \u00b7 no physical bricks are recognized"
+
 // Text sizes. Text.size is the em-square: em cm = size / 43.886.
 // 53 → 1.21 cm em, the floor for essential guidance text at this scale.
 const TEXT = {
@@ -150,6 +180,13 @@ export interface EchoesTestState {
   statusText: string
   /** True while the Confirm cue (pulse + "Press Confirm to place" line) is shown. */
   confirmCue: boolean
+  /** Increment 23: the story intro is shown in the correction area. */
+  introShown: boolean
+  /** Increment 23: the persistent disclosure line as displayed. */
+  disclosureText: string
+  /** Increment 23: beacon target state (lit = complete) and shown level 0…1. */
+  beaconLit: boolean
+  beaconLevel: number
   /** What the correction / help / pause / completion area shows. */
   panelText: string
   stagingShown: boolean
@@ -184,77 +221,8 @@ interface ButtonView {
 }
 
 // ── Mesh construction ────────────────────────────────────────────────────────
-
-class MeshAccumulator {
-  verts: number[] = []
-  indices: number[] = []
-  private count = 0
-
-  quad(a: vec3, b: vec3, c: vec3, d: vec3, n: vec3) {
-    // a,b,c,d counter-clockwise when viewed from the side the normal faces.
-    const base = this.count
-    for (const p of [a, b, c, d]) {
-      this.verts.push(p.x, p.y, p.z, n.x, n.y, n.z, 0, 0)
-    }
-    this.indices.push(base, base + 1, base + 2, base, base + 2, base + 3)
-    this.count += 4
-  }
-
-  tri(a: vec3, b: vec3, c: vec3, n: vec3) {
-    const base = this.count
-    for (const p of [a, b, c]) {
-      this.verts.push(p.x, p.y, p.z, n.x, n.y, n.z, 0, 0)
-    }
-    this.indices.push(base, base + 1, base + 2)
-    this.count += 3
-  }
-
-  /** Convex planar polygon; winding and normal are fixed to face away from `inside`. */
-  poly(points: vec3[], inside: vec3) {
-    let pts = points
-    let n = pts[1].sub(pts[0]).cross(pts[2].sub(pts[0])).normalize()
-    let centroid = vec3.zero()
-    for (const p of pts) centroid = centroid.add(p)
-    centroid = centroid.uniformScale(1 / pts.length)
-    if (n.dot(centroid.sub(inside)) < 0) {
-      pts = pts.slice().reverse()
-      n = n.uniformScale(-1)
-    }
-    const base = this.count
-    for (const p of pts) this.verts.push(p.x, p.y, p.z, n.x, n.y, n.z, 0, 0)
-    for (let i = 1; i < pts.length - 1; i++) this.indices.push(base, base + i, base + i + 1)
-    this.count += pts.length
-  }
-
-  build(): RenderMesh {
-    const mb = new MeshBuilder([
-      {name: "position", components: 3},
-      {name: "normal", components: 3, normalized: true},
-      {name: "texture0", components: 2},
-    ])
-    mb.topology = MeshTopology.Triangles
-    mb.indexType = MeshIndexType.UInt16
-    mb.appendVerticesInterleaved(this.verts)
-    mb.appendIndices(this.indices)
-    mb.updateMesh()
-    return mb.getMesh()
-  }
-}
-
-/** Box with origin at bottom-center. */
-function boxMesh(w: number, h: number, d: number): RenderMesh {
-  const x = w / 2
-  const z = d / 2
-  const m = new MeshAccumulator()
-  const v = (a: number, b: number, c: number) => new vec3(a, b, c)
-  m.quad(v(-x, 0, z), v(x, 0, z), v(x, h, z), v(-x, h, z), v(0, 0, 1)) // front +Z
-  m.quad(v(x, 0, -z), v(-x, 0, -z), v(-x, h, -z), v(x, h, -z), v(0, 0, -1)) // back
-  m.quad(v(x, 0, z), v(x, 0, -z), v(x, h, -z), v(x, h, z), v(1, 0, 0)) // right
-  m.quad(v(-x, 0, -z), v(-x, 0, z), v(-x, h, z), v(-x, h, -z), v(-1, 0, 0)) // left
-  m.quad(v(-x, h, z), v(x, h, z), v(x, h, -z), v(-x, h, -z), v(0, 1, 0)) // top
-  m.quad(v(-x, 0, -z), v(x, 0, -z), v(x, 0, z), v(-x, 0, z), v(0, -1, 0)) // bottom
-  return m.build()
-}
+// MeshAccumulator and boxMesh live in EchoesMeshes.ts (Increment 22: shared
+// with the workshop set; vertices now carry planar UVs for the finishes).
 
 /** Wedge: full height at the back (-Z), thin edge at the front (+Z) — it "points" +Z at rotation 0. */
 function wedgeMesh(w: number, h: number, d: number): RenderMesh {
@@ -309,13 +277,6 @@ function pointedWedgeArrowMesh(w: number, h: number, d: number): RenderMesh {
 function pointerMesh(w: number, h: number): RenderMesh {
   const m = new MeshAccumulator()
   m.tri(new vec3(0, 0, 0), new vec3(w / 2, h, 0), new vec3(-w / 2, h, 0), new vec3(0, 0, 1))
-  return m.build()
-}
-
-/** Flat triangle in the XZ plane pointing +Z (toward the viewer), lying at y = 0. */
-function floorArrowMesh(w: number, len: number): RenderMesh {
-  const m = new MeshAccumulator()
-  m.tri(new vec3(0, 0, len), new vec3(w / 2, 0, 0), new vec3(-w / 2, 0, 0), new vec3(0, 1, 0))
   return m.build()
 }
 
@@ -378,6 +339,10 @@ export class EchoesController extends BaseScriptComponent {
   private confirmCueOn = false
   private confirmCueKey = ""
   private confirmCueTime = 0
+  /** Increment 23: intro shown until the first accepted placement of the lens session. */
+  private introActive = true
+  private feedbackTint: vec4 = WARN_TINT
+  private feedbackFade = INTRO_FADE_SECONDS
 
   // Scene
   private meshes: {[pieceId: string]: RenderMesh} = {}
@@ -410,6 +375,9 @@ export class EchoesController extends BaseScriptComponent {
   private previewDecalVisual: RenderMeshVisual
   private previewMat: Material
   private screenProbes: {name: string; obj: SceneObject; offset: vec3}[] = []
+  private look: EchoesLook
+  private mission: EchoesMission
+  private disclosureText: Text
 
   onAwake() {
     this.task = this.resolveTask(this.taskVariant as TaskVariant)
@@ -419,6 +387,17 @@ export class EchoesController extends BaseScriptComponent {
     this.buildRoot = this.child(this.sceneObject, "Build")
     this.placedRoot = this.child(this.buildRoot, "Accepted Pieces")
     this.decalMat = this.ghostMaterial(new vec4(1, 1, 1, 0.92))
+    this.look = new EchoesLook(PIECE_MAT, GHOST_MAT, SOFT_SHADOW_MAT)
+    // Environment first in the hierarchy: it has no colliders or interactables.
+    this.look.buildWorkshop(this.sceneObject)
+    // Increment 23: the relay beacon (the stake) and the effects/audio layer.
+    this.mission = new EchoesMission(
+      (finish, color) => this.look.finishMaterial(finish as any, color),
+      GHOST_MAT,
+      SOFT_SHADOW_MAT,
+      (e, d) => this.log(e, d)
+    )
+    this.mission.build(this.sceneObject, this.buildRoot)
     this.buildMeshes()
     this.buildBase()
     this.buildTargets()
@@ -436,7 +415,12 @@ export class EchoesController extends BaseScriptComponent {
       this.log("touch-start", `x=${p.x.toFixed(4)} y=${p.y.toFixed(4)}`)
     })
 
-    this.createEvent("UpdateEvent").bind(() => this.animateConfirmCue())
+    this.createEvent("UpdateEvent").bind(() => {
+      this.animateConfirmCue()
+      const dt = getDeltaTime()
+      this.mission.update(dt)
+      this.animateFeedbackFade(dt)
+    })
 
     this.createEvent("OnStartEvent").bind(() => {
       this.bindTargetEvents()
@@ -503,6 +487,11 @@ export class EchoesController extends BaseScriptComponent {
     if (this.decals[pieceId]) this.visual(this.child(so, "Tip Arrow"), this.decals[pieceId], this.decalMat)
   }
 
+  /** Material for a piece in its finish family (Increment 22), tinted with its color. */
+  private pieceMaterial(piece: PieceDef): Material {
+    return this.look.finishMaterial(this.look.pieceFinish(piece.id), rgba(piece.color))
+  }
+
   private text(
     parent: SceneObject,
     name: string,
@@ -562,9 +551,13 @@ export class EchoesController extends BaseScriptComponent {
   private buildBase() {
     const b = this.task.base.size
     const base = this.child(this.buildRoot, "Supplied Base")
-    this.visual(base, boxMesh(b[0], b[1], b[2]), this.litMaterial(rgba(this.task.base.color)))
-    const arrow = this.child(this.buildRoot, "Forward Arrow", new vec3(0, b[1] + 0.05, b[2] / 2 - 5))
-    this.visual(arrow, floorArrowMesh(4, 4.5), this.ghostMaterial(new vec4(1, 1, 1, 0.95)))
+    // Increment 22: slate finish, with a soft contact shadow on the build mat.
+    this.visual(base, boxMesh(b[0], b[1], b[2]), this.look.finishMaterial("slate", rgba(this.task.base.color)))
+    this.look.contactShadow(base, b[0], b[2], 0.02, 0.45, 2.2)
+    // Inlaid FRONT arrow (shaft + head over a recessed groove), same place and
+    // tip (z = b[2]/2 - 0.5) as the Increments 1–21 flat triangle.
+    const arrow = this.child(this.buildRoot, "Forward Arrow")
+    this.look.buildFrontArrow(arrow, new vec3(0, b[1], b[2] / 2 - 5))
     this.text(this.buildRoot, "Front Label", "FRONT", TEXT.base, SOFT, new vec3(0, -1.4, b[2] / 2 + 0.2), [-4, 4, -0.8, 0.8])
   }
 
@@ -606,7 +599,8 @@ export class EchoesController extends BaseScriptComponent {
 
   private buildPreview() {
     this.previewObj = this.child(this.buildRoot, "Candidate Preview (not placed)")
-    this.previewMat = this.ghostMaterial(new vec4(1, 1, 1, 0.35))
+    this.previewMat = GHOST_FRESNEL_MAT.clone()
+    this.previewMat.mainPass.baseColor = GHOST_TINT
     this.previewVisual = this.visual(this.previewObj, this.meshes[this.task.pieces[0] ? this.task.pieces[0].id : ""] || boxMesh(1, 1, 1), this.previewMat)
     this.previewDecal = this.child(this.previewObj, "Tip Arrow")
     this.previewDecalVisual = this.visual(this.previewDecal, boxMesh(0.1, 0.1, 0.1), this.decalMat)
@@ -619,7 +613,7 @@ export class EchoesController extends BaseScriptComponent {
     const content = this.child(root, "Content", new vec3(0, 0, 0.6))
     const half = GUIDANCE.w / 2 - 1
     // Persistent truthfulness label, always first in the panel.
-    this.text(content, "Virtual Demo Disclosure", "Virtual build demo · enlarged pieces · no physical bricks are recognized", TEXT.disclosure, SOFT, new vec3(0, 8.4, 0), [-half, half, -0.6, 0.6])
+    this.disclosureText = this.text(content, "Virtual Demo Disclosure", DISCLOSURE_TEXT, TEXT.disclosure, SOFT, new vec3(0, 8.4, 0), [-half, half, -0.6, 0.6])
     this.progressText = this.text(content, "Progress", "", TEXT.progress, SOFT, new vec3(0, 6.6, 0), [-half, half, -0.8, 0.8])
     this.instructionText = this.text(content, "Instruction", "", TEXT.instruction, WHITE, new vec3(0, 4.0, 0), [-half, half, -1.6, 1.6], {wrap: true})
     this.statusText = this.text(content, "Candidate Status", "", TEXT.status, SOFT, new vec3(0, 1.5, 0), [-half, half, -0.7, 0.7])
@@ -644,7 +638,7 @@ export class EchoesController extends BaseScriptComponent {
       const mini = this.child(so, "Miniature", new vec3(0, 0.7 - (piece.size[1] * s) / 2, 1.2))
       mini.getTransform().setLocalScale(new vec3(s, s, s))
       mini.getTransform().setLocalRotation(quat.angleAxis(25 * DEG, vec3.right()))
-      this.pieceVisual(mini, piece.id, this.litMaterial(rgba(piece.color)))
+      this.pieceVisual(mini, piece.id, this.pieceMaterial(piece))
       btn.onTriggerUp.add(() => this.onPieceChosen(piece.id))
       this.palette.push({piece, button: btn, selectedText})
       this.screenProbes.push({name: `piece:${piece.id}`, obj: so, offset: vec3.zero()})
@@ -751,6 +745,7 @@ export class EchoesController extends BaseScriptComponent {
     this.rotation = normalizeRotation(piece.stagingRotation)
     this.setFeedback("", "none")
     this.log("select-piece", `piece=${pieceId} rot=${this.rotation}`)
+    this.mission.play("select")
     this.refresh()
     this.logState("after-select-piece")
   }
@@ -758,7 +753,8 @@ export class EchoesController extends BaseScriptComponent {
   private onTurn(delta: number) {
     if (this.taskInputBlocked("turn")) return
     if (!this.selectedPieceId) {
-      this.setFeedback("Pick a piece from the palette first, then turn it.", "warn")
+      this.setFeedback("Choose a piece from Pieces first, then I can turn it.", "warn")
+      this.mission.play("error")
       this.refresh()
       this.log("turn-ignored", "no candidate")
       return
@@ -766,6 +762,7 @@ export class EchoesController extends BaseScriptComponent {
     this.rotation = normalizeRotation(this.rotation + delta)
     this.setFeedback("", "none") // a correction about the previous turn is now stale
     this.log("turn", `delta=${delta} rot=${this.rotation}`)
+    this.mission.play("select")
     this.refresh()
     this.logState("after-turn")
   }
@@ -782,6 +779,7 @@ export class EchoesController extends BaseScriptComponent {
     this.targetStamp = this.stamp()
     this.setFeedback("", "none")
     this.log("select-target", `target=${targetId}`)
+    this.mission.play("select")
     this.refresh()
     this.logState("after-select-target")
   }
@@ -824,6 +822,7 @@ export class EchoesController extends BaseScriptComponent {
       this.log("confirm-ignored", "nothing selected; success note kept")
     } else {
       this.setFeedback(verdict.message, "warn")
+      this.mission.play("error")
     }
     this.refresh()
     this.log("progress", `before=${before} after=${this.acceptedIds.length}`)
@@ -834,17 +833,38 @@ export class EchoesController extends BaseScriptComponent {
     const step = this.task.placements[this.stepIndex]
     const piece = this.pieceById(step.pieceId)
     const target = this.targetById(step.targetId)
-    const so = this.child(this.placedRoot, `Placed ${step.id}`, new vec3(target.position[0], target.position[1], target.position[2]))
+    const seat = new vec3(target.position[0], target.position[1], target.position[2])
+    const so = this.child(this.placedRoot, `Placed ${step.id}`, seat)
     const placedRotation = this.rotation
     so.getTransform().setLocalRotation(yaw(placedRotation))
-    this.pieceVisual(so, piece.id, this.litMaterial(rgba(piece.color)))
+    this.pieceVisual(so, piece.id, this.pieceMaterial(piece))
+    // Soft contact shadow on the base top (Increment 22, visual only): under a
+    // piece standing on the base, or below a piece bridging two supports (the
+    // beam). Pieces resting on a single narrower piece get none, so no shadow
+    // quad ever hangs past a support's edge in mid-air.
+    const onBase = target.requires.length === 0
+    const bridging = target.requires.length > 1
+    if (onBase || bridging) {
+      const shadowY = this.task.base.size[1] - target.position[1] + 0.03
+      this.look.contactShadow(so, piece.size[0], piece.size[2], shadowY, bridging ? 0.3 : 0.4, bridging ? 2.5 : 1.6)
+    }
     this.placedObjs.push(so)
     this.acceptedIds.push(step.id)
     this.stepIndex++
     this.clearCandidate()
+    // Increment 23: settle (250 ms ease-out drop) with a pulse ring at the seat.
+    // Visual only: the piece is already accepted and parented; it ends exactly on its seat.
+    this.mission.settle(so, seat, yaw(placedRotation), piece.size[0], piece.size[2])
+    this.mission.play("accept")
+    if (this.introActive) {
+      // The story intro gives way to the compact panel (fade-in of the panel text).
+      this.introActive = false
+      this.feedbackFade = 0
+      this.log("intro", "end reason=first-accepted-placement")
+    }
     const total = this.task.placements.length
-    const next = this.stepIndex < total ? " Next step is shown above." : ""
-    const seq = this.setFeedback(`Placed: ${piece.noun} on ${target.label}. ${this.acceptedIds.length} of ${total} accepted.${next}`, "ok")
+    const next = this.stepIndex < total ? " I've put your next step above." : ""
+    const seq = this.setFeedback(`Placed the ${piece.noun} on ${target.label}. ${this.acceptedIds.length} of ${total} accepted.${next}`, "ok")
     this.log("accepted", `placement=${step.id} rot=${placedRotation} count=${this.acceptedIds.length}`)
     if (this.isComplete()) {
       this.log("complete", `run=${this.runId} accepted=${this.acceptedIds.length} placedObjects=${this.placedRoot.getChildrenCount()}`)
@@ -905,13 +925,15 @@ export class EchoesController extends BaseScriptComponent {
     const before = this.acceptedIds.length
     const id = this.acceptedIds.pop()
     const so = this.placedObjs.pop()
+    this.mission.clearEffects(this.settledPieces())
     if (so) so.destroy()
     this.stepIndex--
     const step = this.task.placements[this.stepIndex]
     const piece = this.pieceById(step.pieceId)
     const target = this.targetById(step.targetId)
     this.clearCandidate()
-    this.setFeedback(`Undone: removed the ${piece.noun} from ${target.label}. Step ${this.stepIndex + 1} is open again.`, "info")
+    const dark = wasComplete ? " The beacon is dark until it's back." : ""
+    this.setFeedback(`Took back the ${piece.noun} from ${target.label}. Step ${this.stepIndex + 1} is yours again.${dark}`, "info")
     this.log("undo", `removed=${id} wasComplete=${wasComplete} before=${before} after=${this.acceptedIds.length}`)
     this.refresh()
     this.logState("after-undo")
@@ -922,6 +944,9 @@ export class EchoesController extends BaseScriptComponent {
     const from = this.mode()
     this.logPose("before-replay")
     this.runId++
+    const wasLit = this.mission.beaconLit
+    this.mission.clearEffects([])
+    this.mission.resetBeacon()
     for (const so of this.placedObjs) so.destroy()
     this.placedObjs = []
     this.acceptedIds = []
@@ -929,7 +954,9 @@ export class EchoesController extends BaseScriptComponent {
     this.overlay = "none"
     this.attemptCount = 0
     this.clearCandidate()
-    this.setFeedback(`Started over: Step 1 of ${this.task.placements.length}. Pieces and choices are cleared.`, "info")
+    // Only mention the beacon going dark when it was actually lit (Replay from completion).
+    const dark = wasLit ? " The beacon is dark again;" : ""
+    this.setFeedback(`Fresh start: Step 1 of ${this.task.placements.length}.${dark} I cleared the pieces and choices.`, "info")
     this.log("replay", `from=${from} run=${this.runId}`)
     this.refresh()
     this.logState("after-replay")
@@ -950,7 +977,7 @@ export class EchoesController extends BaseScriptComponent {
     const total = this.task.placements.length
     if (!this.canStart) {
       this.progressText.text = "Cannot start"
-      this.instructionText.text = "This build's task data is incomplete, so no placement can be accepted."
+      this.instructionText.text = "I can't start: this build's task data is incomplete, so no placement can be accepted."
       this.feedbackText.text = `Problem: ${this.taskErrors.join("; ")}`
       this.feedbackText.textFill.color = WARN_TINT
       for (const b of this.allButtons()) {
@@ -979,10 +1006,10 @@ export class EchoesController extends BaseScriptComponent {
     // Progress and instruction.
     if (paused) {
       this.progressText.text = `PAUSED · ${counts}`
-      this.instructionText.text = "Paused. Nothing can be placed until you press Resume."
+      this.instructionText.text = "Paused. I'm holding your place; nothing changes until Resume."
     } else {
       this.progressText.text = `${help ? "HELP · " : ""}${this.task.title} v${this.task.version} · ${counts}`
-      this.instructionText.text = complete ? `${this.task.title} complete: all ${total} placements accepted.` : step.instruction
+      this.instructionText.text = complete ? COMPLETE_HEADLINE : step.instruction
     }
 
     // Candidate status line (kept visible in help and pause: it is preserved).
@@ -998,22 +1025,32 @@ export class EchoesController extends BaseScriptComponent {
       this.statusText.text = `Chosen: ${pieceStatus} · ${target ? target.label : "no attachment"}${awaitingConfirm ? CONFIRM_CUE_LINE : ""}`
     }
 
-    // Correction / help / pause / completion area.
+    // Correction / help / pause / completion area. The story intro shows here
+    // (Increment 23) while nothing else is to be said, until the first accept.
+    let tint: vec4
     if (help) {
       this.feedbackText.text = this.helpText()
-      this.feedbackText.textFill.color = HELP_TINT
+      tint = HELP_TINT
     } else if (paused) {
       const cand = piece ? `, your ${piece.label.toLowerCase()} at ${this.rotation}°` : ""
-      this.feedbackText.text = `Kept: ${this.acceptedIds.length} placed, Step ${complete ? total : this.stepIndex + 1}${cand}. Press Resume to go on.`
-      this.feedbackText.textFill.color = INFO_TINT
+      this.feedbackText.text = `Kept everything: ${this.acceptedIds.length} placed, Step ${complete ? total : this.stepIndex + 1}${cand}. Resume when you're ready.`
+      tint = INFO_TINT
     } else if (complete) {
-      this.feedbackText.text = "Undo reopens the last placement. Replay starts a new run."
-      this.feedbackText.textFill.color = OK_TINT
+      this.feedbackText.text = "We did it together. Undo reopens the last placement; Replay starts a new run."
+      tint = OK_TINT
+    } else if (this.introShownNow()) {
+      // While the Confirm cue adds its second status line, the intro drops one line so they never overlap.
+      this.feedbackText.text = (awaitingConfirm ? "\n" : "") + INTRO_TEXT
+      tint = INFO_TINT
     } else {
       this.feedbackText.text = this.feedback
-      this.feedbackText.textFill.color =
-        this.feedbackKind === "ok" ? OK_TINT : this.feedbackKind === "info" ? INFO_TINT : WARN_TINT
+      tint = this.feedbackKind === "ok" ? OK_TINT : this.feedbackKind === "info" ? INFO_TINT : WARN_TINT
     }
+    this.feedbackTint = tint
+    this.feedbackText.textFill.color = this.fadedTint()
+
+    // Beacon (Increment 23): lit exactly while the task is complete.
+    this.mission.setBeacon(complete, complete ? "complete" : "undo")
 
     // Targets: offer unfilled attachments whose supports are in place. Hidden
     // while paused; visible but not selectable while help is open.
@@ -1048,7 +1085,7 @@ export class EchoesController extends BaseScriptComponent {
       const maxDim = Math.max(piece.size[0], piece.size[1], piece.size[2])
       const s = Math.min(3.4 / maxDim, 0.45)
       this.stagingVisual.mesh = this.meshes[piece.id]
-      this.stagingMat.mainPass.baseColor = rgba(piece.color)
+      this.look.applyFinish(this.stagingMat, this.look.pieceFinish(piece.id), rgba(piece.color))
       this.setDecal(this.stagingDecal, this.stagingDecalVisual, piece.id)
       const t = this.stagingModel.getTransform()
       t.setLocalScale(new vec3(s, s, s))
@@ -1079,7 +1116,7 @@ export class EchoesController extends BaseScriptComponent {
   private helpText(): string {
     const total = this.task.placements.length
     if (this.isComplete()) {
-      return `All ${total} placements are accepted. Undo reopens the last one; Replay starts over. Help never places a piece.`
+      return `All ${total} placements are accepted and the beacon is lit. Undo reopens the last one; Replay starts over. I never place a piece for you.`
     }
     const step = this.task.placements[this.stepIndex]
     const piece = this.pieceById(step.pieceId)
@@ -1088,7 +1125,7 @@ export class EchoesController extends BaseScriptComponent {
       `Piece: the ${piece.noun} ("${piece.label}" in Pieces).\n` +
       `Turn: ${step.turnHelp}\n` +
       `Attachment: ${target.phrase} ("${target.label}"), under the white pointer.\n` +
-      `Then Confirm. Help never places a piece.`
+      `Then press Confirm; I never place a piece for you.`
     )
   }
 
@@ -1117,6 +1154,31 @@ export class EchoesController extends BaseScriptComponent {
     const label = this.confirmButton.label
     label.getSceneObject().getTransform().setLocalScale(new vec3(s, s, 1))
     label.textFill.color = vec4.lerp(WHITE, OK_TINT, w)
+  }
+
+  /** Increment 23: the intro shows in plain active work with nothing else to say, until the first accept. */
+  private introShownNow(): boolean {
+    return this.canStart && this.introActive && this.overlay === "none" && !this.isComplete() && this.feedback === ""
+  }
+
+  private fadedTint(): vec4 {
+    const k = Math.min(1, this.feedbackFade / INTRO_FADE_SECONDS)
+    const t = this.feedbackTint
+    return new vec4(t.x, t.y, t.z, t.w * (k * k * (3 - 2 * k)))
+  }
+
+  private animateFeedbackFade(dt: number) {
+    if (this.feedbackFade >= INTRO_FADE_SECONDS) return
+    this.feedbackFade = Math.min(INTRO_FADE_SECONDS, this.feedbackFade + dt)
+    this.feedbackText.textFill.color = this.fadedTint()
+  }
+
+  /** Accepted pieces with their seats, so an interrupted settle can snap them home. */
+  private settledPieces(): {so: SceneObject; seat: vec3}[] {
+    return this.placedObjs.map((so, i) => {
+      const t = this.targetById(this.task.placements[i].targetId)
+      return {so, seat: new vec3(t.position[0], t.position[1], t.position[2])}
+    })
   }
 
   private allButtons(): ButtonView[] {
@@ -1286,6 +1348,10 @@ export class EchoesController extends BaseScriptComponent {
       instructionText: this.instructionText.text,
       statusText: this.statusText.text,
       confirmCue: this.confirmCueOn,
+      introShown: this.introShownNow() && this.feedbackText.text.indexOf(INTRO_TEXT) >= 0,
+      disclosureText: this.disclosureText.text,
+      beaconLit: this.mission.beaconLit,
+      beaconLevel: this.mission.beaconLevel,
       panelText: this.feedbackText.text,
       stagingShown: this.stagingModel.isEnabledInHierarchy,
       stagingName: this.stagingName.text,
@@ -1352,7 +1418,9 @@ export class EchoesController extends BaseScriptComponent {
       this.overlay === "none" &&
       !this.isComplete() &&
       this.feedbackKind === "info" &&
-      this.feedback.indexOf("Started over") === 0 &&
+      this.feedback.indexOf("Fresh start") === 0 &&
+      !this.mission.beaconLit &&
+      this.mission.beaconLevel === 0 &&
       !this.confirmCueOn
     this.check(name, ok, this.snapshot())
   }
@@ -1479,6 +1547,11 @@ export class EchoesController extends BaseScriptComponent {
     this.check("A4 prefix 4 incomplete", this.acceptedIds.length === 4 && !this.isComplete())
     this.placeStep(4)
     this.check("A4 complete after all five, scene agrees", this.isComplete() && this.placedRoot.getChildrenCount() === total, this.snapshot())
+    this.check(
+      "Inc23 completion lights the beacon and shows the headline",
+      this.mission.beaconLit && this.instructionText.text === COMPLETE_HEADLINE && this.statusText.text === "Virtual check only: no physical model was inspected.",
+      this.instructionText.text
+    )
     this.onConfirm()
     this.onPieceChosen("pillar")
     this.check("A4 completion blocks further input", this.acceptedIds.length === total && this.selectedPieceId === null)
@@ -1490,8 +1563,9 @@ export class EchoesController extends BaseScriptComponent {
       !this.isComplete() && this.acceptedIds.length === total - 1 && this.stepIndex === total - 1 && this.instructionText.text === this.task.placements[total - 1].instruction,
       this.snapshot()
     )
+    this.check("Inc23 undo after completion darkens the beacon", !this.mission.beaconLit, `lit=${this.mission.beaconLit}`)
     this.placeStep(4)
-    this.check("A6 re-place final reaches completion once", this.isComplete() && this.acceptedIds.length === total)
+    this.check("A6 re-place final reaches completion once", this.isComplete() && this.acceptedIds.length === total && this.mission.beaconLit)
 
     // A7 · Replay from completion, active, correction, help, pause.
     this.onReplay()

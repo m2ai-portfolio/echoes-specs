@@ -1,47 +1,56 @@
-# Echoes
+# Echoes: guidance beside the work
 
-![Echoes: two real Lens Studio Preview captures under the Echoes title](docs/hero.png)
+Echoes explores how SPECS could help with everyday tasks. This working example is a seven-step spatial brick-building guide for the lower assembly of LEGO 40897. It demonstrates how an inspectable model can explain where a piece goes while keeping the current step and progress close to the task.
 
-*Hero image built from two real Lens Studio Preview captures. It is not an AI or concept illustration. Both captures appear at full size under [Screenshots](#screenshots).*
+**Current demonstration:** an enlarged virtual guide in Lens Studio's desktop Preview. The broader everyday-task concept is the goal; other task modules and physical perception are not implemented.
 
-Echoes is a companion that stays beside your work. In this demo it guides you through assembling the **Signal Arch**, an original five-piece virtual brick model, in a SPECS Lens. Each instruction appears where the work happens.
+## What works
 
-- **Guided next action.** The current step, a pointer, and a prompt for the staged candidate ("Press Confirm to place") sit beside the build.
-- **Specific correction, zero loss.** If the piece, attachment, or orientation is wrong, Echoes names the actual mismatch, checking target, then piece, then orientation. It never touches accepted work.
-- **Interruption-safe.** Help never advances the task. Pause/Resume restores the exact state. Undo removes only the latest placement, even after completion. Replay resets cleanly and drops stale callbacks.
-- **Truthful completion.** The build finishes only when all five placements and the visible assembly agree: "Virtual check only: no physical model was inspected."
+- **See the next connection.** Incoming pieces are separated from the assembly, with cyan final-position ghosts and insertion paths.
+- **Look from a useful angle.** Turn 45°, drag to orbit, switch between top and underside, adjust zoom, or return Home.
+- **Inspect every joint.** Inspect joint moves through the step's incoming parts; Return restores the previous view. There are 17 incoming pieces across seven steps.
+- **Review without losing your place.** “I placed it” records your own confirmation and advances. Back preserves your marks; Restart clears them. “All marked” is the finished-state label, not an extra action.
 
-## What it is not
+## Actual Preview captures
 
-The Lens says so on screen: "Virtual build demo · enlarged pieces · no physical bricks are recognized." It has no camera perception, no physical verification, and no AI model in the loop. It is a deterministic authored task that makes no network calls. It was built and tested entirely in Lens Studio Preview. Device comfort and hand tracking are untested because no SPECS device was available.
+These are real Lens Studio Preview captures collected during automated/injected validation, not concept images or evidence of physical recognition.
 
-## Screenshots
+Step 1, inspecting the second of four pin joints:
 
-Step 1 of 5: the guidance card, piece tray, and controls beside the base plate. Front view at 90 cm, Lens Studio Preview.
+![Step 1 pin inspection with a single cyan seat and insertion path](validation/guide-hero/captures/22-step1-inspect-joint-2-of-4-single-ghost.jpg)
 
-![Step 1 of 5 layout, front view at 90 cm](validation/increment-4/captures/a9-01-front-90cm.jpg)
+After all seven steps have been manually marked:
 
-Completion: 5 of 5 placed, with the "Virtual check only" statement.
-
-![Signal Arch complete, 5 of 5 placed](validation/increment-2/captures/07-run2-completion-5-of-5.jpg)
+![Completed virtual lower assembly, seven user-marked steps and Back/Restart controls](validation/guide-hero/captures/17-finished-all-7-marked-by-user-assembled.jpg)
 
 ## Run it
 
-See [devpost/run-instructions.md](devpost/run-instructions.md). You need Lens Studio 5.23.2 and Git LFS.
+1. Use **Lens Studio 5.23.2**. This ZIP contains materialized assets; extract it and open `Echoes.esproj`. If later obtaining a Git checkout, use Git LFS to materialize assets.
+2. Keep **Echoes 40897 Guide** enabled and **Echoes Signal Arch** disabled in the scene.
+3. In Preview, select the third input icon (Interactive), choose **Plane**, and use **SPECS 27**. Refresh Preview to start at step 1 with zero marks.
+4. Click the large controls to operate them; drag in the center to orbit. At each step, Inspect the joints, Return, then click **I placed it**.
 
-## How it was verified
+See the [setup and rehearsal instructions](devpost/run-instructions.md). No SPECS headset is required for desktop Preview.
 
-- 8 LEAF scenario suites: 220 checks, 0 failures, covering every done criterion
-- A 41-assertion in-lens state suite
-- A clean-clone rehearsal and a remote clone-from-GitHub rehearsal, each running the full story
-- Nine human Preview sessions by a first-time operator, plus comprehension testing with uncoached viewers (a 2-viewer sample, honestly recorded)
+## What the evidence establishes
 
-The full evidence trail is in [devpost/echoes-acceptance-matrix.md](devpost/echoes-acceptance-matrix.md).
+- Guide-specific LEAF suites: **24/24** control checks and **79/79** step-flow checks, including all 17 incoming joints.
+- Source checks: **29/29**; seeded state stress: **50,000 actions, zero failures**.
+- A fresh local clone compiled, started and passed the guide suites. This is local reproducibility evidence, not a public-download test.
+- A **2:14.2 local demo** is available with injected-input labeling on every frame. It is not a recording of the later human mouse pass.
 
-## How it was built
+See the [technical evidence summary](validation/guide-hero/evidence-summary.md) for tests and coverage limits. Earlier Signal Arch test counts do not establish this guide's behavior.
 
-Echoes was built in Lens Studio 5.23.2 (SPECS Base Template) with Claude Opus 5.5 as the coding agent through CLAD. It uses Spectacles Interaction Kit, UI Kit, and LEAF 2.0.2, all disclosed in [devpost/asset-record.md](devpost/asset-record.md). Scope is governed by the approved [devpost/design-brief.md](devpost/design-brief.md).
+## Limits
 
-## License / rights
+Echoes cannot see or verify physical bricks. “I placed it” is the user's statement. Physical fit, device comfort and real hand tracking are unverified. There is no live camera overlay, physical recognition or AI operator. The guide itself makes no network requests. Progress is not a claim of persistent memory across sessions.
 
-The authored content is original. Incorporated packages are disclosed in [devpost/asset-record.md](devpost/asset-record.md).
+## Approved design direction
+
+The [Echoes design brief](devpost/design-brief.md) separates the working desktop guide from future hands-free, peripheral-placement and focus-activation experiments. Its approval covers design framing, not publication or device validation.
+
+## Credits and project contents
+
+Geometry derives from the **LDraw parts library, CC BY 4.0**, with triangulation and quantization changes. See the [human-readable credits](devpost/guide-credits.md) and [per-file attribution](devpost/ldraw-attribution.json). Incorporated Snap packages retain their own terms; see the [asset record](devpost/asset-record.md).
+
+The current module covers seven steps and 17 incoming parts. The earlier Signal Arch module remains disabled in the scene. Its assets and test registrations are retained to preserve project dependencies; its test counts are not evidence for this guide. Historical development reports, conversations and planning drafts are not included in this export.

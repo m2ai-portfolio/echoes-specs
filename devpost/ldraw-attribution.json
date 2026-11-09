@@ -1,0 +1,943 @@
+{
+  "library": "LDraw official parts library",
+  "libraryUrl": "https://www.ldraw.org/",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "modifications": "Triangulated and quantized to hundredths of an LDraw unit for Echoes Lens mesh data; source parts retained in dependency record.",
+  "sourceParts": [
+    "46372",
+    "89678",
+    "67095",
+    "32062",
+    "6222",
+    "60474",
+    "27925",
+    "18674"
+  ],
+  "dependencies": {
+    "p/1-16chrd.dat": {
+      "path": "p/1-16chrd.dat",
+      "sha256": "e429dd760eb6f0cf460a74e6ebf52c023bedbdea82de7801efa1694b5a1a82e8",
+      "title": "Chord 0.0625",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4chrd.dat": {
+      "path": "p/1-4chrd.dat",
+      "sha256": "ccba3a97b5cc358754e476b78b4ce61cce5f404cd15e37471b73df3e81784aec",
+      "title": "Chord 0.25",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4cylc.dat": {
+      "path": "p/1-4cylc.dat",
+      "sha256": "fdcb54ba2e2731cbb86ea6b2fddb25c7dda060a7780629a72003e0278805dd30",
+      "title": "Cylinder Closed 0.25",
+      "author": "Mark Kennedy [mkennedy]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4cyli.dat": {
+      "path": "p/1-4cyli.dat",
+      "sha256": "5a7168952a5a3570327873b9a5802fa7b3be40967ab78c03b6a2bfd4419a1f10",
+      "title": "Cylinder 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4cylo.dat": {
+      "path": "p/1-4cylo.dat",
+      "sha256": "792a01362608c3f385dd7f01a1bd7d19cf9ed8a40f793266345cc86d1d98f3af",
+      "title": "Cylinder Open 0.25",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4cyls.dat": {
+      "path": "p/1-4cyls.dat",
+      "sha256": "aaee6ffe6e4a191d6cad4496677132eb0349303d6e48c13c7a2240dcea1db621",
+      "title": "Cylinder Sloped 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4disc.dat": {
+      "path": "p/1-4disc.dat",
+      "sha256": "3b8faa77185c576085c38f37b13c6a04e2e889eea6a7dc8c4db2d1699a33bcda",
+      "title": "Disc 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4edge.dat": {
+      "path": "p/1-4edge.dat",
+      "sha256": "9ce2de7e67bbac575d52cfdc771b9d00856efc9b88002d97db8e665e50f4d467",
+      "title": "Circle 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4ndis.dat": {
+      "path": "p/1-4ndis.dat",
+      "sha256": "ff6685838636e7ab6152356d8f09e4f00a38af0d878b0881423f5c45fb868f0c",
+      "title": "Disc Negative 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4ring1.dat": {
+      "path": "p/1-4ring1.dat",
+      "sha256": "5d34b5bae7e8a8f7c7100d61e8cf2e4c2d7a4758edeee66911d968114bed9cad",
+      "title": "Ring  1 x 0.25",
+      "author": "Chris Dee [cwdee]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4ring20.dat": {
+      "path": "p/1-4ring20.dat",
+      "sha256": "bacb42ebc27cfa8ad216dfb4cb5897cce203ea2af5319a8782e8554c779fa532",
+      "title": "Ring 20 x 0.25",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4ring3.dat": {
+      "path": "p/1-4ring3.dat",
+      "sha256": "4048b121d53509363cfaa7422648dd29b2eeb93074279feb0bcc7a45bbb7c2e1",
+      "title": "Ring  3 x 0.25",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-4tang.dat": {
+      "path": "p/1-4tang.dat",
+      "sha256": "4eb5b51b824675756efd7e74e1141aaeaa9520517754d3bd0cfc1f591a0e04b4",
+      "title": "Disc Negative Tangent 0.25",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8chrd.dat": {
+      "path": "p/1-8chrd.dat",
+      "sha256": "7694157b725563188a6efd69b3f558b00533b375b8a4e82f469497a03e471e74",
+      "title": "Chord 0.125",
+      "author": "Orion Pobursky [OrionP]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8cyli.dat": {
+      "path": "p/1-8cyli.dat",
+      "sha256": "46def63dc8293ad9a2dd1d1a5cb720b9ba883850e65d3280d2093c664a6140c4",
+      "title": "Cylinder 0.125",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8cylo.dat": {
+      "path": "p/1-8cylo.dat",
+      "sha256": "870bbbf6052e075598de7dce7efe7a139ea5189820e7a296442fe2b3318c18bf",
+      "title": "Cylinder Open 0.125",
+      "author": "Tim Gould [timgould]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8edge.dat": {
+      "path": "p/1-8edge.dat",
+      "sha256": "50436a0bce461198c342dccbccb658a1bffae13e44b7c48689b158c946c2c2ab",
+      "title": "Circle 0.125",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8ring18.dat": {
+      "path": "p/1-8ring18.dat",
+      "sha256": "bb03cb6a1df637953544d4721509130eefdbd76b49eae2673031fc7ca5e970fa",
+      "title": "Ring 18 x 0.125",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8ring19.dat": {
+      "path": "p/1-8ring19.dat",
+      "sha256": "3e960324d4741e841725a81b8be1efa24b72460f12d50c0ecaa9578a11c05641",
+      "title": "Ring 19 x 0.125",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8ring3.dat": {
+      "path": "p/1-8ring3.dat",
+      "sha256": "641f3ae7395e7d38e57ab918928ac19209ed72e8474fd1646e2d70f223c4a0ce",
+      "title": "Ring  3 x 0.125",
+      "author": "Paul Easter [pneaster]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8ring6.dat": {
+      "path": "p/1-8ring6.dat",
+      "sha256": "bfec71b5d0b0ba1549923f349ec1d07cc8694a4827f88d9ef955457cecdd90a5",
+      "title": "Ring  6 x 0.125",
+      "author": "Paul Easter [pneaster]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8ring8.dat": {
+      "path": "p/1-8ring8.dat",
+      "sha256": "6166b3c447f674cfb20d21eb4fcaa5e3c0ab20d9aee25a1c6d981f38ec09e496",
+      "title": "Ring  8 x 0.125",
+      "author": "Paul Easter [pneaster]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/1-8sphe.dat": {
+      "path": "p/1-8sphe.dat",
+      "sha256": "c38f9b8df6f260a26e920d8bbfb2d6b11667026e0675733d7fc2d3653ef92c53",
+      "title": "Sphere 0.125",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/2-4cyli.dat": {
+      "path": "p/2-4cyli.dat",
+      "sha256": "d486780f0f84893899d9eadcd13150f13a42e15e77a3cda38cdf24ded98862c6",
+      "title": "Cylinder 0.5",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/2-4edge.dat": {
+      "path": "p/2-4edge.dat",
+      "sha256": "665400f76566b161c28303cdadce40d17d979a8ff9a8a133675af2d17fbe6763",
+      "title": "Circle 0.5",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/2-4ndis.dat": {
+      "path": "p/2-4ndis.dat",
+      "sha256": "7557eae598be3f530b840471535198e6b07b03486ffbcc18a00e862c3d25d925",
+      "title": "Disc Negative 0.5",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/2-4ring3.dat": {
+      "path": "p/2-4ring3.dat",
+      "sha256": "045613f5bb90e0c283211b1fa261cc66f8ee8ab968dc9763222e7e592cbf83fc",
+      "title": "Ring  3 x 0.5",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/2-8sphe.dat": {
+      "path": "p/2-8sphe.dat",
+      "sha256": "63a1d64d6c27e64ace1fe6e5233aef04f7af15e39c6e1d36717dfe5c6d226c3a",
+      "title": "Sphere 0.25",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-16cyls.dat": {
+      "path": "p/3-16cyls.dat",
+      "sha256": "166309d0dba474780d13a812b58b952b790512f6036dbfb93cf43ab53401be0a",
+      "title": "Cylinder Sloped 0.1875",
+      "author": "Niels Karsdorp [nielsk]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-16cys2.dat": {
+      "path": "p/3-16cys2.dat",
+      "sha256": "705ec7384e735a8e7a864403831e55cb1e62f88ec09126a8b379b7e27288607a",
+      "title": "Cylinder Sloped 0.1875 Convex",
+      "author": "Donald Sutter [technog]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-16edge.dat": {
+      "path": "p/3-16edge.dat",
+      "sha256": "c08dd83bb7fe90b61f7cd0b10ebef0d9a9ba33b497676dedd2e2e968cb8248f9",
+      "title": "Circle 0.1875",
+      "author": "Donald Sutter [technog]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8cyli.dat": {
+      "path": "p/3-8cyli.dat",
+      "sha256": "9224d4e5edc6f5b0f75f6fa358fd1368a4fd65f676b74fe1bb6e3bbb05046206",
+      "title": "Cylinder 0.375",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8cylo.dat": {
+      "path": "p/3-8cylo.dat",
+      "sha256": "f5e90ea29201b4cea569e2effe32eee5fe95146e3eadcddc054a881ef4f839bd",
+      "title": "Cylinder Open 0.375",
+      "author": "J.C. Tchang [tchang]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8edge.dat": {
+      "path": "p/3-8edge.dat",
+      "sha256": "a590f230678d592d514a9c5e307c6a30945e50e4c529fc06accf37530d0e0ed5",
+      "title": "Circle 0.375",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8ring12.dat": {
+      "path": "p/3-8ring12.dat",
+      "sha256": "3480b87412d6592fcbcfbbea7e1c1120c63b13b96a88bf64a0cbc689ce2aec00",
+      "title": "Ring 12 x 0.375",
+      "author": "Niels Karsdorp [nielsk]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8ring2.dat": {
+      "path": "p/3-8ring2.dat",
+      "sha256": "c65d4b41084dd68c63f74ca1f92d7ae9e7a79e5b1632823f24739f3ff8196691",
+      "title": "Ring  2 x 0.375",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/3-8ring3.dat": {
+      "path": "p/3-8ring3.dat",
+      "sha256": "c44e0a5db0b1fc228aa513880a7717cab472194b576a75a89fd71e4059d6d8a2",
+      "title": "Ring  3 x 0.375",
+      "author": "Niels Karsdorp [nielsk]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4cyli.dat": {
+      "path": "p/4-4cyli.dat",
+      "sha256": "4a742c2765b6ebf98245baaf8a160a4ff587fc93d36c8ee2b9074712a2f968c4",
+      "title": "Cylinder 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4disc.dat": {
+      "path": "p/4-4disc.dat",
+      "sha256": "a00b5547776f61a7389d303616987c76b3c4de86ad8ec32f22857e1bd5e5e40f",
+      "title": "Disc 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4edge.dat": {
+      "path": "p/4-4edge.dat",
+      "sha256": "54a52196e421fd1717d291ff52ea57553b1fb238907c1678cc1f1a84c698b1da",
+      "title": "Circle 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ndis.dat": {
+      "path": "p/4-4ndis.dat",
+      "sha256": "21202dc15823f4336bc2544244d0b539b76745c89f7a59ad18cdd03ad45cc543",
+      "title": "Disc Negative 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring1.dat": {
+      "path": "p/4-4ring1.dat",
+      "sha256": "4ae21061a6d0c9c80c608decb750f16fe1d113d84e08ef2f6082bcbb0f55194c",
+      "title": "Ring  1 x 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring2.dat": {
+      "path": "p/4-4ring2.dat",
+      "sha256": "6fb38804b1f5e9bee8c0b80caf1397b09454fc58b048dc19045b6f37c8762ab0",
+      "title": "Ring  2 x 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring3.dat": {
+      "path": "p/4-4ring3.dat",
+      "sha256": "1f2835ac308154edc2d6f479d8e742a55be981f6167b20bfa100c195bc0731dd",
+      "title": "Ring  3 x 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring4.dat": {
+      "path": "p/4-4ring4.dat",
+      "sha256": "e046737f05ca843c7fc32bbfe9f5b26f3409c5b42b786d8809aa789faf761154",
+      "title": "Ring  4 x 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring7.dat": {
+      "path": "p/4-4ring7.dat",
+      "sha256": "67b27c082eec7286888ac427f11db06c5eca6c9bcec76c7e2b2014841afa83f3",
+      "title": "Ring  7 x 1.0",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/4-4ring8.dat": {
+      "path": "p/4-4ring8.dat",
+      "sha256": "4d7ae146c56385df78fb08391c29f72a106355ffe4b7be472461899ebff840ca",
+      "title": "Ring  8 x 1.0",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12chrd.dat": {
+      "path": "p/48/1-12chrd.dat",
+      "sha256": "fe2a0252d971dc65126755c4fdb7db900e229dfdce712b42ce9510c7b0390e26",
+      "title": "Hi-Res Chord 0.0833",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12cyli.dat": {
+      "path": "p/48/1-12cyli.dat",
+      "sha256": "a645a42a5ed912a059a9336ab1449d02efd067008f034549cc8c5ae488159fd3",
+      "title": "Hi-Res Cylinder 0.0833",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12cylo.dat": {
+      "path": "p/48/1-12cylo.dat",
+      "sha256": "aba0697449741a95889cb0faf8d6231777086ebed8ee1956ac304bd32b208c6a",
+      "title": "Hi-Res Cylinder Open 0.0833",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12edge.dat": {
+      "path": "p/48/1-12edge.dat",
+      "sha256": "c1320fa098058f1bb4bb73a4bd02a9533bdcc4f22ac4a0f0a1dcd5cdf85deaed",
+      "title": "Hi-Res Circle 0.0833",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12ring13.dat": {
+      "path": "p/48/1-12ring13.dat",
+      "sha256": "af7d24639a2673332a466e43341d0a150802f4cc06b0f21f931dbaea062adf3f",
+      "title": "Hi-Res Ring 13 x 0.0833",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12ring14.dat": {
+      "path": "p/48/1-12ring14.dat",
+      "sha256": "d6a8aff1cc4a6f2774dd931d353e673fd37f01a0d4dfa64c93a2d6ed1d88a578",
+      "title": "Hi-Res Ring 14 x 0.0833",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12ring28.dat": {
+      "path": "p/48/1-12ring28.dat",
+      "sha256": "eff99d9d11115e4dfbe95ad027141038f8dbaaf5c158ceaf2401af3c49b1537c",
+      "title": "Hi-Res Ring 28 x 0.0833",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12ring29.dat": {
+      "path": "p/48/1-12ring29.dat",
+      "sha256": "6af6f7b6157b0c3e9a6efcef4af1534a980d8636e86b185ea43eff1d9529a45c",
+      "title": "Hi-Res Ring 29 x 0.0833",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-12ring39.dat": {
+      "path": "p/48/1-12ring39.dat",
+      "sha256": "ed53c7d74bcd6456267669a3c96735430148c871cfe9ac2736d31f124b919e00",
+      "title": "Hi-Res Ring 39 x 0.0833",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-24chrd.dat": {
+      "path": "p/48/1-24chrd.dat",
+      "sha256": "9c1442d69aa0acfe4de87e4b9cdce8b164c88289640c9aa980afafb7b4aabd74",
+      "title": "Hi-Res Chord 0.0417",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-24cyli.dat": {
+      "path": "p/48/1-24cyli.dat",
+      "sha256": "5e767152f719b094442a5e68060781c9f2b7304595c6956bf98183bda00a9a36",
+      "title": "Hi-Res Cylinder 0.0417",
+      "author": "Niels Karsdorp [nielsk]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-24cylo.dat": {
+      "path": "p/48/1-24cylo.dat",
+      "sha256": "efeb548c4941d52d9642c0343fa790fcf4778cf4bf1b869de91502933f07671f",
+      "title": "Hi-Res Cylinder Open 0.0417",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-24edge.dat": {
+      "path": "p/48/1-24edge.dat",
+      "sha256": "0946112b54d72f44d95d9f48b652bec53468f05eaacb2503ca09f58bee518e04",
+      "title": "Hi-Res Circle 0.0417",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-48edge.dat": {
+      "path": "p/48/1-48edge.dat",
+      "sha256": "89dbd38b8578e8fa60ce2f80e8d7aa9b20d53c31cf40d2d322519287e6eeff19",
+      "title": "Hi-Res Circle 0.02083",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-48ring9.dat": {
+      "path": "p/48/1-48ring9.dat",
+      "sha256": "737eebf82b2c17353e2c9e499c657f58fb7f74d2745cd7d77a8651af4abb6aae",
+      "title": "Hi-Res Ring  9 x 0.0208",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-4aring.dat": {
+      "path": "p/48/1-4aring.dat",
+      "sha256": "8d67989822c019531862f5c2d5cc724145f5e81e00121433065d3fce3b52dac2",
+      "title": "Adapter Ring Hi-Res to Normal 0.25",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-4cyli.dat": {
+      "path": "p/48/1-4cyli.dat",
+      "sha256": "e2ed297feaf608b7319c2e54cd81dcb653fbb3d87b5a8e48ab2f54b32953fc6b",
+      "title": "Hi-Res Cylinder 0.25",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-4edge.dat": {
+      "path": "p/48/1-4edge.dat",
+      "sha256": "e4ebabd21711f16411b3c8b8b278995a56c5f25919cd424976357da5b19943c6",
+      "title": "Hi-Res Circle 0.25",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8cyli.dat": {
+      "path": "p/48/1-8cyli.dat",
+      "sha256": "494069ca353e41885bf8f5b6b3ddc9b62aabeca3eedfe6aa5597ac8f12ca12b9",
+      "title": "Hi-Res Cylinder 0.125",
+      "author": "Steve Bliss [sbliss]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8cylo.dat": {
+      "path": "p/48/1-8cylo.dat",
+      "sha256": "bc5df94184d568c4b032959d7ec8fb138adc17acf14d8f9b4d41b69e96bc9f5f",
+      "title": "Hi-Res Cylinder Open 0.125",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8edge.dat": {
+      "path": "p/48/1-8edge.dat",
+      "sha256": "eec30153f06bac336ca71ae16b31c5d0c7ae432acb5e91befe37fdb7b6bb1c8e",
+      "title": "Hi-Res Circle 0.125",
+      "author": "[PTadmin]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8ring1.dat": {
+      "path": "p/48/1-8ring1.dat",
+      "sha256": "24efcdb212c01fd1dc111f001b6272f35505a4380fb2cdc01acdaabe25fa8c51",
+      "title": "Hi-Res Ring  1 x 0.125",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8ring12.dat": {
+      "path": "p/48/1-8ring12.dat",
+      "sha256": "d3075ae75316e4ebff7b1c33515056aea94211f091d28b71223c8d2c8c3e7119",
+      "title": "Hi-Res Ring 12 x 0.125",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8ring4.dat": {
+      "path": "p/48/1-8ring4.dat",
+      "sha256": "e5c57d885ca33bfc26390017a3074351c30fee9fba6d0a3c106337e2b292a847",
+      "title": "Hi-Res Ring  4 x 0.125",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8ring8.dat": {
+      "path": "p/48/1-8ring8.dat",
+      "sha256": "230a126f6d4d4bd25f57f7a3167324d01fdb93fca51e3891049671de64864b5f",
+      "title": "Hi-Res Ring  8 x 0.125",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/1-8tang.dat": {
+      "path": "p/48/1-8tang.dat",
+      "sha256": "a48fdfb9852b080f49f0190af8b8a545088a566a891f3f88007800281d5f3de8",
+      "title": "Hi-Res Disc Negative Tangent 0.125",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/4-4aring.dat": {
+      "path": "p/48/4-4aring.dat",
+      "sha256": "4c0d575f91df941b5d3313427d699813cc3cf9f09c334cbad7a0eceeaf98f573",
+      "title": "Adapter Ring Hi-Res to Normal 1.0",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/4-4cyli.dat": {
+      "path": "p/48/4-4cyli.dat",
+      "sha256": "6c466cd94f69ecdb3a5a83faee52ad2e5ecd9d1560975feaf854c3433de6e6a2",
+      "title": "Hi-Res Cylinder 1.0",
+      "author": "Paul Easter [pneaster]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/4-4disc.dat": {
+      "path": "p/48/4-4disc.dat",
+      "sha256": "d458fdd05b598d6f4023a38d86d9647c542d2d4209c4bc83360399842448f680",
+      "title": "Hi-Res Disc 1.0",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/48/4-4edge.dat": {
+      "path": "p/48/4-4edge.dat",
+      "sha256": "db8fd751c8c6b1f72211903adbff3aa90be6808cc4fcff391f1c320adced5da7",
+      "title": "Hi-Res Circle 1.0",
+      "author": "Paul Easter [pneaster]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/5-16cyli.dat": {
+      "path": "p/5-16cyli.dat",
+      "sha256": "3a46e175cd13f2343645b5ba1be54f1f2fdf446cf28392383d511d85eaa7665a",
+      "title": "Cylinder 0.3125",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/5-16cylo.dat": {
+      "path": "p/5-16cylo.dat",
+      "sha256": "3468b4f9bf29026d7266da964f4298eea5d4bfa30f09d80e11abfb39cc9df797",
+      "title": "Cylinder Open 0.3125",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/5-16edge.dat": {
+      "path": "p/5-16edge.dat",
+      "sha256": "17a9ae47e68e98286d27fc7be4a48e1110d1cae0d3abff658f3378a552857fc3",
+      "title": "Circle 0.3125",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/8/1-4cyli.dat": {
+      "path": "p/8/1-4cyli.dat",
+      "sha256": "a9e8266ebf4bdb75f8ac643596e29e3069cc88697a379e4b116fa59b1c138bbf",
+      "title": "Cylinder 0.25",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/8/1-4cylo.dat": {
+      "path": "p/8/1-4cylo.dat",
+      "sha256": "d0b0c3568d1ec7160378aec8e90a9ac101c6bd4398ea9d70c15feeb6f2574211",
+      "title": "Lo-Res Cylinder Open 0.25",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/8/1-4edge.dat": {
+      "path": "p/8/1-4edge.dat",
+      "sha256": "841b1c8c1e48553b010ba25fde8e9ef1ea959c1ac83c7c7b6dae7277fbee4a35",
+      "title": "Circle 0.25",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/8/1-4ndis.dat": {
+      "path": "p/8/1-4ndis.dat",
+      "sha256": "c47a4b0165bfffb084112a6703f4dc1641fdea7c3c68337a4b745223cf400ce2",
+      "title": "Lo-Res Disc Negative 0.25",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axl5ho10.dat": {
+      "path": "p/axl5ho10.dat",
+      "sha256": "5658b3df4183184a5d5104624ff85b3048a658972991b1dfc489dc05728278ba",
+      "title": "Technic Axle Hole Rounded Tooth Surface",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axl5hol8.dat": {
+      "path": "p/axl5hol8.dat",
+      "sha256": "95b2d384c0697cd5dd4ebcc9fd4ab2d005307af5aa611bea20ce832a91f8bc68",
+      "title": "Technic Axle Hole Rounded Perimeter",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axl5hol9.dat": {
+      "path": "p/axl5hol9.dat",
+      "sha256": "d46a457be819e6b46b7fc85f8610b8850e0d0a40556c65b74dbda04179b68a20",
+      "title": "Technic Axle Hole Rounded Tooth Outer Edges",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axleend2.dat": {
+      "path": "p/axleend2.dat",
+      "sha256": "cedcec0918b69285f612c94d1f6532f7352a08f18b2749dde6f6a5235c1a0c73",
+      "title": "Technic Axle End Beveled",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axlehol2.dat": {
+      "path": "p/axlehol2.dat",
+      "sha256": "9d3e161068b049c3a21fbb8c0970d8264215c08bfcefd3508b8bbff47974a319",
+      "title": "Technic Axle Hole Side Edges",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axlehol3.dat": {
+      "path": "p/axlehol3.dat",
+      "sha256": "81caa1e48cb356fd74575f2a37a4422d75cafb930fae19182783f48381e48d2f",
+      "title": "Technic Axle Hole Tooth Outer Edges",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axlehol5.dat": {
+      "path": "p/axlehol5.dat",
+      "sha256": "5977860888c76d8170d9ec33c93f6c431133bfdc79435e7eac9c32bb15c0a83d",
+      "title": "Technic Axle Hole Open Two Opposite Sides",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axlehol8.dat": {
+      "path": "p/axlehol8.dat",
+      "sha256": "e3cf8856c972ecaf486a344c171cb4ab601efcb08956bd7b6cfafa39b0439493",
+      "title": "Technic Axle Perimeter",
+      "author": "Steve Bliss [sbliss]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/axlehole.dat": {
+      "path": "p/axlehole.dat",
+      "sha256": "8dfcdd5058a66fba2ea4f59ddc7fd4510118baca9f745e5dfe341ccf0e24b49e",
+      "title": "Technic Axle Hole Closed",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/box2-9p.dat": {
+      "path": "p/box2-9p.dat",
+      "sha256": "6c68301a34e42d105e716e5ae5edf02e3d58978db24619f0364887c339edd331",
+      "title": "Box with  2 Faces with  3 Parallel Edges",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/box4-7a.dat": {
+      "path": "p/box4-7a.dat",
+      "sha256": "93ac5f1805fc4e785c9532c0b40851a9d03da37241f85d5513b059c4358839f4",
+      "title": "Box with  4 Faces without  7 Adjacent Edges",
+      "author": "Willy Tschager [Holly-Wood]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/confricrib1.dat": {
+      "path": "p/confricrib1.dat",
+      "sha256": "3d4f3394b9aaa9007498a35a33e2c63113c6b6113027c205531bc91bb6335067",
+      "title": "Technic Friction Pin Rib",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/confricrib2.dat": {
+      "path": "p/confricrib2.dat",
+      "sha256": "029431b8493179b67ac662e609f61cac5b75bda8974360886214c1d6fbce9603",
+      "title": "Technic Friction Pin 3 Ribs 120 Degrees",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/connect.dat": {
+      "path": "p/connect.dat",
+      "sha256": "fa572d5b7bcdb19ea2ba74cd1a98aca913e1e556001232e484611915adf83305",
+      "title": "Technic Pin 1.0 with Base Collar",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/connhole.dat": {
+      "path": "p/connhole.dat",
+      "sha256": "577a734213f632d44646c02d5f9b0f7581df1572aff2f213791bc6172d623af4",
+      "title": "Technic Connector Hole Long",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/empty.dat": {
+      "path": "p/empty.dat",
+      "sha256": "192c9b9ee2e425cfbc9e9b12ff61ee0f05ae1cb0c12dc37d5590adb6abb65128",
+      "title": "Empty",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/peghole.dat": {
+      "path": "p/peghole.dat",
+      "sha256": "90c6dba9e5bcdd63955b9a5208f377761850863be9ed26cac7cd2be61ab85c92",
+      "title": "Peg Hole End",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/rect.dat": {
+      "path": "p/rect.dat",
+      "sha256": "ffeb2dd3d9b83c38841f18f1f74800fbba9e90c5fb6badfff2a795f08a96cb71",
+      "title": "Rectangle",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/rect1.dat": {
+      "path": "p/rect1.dat",
+      "sha256": "48fdcd3181587b4bdc89d356a5aee21268688f3f2fcdd4d6f5c1a3d49b1a1ceb",
+      "title": "Rectangle with 1 Edge",
+      "author": "Chris Dee [cwdee]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/rect2a.dat": {
+      "path": "p/rect2a.dat",
+      "sha256": "6d75ffb88e705a35f34e095ec0848a7bb70b577a376fdae05804da214b0d6369",
+      "title": "Rectangle with 2 Adjacent Edges",
+      "author": "Chris Dee [cwdee]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/rect2p.dat": {
+      "path": "p/rect2p.dat",
+      "sha256": "faac2b36241a9de0c0108471e59c45734df6c79813332d9cacf97f6391886acc",
+      "title": "Rectangle with 2 Parallel Edges",
+      "author": "Donald Sutter [technog]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/rect3.dat": {
+      "path": "p/rect3.dat",
+      "sha256": "07ac46908b6668d993b6de0fb001a34cd996542106b80ebc7de63317d8dde865",
+      "title": "Rectangle with 3 Edges",
+      "author": "Mark Kennedy [mkennedy]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/recte3.dat": {
+      "path": "p/recte3.dat",
+      "sha256": "e7f5ccbb040191aaa4cd469a25b086299cba4a3eaa8d3b0fbf71240e3de0359a",
+      "title": "Rectangle Empty with 3 Edges",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud.dat": {
+      "path": "p/stud.dat",
+      "sha256": "db037d518d7c08bcdc1f0e7497f4f98e97d99850531dd62d602965520f3bf8f4",
+      "title": "Stud",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud18a.dat": {
+      "path": "p/stud18a.dat",
+      "sha256": "5c02e7ce688de49bc4db00751988cf9044ba9c8b2b0b45ba836154be3637b2e2",
+      "title": "Stud Tube Open Snap",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud2.dat": {
+      "path": "p/stud2.dat",
+      "sha256": "5ed3702c7d7000bfac2906f12b74ae312c59194a8e3b504952820c826b51c810",
+      "title": "Stud Open",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud2a.dat": {
+      "path": "p/stud2a.dat",
+      "sha256": "61fbed54b085a30490045309778d1e2a6d95485e6558996b12674f848028d557",
+      "title": "Stud Open without Base Edges",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud4.dat": {
+      "path": "p/stud4.dat",
+      "sha256": "871cdcab26e7f5113488a24c453d6fabda75b275b06de592e0bfaad4292c12a3",
+      "title": "Stud Tube Open",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stud4a.dat": {
+      "path": "p/stud4a.dat",
+      "sha256": "29e414ab757f2a79073aa0d5d10c4c925da1fc239d20019d7615c06db612e2f6",
+      "title": "Stud Tube Open without Base Edges",
+      "author": "James Jessiman",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stug-2x2.dat": {
+      "path": "p/stug-2x2.dat",
+      "sha256": "16114159ea25719341a852d5403dc9982a6211f2fcb23f5c4c3eac05a2ad43f7",
+      "title": "Stud Group  2 x  2",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stug2-1x2.dat": {
+      "path": "p/stug2-1x2.dat",
+      "sha256": "9cd034fe99c6efd6e158c73a8a95d7b0e6ff4f1671a7ee22e2323c74a43b7f1e",
+      "title": "Stud Open Group  1 x  2",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stug2-1x4.dat": {
+      "path": "p/stug2-1x4.dat",
+      "sha256": "fca792de8f55eea1b35ec581ba94cb1aa5ad0967dd6af5ad3d7ed6ba0d0543b4",
+      "title": "Stud Open Group  1 x  4",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/stug4-2x2.dat": {
+      "path": "p/stug4-2x2.dat",
+      "sha256": "cf6e68b84d37562ed1a035015c23f804157ce6a80a7632a179e4def8ddcacfcb",
+      "title": "Stud Tube Open Group  2 x  2",
+      "author": "Steffen [Steffen]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/t16o1429.dat": {
+      "path": "p/t16o1429.dat",
+      "sha256": "feacc63d988960380c67d79f303dcfe0a62f93816d7282088796af745ddc1249",
+      "title": "Torus Outside  1 x 0.1429 x 0.0625",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "p/toothb28d.dat": {
+      "path": "p/toothb28d.dat",
+      "sha256": "ccc3b9f87236360bdd8dfbb965a9e2b68a7d3a0acda0c17762bbbac9c50bdd37",
+      "title": "Single Tooth for Technic Double Bevel Gear 28 Tooth",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/18674.dat": {
+      "path": "parts/18674.dat",
+      "sha256": "1a6a54b886d17bf5b5556c1e5db9ee3c6a30cfe5228cc53eabfced3d37bb499e",
+      "title": "Plate  2 x  2 Round with  1 Centre Stud",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/27925.dat": {
+      "path": "parts/27925.dat",
+      "sha256": "1bc5b2691989f236fef4bfbc47c5588396ee308e8df4fdf27fdd4a9290f60ea2",
+      "title": "Tile  2 x  2 Corner Round",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/32062.dat": {
+      "path": "parts/32062.dat",
+      "sha256": "5d5a970dccccabbd0a0e89e9519c69a51e6a8c75a35af1cfbf61f4fb46231da7",
+      "title": "Technic Axle  2 Notched",
+      "author": "Steve Bliss [sbliss]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/46372.dat": {
+      "path": "parts/46372.dat",
+      "sha256": "19ea2807df6b7855c1347bdbcba16704d2cba64f4e30a7edea0e865795306992",
+      "title": "Technic Gear 28 Tooth Double Bevel",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/60474.dat": {
+      "path": "parts/60474.dat",
+      "sha256": "848d6dc06f8fea18a17af0ea16e4d30109cc37285763e9060767b2790a504967",
+      "title": "Plate  4 x  4 Round with Hole and Snapstud",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/6222.dat": {
+      "path": "parts/6222.dat",
+      "sha256": "f6c01c3aa3375758954dde950187c2244f27c1b0f89c9114b1b9672bc8ed194d",
+      "title": "Brick  4 x  4 Round with Holes",
+      "author": "Steve Bliss [sbliss]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/67095.dat": {
+      "path": "parts/67095.dat",
+      "sha256": "f2fcf26981b2dd92d145a3f3456349c0a2c0f82ac77560a105ee4853f93bb7d5",
+      "title": "Tile  3 x  3 Round",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/89678.dat": {
+      "path": "parts/89678.dat",
+      "sha256": "7b56ae687b68e042660d175f55cb3241329b9cbde63b2a3402eb47f1b1cf6093",
+      "title": "Technic Pin  1/2 with Friction",
+      "author": "Vincent Messenet [Cheenzo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/s/15535s02.dat": {
+      "path": "parts/s/15535s02.dat",
+      "sha256": "4df4b43c8a74657711da3890d0a242eca23298bd153312b2de8793f3203d33d0",
+      "title": "~Tile  2 x  2 Round with Hole - 1/4",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/s/27925s01.dat": {
+      "path": "parts/s/27925s01.dat",
+      "sha256": "156386a6407e889dcc7529fdca10c41ef511f379140a450f3ffd742d68f2b731",
+      "title": "~Tile  2 x  2 Corner Round without Top Surface",
+      "author": "Gerald Lasser [GeraldLasser]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/s/46372s01.dat": {
+      "path": "parts/s/46372s01.dat",
+      "sha256": "357de188fd9505506e789d2f76a995febe721295a6a3aaf09903fa327ddcf55e",
+      "title": "~Technic Gear 28 Tooth Double Bevel -  1/4",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/s/60474s01.dat": {
+      "path": "parts/s/60474s01.dat",
+      "sha256": "7282425c21281a87ea0a87da5f70cd004374e4b4f043a7954d2bf852e2458a3a",
+      "title": "~Plate  4 x  4 Round - 1/8",
+      "author": "Alex Taylor [anathema]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    },
+    "parts/s/67095s01.dat": {
+      "path": "parts/s/67095s01.dat",
+      "sha256": "4dc8ef815fe7f80b0b0930c4735ea845865c9e98f847ef547ec79fbf7c834693",
+      "title": "~Tile  3 x  3 Round without Top Surface",
+      "author": "Magnus Forsberg [MagFors]",
+      "license": "Licensed under CC BY 4.0 : see CAreadme.txt"
+    }
+  }
+}

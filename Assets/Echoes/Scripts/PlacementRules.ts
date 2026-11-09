@@ -3,6 +3,9 @@
 // Correction priority (approved default): target → piece → orientation.
 // Every correction names the actual mismatch and the required alternative in
 // words, so it never depends on color.
+//
+// Increment 23: messages re-authored in Echoes' first-person companion voice.
+// Same mismatches, same priority, same named alternatives.
 
 import {normalizeRotation, PieceDef, TargetDef, TaskDef} from "./SignalArchTask"
 
@@ -44,7 +47,7 @@ function capitalize(s: string): string {
  */
 export function evaluateAttempt(task: TaskDef, stepIndex: number, attempt: Attempt): Verdict {
   if (stepIndex >= task.placements.length) {
-    return {accepted: false, mismatch: "finished", differing: ["finished"], message: "All placements are done."}
+    return {accepted: false, mismatch: "finished", differing: ["finished"], message: "Everything is placed. Nothing is left to confirm."}
   }
   const step = task.placements[stepIndex]
   const wantPiece = pieceById(task, step.pieceId)
@@ -55,7 +58,7 @@ export function evaluateAttempt(task: TaskDef, stepIndex: number, attempt: Attem
       accepted: false,
       mismatch: "incomplete",
       differing: ["incomplete"],
-      message: `Pick a piece first: choose the ${wantPiece ? wantPiece.noun : step.pieceId}.`,
+      message: `I need a piece first: choose the ${wantPiece ? wantPiece.noun : step.pieceId}.`,
     }
   }
   if (!attempt.targetId) {
@@ -63,7 +66,7 @@ export function evaluateAttempt(task: TaskDef, stepIndex: number, attempt: Attem
       accepted: false,
       mismatch: "incomplete",
       differing: ["incomplete"],
-      message: `Pick an attachment first: use ${wantTarget ? wantTarget.phrase : step.targetId}.`,
+      message: `I need an attachment first: use ${wantTarget ? wantTarget.phrase : step.targetId}.`,
     }
   }
 
@@ -86,16 +89,16 @@ export function evaluateAttempt(task: TaskDef, stepIndex: number, attempt: Attem
   if (first === "target") {
     const chosen = targetById(task, attempt.targetId)
     message =
-      `Not yet: that is ${chosen ? chosen.phrase : attempt.targetId}. ` +
-      `Use ${wantTarget ? wantTarget.phrase : step.targetId} first.`
+      `Not there yet: that's ${chosen ? chosen.phrase : attempt.targetId}. ` +
+      `Let's use ${wantTarget ? wantTarget.phrase : step.targetId} first.`
   } else if (first === "piece") {
     const chosen = pieceById(task, attempt.pieceId)
     message =
-      `Not this piece: that is the ${chosen ? chosen.noun : attempt.pieceId}. ` +
+      `That piece won't fit here: it's the ${chosen ? chosen.noun : attempt.pieceId}. ` +
       `Choose the ${wantPiece ? wantPiece.noun : step.pieceId}.`
   } else {
     const noun = wantPiece ? wantPiece.noun : step.pieceId
-    message = `Wrong turn: at ${rotation}° the ${noun} ${step.describeRotation(rotation)}. ${step.orientationHint}`
+    message = `Not quite: at ${rotation}° the ${noun} ${step.describeRotation(rotation)}. ${step.orientationHint}`
   }
   return {accepted: false, mismatch: first, differing, message: capitalize(message)}
 }

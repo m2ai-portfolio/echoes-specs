@@ -16,7 +16,7 @@ export class Dc5SequenceGuards extends Scenario {
     await d.choose("pillar", 0, "right-pad")
     await d.confirm()
     let st = d.s()
-    d.check("out-of-order target does not advance", st.acceptedIds.length === 0 && st.stepIndex === 0 && st.feedback.indexOf("Use the left pillar attachment first") > 0, st.feedback)
+    d.check("out-of-order target does not advance", st.acceptedIds.length === 0 && st.stepIndex === 0 && st.feedback.indexOf("use the left pillar attachment first") > 0, st.feedback)
     d.check("later attachments not selectable at step 1", !d.targetSelectable("beam-seat") && !d.targetSelectable("pedestal-seat") && !d.targetSelectable("marker-seat"))
 
     for (let i = 0; i < STEPS.length; i++) {

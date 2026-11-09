@@ -10,6 +10,14 @@ export class Dc1PlaceNextPiece extends Scenario {
     d.assertBaseline("fresh start", false)
     let st = d.s()
     d.check("start shows goal context and disclosure", st.progressText.indexOf("Signal Arch v1") === 0, st.progressText)
+    // Increment 23: the story intro in Echoes' voice, with the disclosure unchanged and the step-1 instruction still shown.
+    d.check(
+      "start shows the story intro, unchanged disclosure, and step 1",
+      st.introShown && st.panelText.indexOf("The relay's beacon went dark.") === 0 &&
+        st.disclosureText === "Virtual build demo · enlarged pieces · no physical bricks are recognized" &&
+        st.instructionText === st.stepInstructions[0] && !st.beaconLit && st.beaconLevel === 0,
+      `${st.panelText} | ${st.disclosureText}`
+    )
 
     // Select a candidate: it becomes visible in the staging card at its authored turn.
     await d.piece("pillar")
@@ -52,7 +60,8 @@ export class Dc1PlaceNextPiece extends Scenario {
     )
     d.check("progress text agrees with the scene", st.progressText.indexOf("Step 2 of 5 · 1 placed") >= 0 && st.instructionText === st.stepInstructions[1], st.progressText)
     d.check("candidate cleared after accept, Confirm cue stopped", st.piece === null && st.target === null && !st.ghostShown && !st.confirmCue, d.brief(st))
-    d.check("success note names what was placed", st.feedbackKind === "ok" && st.feedback.indexOf("Placed: square pillar on Left pad") === 0, st.feedback)
+    d.check("success note names what was placed", st.feedbackKind === "ok" && st.feedback.indexOf("Placed the square pillar on Left pad. 1 of 5 accepted.") === 0, st.feedback)
+    d.check("intro gives way after the first accepted placement; disclosure stays", !st.introShown && st.panelText === st.feedback && st.disclosureText.indexOf("Virtual build demo") === 0, st.panelText)
 
     // Deliberately wrong orientation: the beam arrives at 90° (front to back).
     await d.placeStep(1)
@@ -67,7 +76,7 @@ export class Dc1PlaceNextPiece extends Scenario {
       st.acceptedIds.length === 2 && st.placedNames.length === 2 && st.stepIndex === 2 && st.mode === "correction",
       d.brief(st)
     )
-    d.check("correction names the orientation and the fix", st.feedback.indexOf("Wrong turn: at 90° the long beam runs front to back.") === 0 && st.feedback.indexOf("spans both pillars") > 0, st.feedback)
+    d.check("correction names the orientation and the fix", st.feedback.indexOf("Not quite: at 90° the long beam runs front to back.") === 0 && st.feedback.indexOf("spans both pillars") > 0, st.feedback)
     d.check("candidate kept for another try", st.piece === "beam" && st.rotation === 90 && st.target === "beam-seat", d.brief(st))
     await d.turnRight()
     await d.confirm()

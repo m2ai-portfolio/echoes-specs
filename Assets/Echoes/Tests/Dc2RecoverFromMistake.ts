@@ -20,21 +20,21 @@ export class Dc2RecoverFromMistake extends Scenario {
     await d.confirm()
     let st = d.s()
     unchanged("wrong target", 0)
-    d.check("wrong target names chosen and required attachment", st.feedback === "Not yet: that is the right pillar attachment. Use the left pillar attachment first.", st.feedback)
+    d.check("wrong target names chosen and required attachment", st.feedback === "Not there yet: that's the right pillar attachment. Let's use the left pillar attachment first.", st.feedback)
 
     // Wrong piece only: beam on the left pad.
     await d.choose("beam", 90, "left-pad")
     await d.confirm()
     st = d.s()
     unchanged("wrong piece", 0)
-    d.check("wrong piece names chosen and required piece", st.feedback === "Not this piece: that is the long beam. Choose the square pillar.", st.feedback)
+    d.check("wrong piece names chosen and required piece", st.feedback === "That piece won't fit here: it's the long beam. Choose the square pillar.", st.feedback)
 
     // Multi-error: wrong piece AND wrong target → target is explained first.
     await d.choose("marker", 180, "right-pad")
     await d.confirm()
     st = d.s()
     unchanged("multi-error", 0)
-    d.check("multi-error reports target first (target → piece → orientation)", st.feedback.indexOf("Not yet: that is the right pillar attachment.") === 0, st.feedback)
+    d.check("multi-error reports target first (target → piece → orientation)", st.feedback.indexOf("Not there yet: that's the right pillar attachment.") === 0, st.feedback)
 
     // Correct: adds exactly one.
     await d.choose("pillar", 0, "left-pad")
@@ -57,7 +57,7 @@ export class Dc2RecoverFromMistake extends Scenario {
     await d.confirm()
     st = d.s()
     unchanged("wrong orientation", 2)
-    d.check("wrong orientation names the actual turn and the fix", st.feedback === "Wrong turn: at 270° the long beam runs front to back. Turn the beam so it spans both pillars.", st.feedback)
+    d.check("wrong orientation names the actual turn and the fix", st.feedback === "Not quite: at 270° the long beam runs front to back. Turn it so it spans both pillars.", st.feedback)
     d.check("color is not the only cue (correction is text)", st.panelText === st.feedback && st.feedback.length > 0, st.panelText)
 
     // Recover: turn once more → 0°, accepted.

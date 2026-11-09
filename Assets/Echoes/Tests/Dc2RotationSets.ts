@@ -46,7 +46,7 @@ export class Dc2RotationSets extends Scenario {
         } else {
           d.check(
             `${step.piece} at ${rot}° on ${step.target} rejected as orientation (valid set ${JSON.stringify(VALID[i])})`,
-            st.acceptedIds.length === before.acceptedIds.length && st.placedNames.length === i && st.feedback.indexOf(`Wrong turn: at ${rot}°`) === 0,
+            st.acceptedIds.length === before.acceptedIds.length && st.placedNames.length === i && st.feedback.indexOf(`Not quite: at ${rot}°`) === 0,
             `${d.brief(st)}`
           )
         }

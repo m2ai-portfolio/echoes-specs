@@ -171,6 +171,10 @@ export class EchoesLeafDriver extends DefaultLeafInteractor {
     await this.confirm()
   }
 
+  async sleepMs(ms: number) {
+    await sleep(ms)
+  }
+
   // ── Scenario frame ─────────────────────────────────────────────────────────
 
   /** Wait for the lens; LEAF resets it before each run, so expect the fresh baseline. */
@@ -212,7 +216,7 @@ export class EchoesLeafDriver extends DefaultLeafInteractor {
     )
     this.check(
       `${label}: earlier feedback cleared`,
-      afterReplay ? st.feedbackKind === "info" && st.feedback.indexOf("Started over") === 0 : st.feedback === "",
+      afterReplay ? st.feedbackKind === "info" && st.feedback.indexOf("Fresh start") === 0 : st.feedback === "",
       `"${st.feedback}"`
     )
     this.check(

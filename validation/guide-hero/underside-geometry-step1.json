@@ -1,0 +1,104 @@
+{
+  "kind": "geometry check from the committed guide meshes; no Lens runtime claim",
+  "step": 1,
+  "visibleParts": [
+    "gear",
+    "lower-pin-1",
+    "lower-pin-2",
+    "lower-pin-3",
+    "lower-pin-4"
+  ],
+  "boundsLdu": {
+    "gear": {
+      "minY": -10,
+      "maxY": 10,
+      "maxRadial": 36.816
+    },
+    "lower-pin-1": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-2": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-3": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-4": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    }
+  },
+  "upwardRayFirstHit": [
+    {
+      "x": 0,
+      "z": 0,
+      "hit": null
+    },
+    {
+      "x": 5,
+      "z": 0,
+      "hit": null
+    },
+    {
+      "x": 0,
+      "z": 5,
+      "hit": null
+    },
+    {
+      "x": 10,
+      "z": 10,
+      "hit": null
+    },
+    {
+      "x": 20,
+      "z": 0,
+      "hit": null
+    },
+    {
+      "x": 0,
+      "z": 20,
+      "hit": null
+    },
+    {
+      "x": -20,
+      "z": 0,
+      "hit": null
+    },
+    {
+      "x": 28,
+      "z": 0,
+      "hit": {
+        "part": "gear",
+        "y": -10
+      }
+    },
+    {
+      "x": 0,
+      "z": -28,
+      "hit": {
+        "part": "gear",
+        "y": -10
+      }
+    },
+    {
+      "x": 35,
+      "z": 0,
+      "hit": {
+        "part": "gear",
+        "y": -9.252
+      }
+    },
+    {
+      "x": 45,
+      "z": 0,
+      "hit": null
+    }
+  ]
+}

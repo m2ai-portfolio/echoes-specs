@@ -59,7 +59,7 @@ export class Dc4ReplayCleanly extends Scenario {
     d.note(`replayed at +2 s from run ${oldRun}; waiting past the old 8 s callback`)
     await sleep(8000)
     const st = d.s()
-    d.check("old run's delayed callback cannot change the new run", d.core(st) === after && st.feedback.indexOf("Started over") === 0 && st.runId === oldRun + 1, d.core(st))
+    d.check("old run's delayed callback cannot change the new run", d.core(st) === after && st.feedback.indexOf("Fresh start") === 0 && st.runId === oldRun + 1, d.core(st))
     d.assertBaseline("after stale callback window", true, world)
     d.end()
   }

@@ -1,0 +1,137 @@
+{
+  "kind": "geometry check from the committed guide meshes; no Lens runtime claim",
+  "step": 3,
+  "visibleParts": [
+    "gear",
+    "lower-pin-1",
+    "lower-pin-2",
+    "lower-pin-3",
+    "lower-pin-4",
+    "lower-disc",
+    "center-axle"
+  ],
+  "boundsLdu": {
+    "gear": {
+      "minY": -10,
+      "maxY": 10,
+      "maxRadial": 36.816
+    },
+    "lower-pin-1": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-2": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-3": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-pin-4": {
+      "minY": -14,
+      "maxY": 10,
+      "maxRadial": 28
+    },
+    "lower-disc": {
+      "minY": -18,
+      "maxY": -10,
+      "maxRadial": 30.003
+    },
+    "center-axle": {
+      "minY": -9.5,
+      "maxY": 29.5,
+      "maxRadial": 6
+    }
+  },
+  "upwardRayFirstHit": [
+    {
+      "x": 0,
+      "z": 0,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 5,
+      "z": 0,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 0,
+      "z": 5,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 10,
+      "z": 10,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 20,
+      "z": 0,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 0,
+      "z": 20,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": -20,
+      "z": 0,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 28,
+      "z": 0,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 0,
+      "z": -28,
+      "hit": {
+        "part": "lower-disc",
+        "y": -18
+      }
+    },
+    {
+      "x": 35,
+      "z": 0,
+      "hit": {
+        "part": "gear",
+        "y": -9.252
+      }
+    },
+    {
+      "x": 45,
+      "z": 0,
+      "hit": null
+    }
+  ]
+}

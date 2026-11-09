@@ -1,101 +1,45 @@
-# Echoes: run instructions
+# Run and rehearse Echoes
 
-Echoes is a virtual brick-building lens for Specs. You build **Signal Arch v1**, a five-piece arch, on a virtual base. You pick each piece, turn it in 90° steps, choose where it goes, and press Confirm. The lens tells you what to do next, names exactly what is wrong when an attempt doesn't fit, and lets you get help, pause, undo the latest placement, or start over.
+## Open the project
 
-It is a **virtual build demo**. No physical bricks are recognized or checked, and the pieces are drawn larger than real bricks so they are easy to see and select. The lens says so on screen.
+Extract the entire ZIP first. Open Echoes.esproj in Lens Studio 5.23.2. All Assets and Packages files are included; do not open from inside the ZIP. No login, API key or external service is required by the guide code.
 
-These steps were rehearsed on a clean local clone (see `devpost/increment-4-report.md` § Clean clone rehearsal). Download from a public remote has not been tested yet.
-
-## What you need
-
-- **Lens Studio 5.23.2** (the project was built and tested with 5.23.2.26081320). Other versions are untested.
-- **Git with Git LFS.** The project's assets and packages (`Assets/**`, `Packages/**`) are stored with Git LFS. Without LFS the packages are 130-byte pointer files and the lens won't compile.
-- No Specs device is needed. Everything runs in Lens Studio's Preview.
-- No network access is used by the lens, and no account is needed to run it in Preview.
-
-## Get the project
-
-```sh
-git lfs install
-git clone <repository-url> Echoes
-cd Echoes
-git lfs pull
-```
-
-Check that `Packages/SpectaclesInteractionKit.lspkg` is about 1.9 MB, not a small text pointer. If it is a pointer, run `git lfs pull` again.
-
-After the first open, `git status` may list `.gitattributes`, `.gitignore`, `AGENTS.md`, and `jsconfig.json` as modified. Lens Studio rewrites them on open; in the rehearsal only their line endings changed (`git diff` was empty).
-
-## Open it
-
-1. Start Lens Studio 5.23.2.
-2. Choose **Open Project** and select `Echoes.esproj` in the cloned folder.
-3. Wait for the first compile to finish. A fresh clone has no `Cache/` folder, so Lens Studio rebuilds it the first time; this takes a little longer than usual.
-4. The project already targets Specs (Spectacles); you don't change the platform. But the **Preview** panel's simulation mode is a per-computer editor setting that is not stored in the project. On the clean-clone rehearsal, Preview first opened in a recorded-room video view (a tall panel with a living room behind the lens). The lens ran there, but to walk around and click it, switch the Preview to **Interactive Preview**:
-   - In Lens Studio 5.23.2 the Preview panel's input switch is a row of **five unlabeled icons at the panel's top-left corner**. From left to right: a picture (image/video input), a camera, **Interactive** (a screen on a stand), pause, and an eye. Click the **third icon**. It is highlighted when it is active. There is no text menu named "Interactive Preview"; that is this guide's name for the mode.
-   - The dropdown at the **top center** of the Preview panel then names the interactive room. Choose **Plane** (all testing used it).
-   - The dropdown at the **bottom center** should read **SPECS 27**.
-
-   That view is a plain grey virtual room with a floor grid, with the Specs display area in the middle (see `validation/increment-5/captures/p01-preview-chrome-interactive.png`).
-
-What you should see straight ahead, about 90 cm away:
-
-- **Guidance panel** at the top center: the disclosure line (`Virtual build demo · enlarged pieces · no physical bricks are recognized`), progress (`Signal Arch v1 · Step 1 of 5 · 0 placed`), the current instruction (`Put a square pillar on the left pad.`), and a status line (`Chosen: no piece · no attachment`).
-- **Left column:** Help and Pause, then the **Pieces** palette (Pillar, Beam, Pedestal, Marker).
-- **Right column:** Undo and Replay, then the **Candidate** card, then Turn left, Turn right, and Confirm.
-- **Base** in the middle, with a FRONT arrow and label, and translucent attachment boxes (Left pad, Right pad to start). A white pointer marks the next attachment.
-
-If the panel says **Cannot start**, the task data in the scene was changed: see "Settings" below.
-
-## Using the mouse in Interactive Preview
-
-From the Specs template's guidance:
-
-- **Click** acts as a pinch: it presses the button or attachment under the pointer.
-- **W, A, S, D** move, **Q and E** go down and up.
-- **Right-drag** (or hold **Shift**) to look around.
-
-The content stays where it was placed when Preview started, even if you walk around it. Stand where a user would: about 90 cm from the base, looking at it.
+Keep Echoes 40897 Guide enabled and Echoes Signal Arch disabled. In Preview select Interactive (third input icon), Plane, and SPECS 27. Refresh Preview. Expect step 1 / 7 and 0 of 7 marked by you.
 
 ## Controls
 
-| Control | Where | What it does |
-|---|---|---|
-| **Pillar / Beam / Pedestal / Marker** | Pieces palette, left | Choose the candidate piece. The chosen piece reads `[ Pillar ]` in the palette and appears on the Candidate card with its turn. |
-| **Turn left / Turn right** | Right column | Turn the candidate 90° in that direction. The Candidate card shows `Turned 0°`, `90°`, `180°`, or `270°`. |
-| **Attachment boxes** (Left pad, Right pad, Beam seat, Pedestal seat, Marker seat) | On the base | Choose where the candidate goes. Only open attachments can be clicked; a ghost of the candidate shows there before you confirm. |
-| **Confirm** | Right column, bottom | Try the placement. If it fits, the piece is placed and the next step appears. If not, nothing is placed and the panel says what is wrong (wrong attachment first, then wrong piece, then wrong turn) and what to do instead. |
-| **Help / Close help** | Left column, top | Shows what the current step needs. While help is open, nothing else changes. Close help returns you to exactly where you were. |
-| **Pause / Resume** | Left column | Pauses the task and says what is kept. While paused, nothing can be placed. Resume returns you to exactly where you were. |
-| **Undo** | Right column, top | Removes only the latest accepted piece and reopens that step. Dimmed when nothing has been placed. Works after completion too. |
-| **Replay** | Right column | Starts over from the empty base, from any state. |
+- Turn 45 and center drag change the view. A drag starting on a button does not orbit.
+- Underside / Top side flips the view. Home restores the step's default view. Zoom changes size within fixed bounds.
+- Explode / Reassemble separates incoming parts from their canonical final positions.
+- Inspect joint, Next joint and Return inspect the current step's incoming connections and restore the previous view.
+- I placed it is a manual confirmation. Back preserves marks. Restart clears marks.
+- All marked means all seven confirmations were recorded. Pressing it again does not advance, clear, save or submit anything.
 
-## Walkthrough (the full build)
+## Seven-step walkthrough
 
-1. **Pillar** → choose **Left pad** → **Confirm**. Any turn fits a square pillar.
-2. **Pillar** → **Right pad** → **Confirm**.
-3. **Beam** → it arrives at 90° (front to back), so press **Turn right** once → **Beam seat** → **Confirm**. 0° and 180° both fit.
-4. **Pedestal** → **Pedestal seat** → **Confirm**.
-5. **Marker** → it arrives at 180° (pointing away from FRONT), so turn it twice → **Marker seat** → **Confirm**. Only 0°, tip toward FRONT, fits.
+1. Four pins below the gear: inspect all four joints, Return, then I placed it.
+2. Round underside tile: inspect its seat, Return and confirm.
+3. Center axle: compare Explode/Reassemble and the underside, inspect, Return and confirm. The underside disc is the preceding tile.
+4. Round body: inspect, Return, use Turn and Home, then confirm.
+5. Four radial pins: try maximum zoom, inspect all four, Return and confirm.
+6. Upper round plate: inspect, Return and confirm.
+7. Four curved tiles plus the center plate: inspect all five, Return and confirm.
 
-The panel then reads `Signal Arch complete: all 5 placements accepted.` and `Virtual check only: no physical model was inspected.` Press **Replay** to start again.
+Expect Lower assembly complete and You marked all 7 steps placed. Use Back to review, then Restart to return to step 1 and zero marks. This walkthrough has 17 incoming joints. A successful walkthrough does not verify physical fit or real-world placement.
 
-To see a correction, try Confirm with the Beam still at 90°, or choose the Right pad at step 1.
+## Source and geometric checks
 
-## Settings (for testers)
+From the project root, using Node 24 or later:
 
-The `EchoesController` script on the `Echoes Signal Arch` scene object has two inputs. The shipped values are:
+```
+node validation/guide-hero/tools/guide-state-check.mjs
+node validation/guide-hero/tools/underside-geometry-check.mjs 3
+node validation/guide-hero/tools/step7-arrangement-check.mjs
+node validation/guide-hero/tools/guide-state-stress.mjs
+```
 
-- `taskVariant` = `valid`. The other values (`missing-piece`, `missing-target`, `empty-sequence`) deliberately break the task data so you can see the Cannot start state.
-- `runStateTests` = off. When on, the lens runs its 31 built-in state assertions at start and prints `ECHOES test END pass=… fail=…` to the Logger.
+Expect 29 source checks, step-3 rays hitting the lower disc, step-7 passed true and 50,000 stress actions with zero failures. These are not Lens Preview tests.
 
-## Automated tests (LEAF)
+In Lens Studio's LEAF panel run dg1-guide-hero-controls then dg2-guide-step-flow, one at a time. Expected counts: 24 and 79 passes, zero failures. Automated/injected input must not be described as a human mouse pass.
 
-The project includes eight LEAF scenarios (`Assets/Echoes/Tests/`), at least one per done criterion. Open the LEAF panel in Lens Studio, let it load the scenarios from Preview, and run any of them; `dc5-full-story` runs the whole story (correction, help, pause, undo, completion, replay). The scenarios press the real buttons and attachments through their interactables. They are not a substitute for a person trying it with the mouse.
-
-## Known limits
-
-- Virtual only: no camera input, no physical brick recognition, no check of a real model.
-- Pieces are enlarged (the finished arch is about 30 × 18.5 × 14 cm).
-- The layout is designed for about 90 cm. At 60 cm the side columns are outside the Specs display, so you have to turn your head to reach them.
-- Comfort, real hand tracking, and readability on a real Specs display have not been tested; there was no device.
+If Preview starts in recorded-room mode, select Interactive and refresh. If the heading or buttons are covered, capture the step and view settings. A cannot-start panel names invalid data in the log.

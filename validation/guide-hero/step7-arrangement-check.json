@@ -1,0 +1,213 @@
+{
+  "kind": "geometric arrangement check from committed meshes; visual source comparison is separate; not a physical-fit check",
+  "source": {
+    "pdf": "https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6670807.pdf",
+    "sha256": "1ec7785b2c47c7dfdc7a3a16be5a04b4ffcdad0292865fae5f26b1edc87379bb",
+    "page": "printed page 10 = PDF page 10 of 56",
+    "step": 7
+  },
+  "tiles": {
+    "arc-tile-1": {
+      "x": [
+        0,
+        40
+      ],
+      "y": [
+        42,
+        50
+      ],
+      "z": [
+        0,
+        40
+      ],
+      "radial": [
+        19.997,
+        40.005
+      ],
+      "centroidAngleDeg": 44.983
+    },
+    "arc-tile-2": {
+      "x": [
+        0,
+        40
+      ],
+      "y": [
+        42,
+        50
+      ],
+      "z": [
+        -40,
+        0
+      ],
+      "radial": [
+        19.997,
+        40.005
+      ],
+      "centroidAngleDeg": -45.017
+    },
+    "arc-tile-3": {
+      "x": [
+        -40,
+        0
+      ],
+      "y": [
+        42,
+        50
+      ],
+      "z": [
+        -40,
+        0
+      ],
+      "radial": [
+        19.997,
+        40.005
+      ],
+      "centroidAngleDeg": -135.017
+    },
+    "arc-tile-4": {
+      "x": [
+        -40,
+        0
+      ],
+      "y": [
+        42,
+        50
+      ],
+      "z": [
+        0,
+        40
+      ],
+      "radial": [
+        19.997,
+        40.005
+      ],
+      "centroidAngleDeg": 134.983
+    }
+  },
+  "centerMark": {
+    "x": [
+      -20,
+      20
+    ],
+    "y": [
+      42,
+      54
+    ],
+    "z": [
+      -20,
+      20
+    ],
+    "radial": [
+      4,
+      20.001
+    ],
+    "centroidAngleDeg": -132.233
+  },
+  "radialPins": {
+    "radial-pin-1": {
+      "x": [
+        20,
+        44
+      ],
+      "y": [
+        16,
+        32
+      ],
+      "z": [
+        -8,
+        8
+      ],
+      "radial": [
+        20,
+        44.407
+      ],
+      "centroidAngleDeg": 0
+    },
+    "radial-pin-2": {
+      "x": [
+        -8,
+        8
+      ],
+      "y": [
+        16,
+        32
+      ],
+      "z": [
+        20,
+        44
+      ],
+      "radial": [
+        20,
+        44.407
+      ],
+      "centroidAngleDeg": 90
+    },
+    "radial-pin-3": {
+      "x": [
+        -44,
+        -20
+      ],
+      "y": [
+        16,
+        32
+      ],
+      "z": [
+        -8,
+        8
+      ],
+      "radial": [
+        20,
+        44.407
+      ],
+      "centroidAngleDeg": -180
+    },
+    "radial-pin-4": {
+      "x": [
+        -8,
+        8
+      ],
+      "y": [
+        16,
+        32
+      ],
+      "z": [
+        -44,
+        -20
+      ],
+      "radial": [
+        20,
+        44.407
+      ],
+      "centroidAngleDeg": -90
+    }
+  },
+  "upperPlate": {
+    "x": [
+      -40,
+      40
+    ],
+    "y": [
+      34,
+      46
+    ],
+    "z": [
+      -40,
+      40
+    ],
+    "radial": [
+      5.883,
+      40.005
+    ],
+    "centroidAngleDeg": 45.703
+  },
+  "checks": {
+    "each tile fills one diagonal quadrant (centroid near ±45°/±135°)": true,
+    "the four tiles cover four different quadrants": true,
+    "tiles stay on their side of the x=0 and z=0 seams": true,
+    "curved edges outward: tile outer radius reaches the plate rim": true,
+    "ring opening holds the centre plate (tile inner radius ≥ centre radius)": true,
+    "radial pins sit on the seam axes (x=0 or z=0)": true,
+    "tiles and centre plate share the top layer": true
+  },
+  "passed": true
+}

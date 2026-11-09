@@ -116,7 +116,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
   version: 1,
   title: "Signal Arch",
   goal: "Build the Signal Arch: two pillars, a beam across them, a pedestal, and a marker pointing to the front arrow.",
-  base: {size: [30, BASE_H, 14], color: [0.82, 0.84, 0.9]},
+  base: {size: [30, BASE_H, 14], color: [0.55, 0.6, 0.7]}, // Increment 22: mid-tone slate (was 0.82, 0.84, 0.9) so the white FRONT inlay reads
   pieces: [
     {
       id: "pillar",
@@ -125,7 +125,9 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       form: "box",
       size: [PILLAR.w, PILLAR.h, PILLAR.d],
       stagingRotation: 0,
-      color: [0.98, 0.86, 0.6],
+      // Increment 22: brushed plastic, sky blue (hue swapped with the beam so the
+      // beam can read as natural wood).
+      color: [0.62, 0.82, 1.0],
     },
     {
       id: "beam",
@@ -135,7 +137,8 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       size: [BEAM.w, BEAM.h, BEAM.d],
       // Arrives turned front-to-back so the orientation choice is real.
       stagingRotation: 90,
-      color: [0.62, 0.82, 1.0],
+      // Increment 22: honey wood grain.
+      color: [0.98, 0.84, 0.6],
     },
     {
       id: "pedestal",
@@ -144,6 +147,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       form: "box",
       size: [PEDESTAL.w, PEDESTAL.h, PEDESTAL.d],
       stagingRotation: 0,
+      // Increment 22: pale jade stone.
       color: [0.66, 0.96, 0.72],
     },
     {
@@ -156,6 +160,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       size: [MARKER.w, MARKER.h, MARKER.d],
       // Arrives pointing away from the front arrow.
       stagingRotation: 180,
+      // Increment 22: brushed copper metal.
       color: [1.0, 0.72, 0.62],
     },
   ],
@@ -207,7 +212,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       pieceId: "pillar",
       targetId: "left-pad",
       validRotations: [0, 90, 180, 270],
-      instruction: "Put a square pillar on the left pad.",
+      instruction: "First, seat a square pillar on the left pad.",
       orientationHint: "Any turn fits a square pillar.",
       describeRotation: squareDescription,
       turnHelp: "any turn fits a square pillar.",
@@ -217,7 +222,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       pieceId: "pillar",
       targetId: "right-pad",
       validRotations: [0, 90, 180, 270],
-      instruction: "Put a square pillar on the right pad.",
+      instruction: "Now its twin: a square pillar on the right pad.",
       orientationHint: "Any turn fits a square pillar.",
       describeRotation: squareDescription,
       turnHelp: "any turn fits a square pillar.",
@@ -227,8 +232,8 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       pieceId: "beam",
       targetId: "beam-seat",
       validRotations: [0, 180],
-      instruction: "Lay the long beam across both pillar tops.",
-      orientationHint: "Turn the beam so it spans both pillars.",
+      instruction: "Bridge both pillar tops with the long beam.",
+      orientationHint: "Turn it so it spans both pillars.",
       describeRotation: beamDescription,
       turnHelp: "0° or 180°, so it spans left to right. It arrives at 90°, so turn it once.",
     },
@@ -237,7 +242,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       pieceId: "pedestal",
       targetId: "pedestal-seat",
       validRotations: [0, 90, 180, 270],
-      instruction: "Set the flat square pedestal on the beam's center.",
+      instruction: "Center the flat square pedestal on the beam.",
       orientationHint: "Any turn fits the square pedestal.",
       describeRotation: squareDescription,
       turnHelp: "any turn fits the square pedestal.",
@@ -247,7 +252,7 @@ export const SIGNAL_ARCH_V1: TaskDef = {
       pieceId: "marker",
       targetId: "marker-seat",
       validRotations: [0],
-      instruction: "Set the wedge marker on the pedestal, tip to FRONT.",
+      instruction: "Last: the wedge marker on the pedestal, tip to FRONT.",
       orientationHint: "Turn it so its tip points to FRONT.",
       describeRotation: markerDescription,
       turnHelp: "0° only, tip pointing to the FRONT arrow. It arrives at 180°, so turn it twice.",

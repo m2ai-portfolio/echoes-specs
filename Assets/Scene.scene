@@ -4,9 +4,10 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
-    - !<own> 5e4c89f8-66bd-40b2-b090-27ff29b60c2d
     - !<own> 358bb1dd-3bb0-40d5-aa94-91d5b882cd8a
     - !<own> 6f10a585-aa73-4336-8d98-0eea11123a14
+    - !<own> 5f5cea95-10c0-479f-9f09-749c608c508e
+    - !<own> 1ead4bb2-7dc0-45e3-b090-709a175eb501
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -122,7 +123,7 @@
   EnvMapRotation: 0.000000
   DiffuseEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
   SpecularEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  Color: {x: 1.000000, y: 0.890000, z: 0.740000, w: 1.000000}
   ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
   DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
   InnerConeAngle: 0.000000
@@ -530,6 +531,37 @@
     []
   Components:
     []
+- !<ScriptComponent/19affdb4-719a-43b0-a105-0c6f00237023>
+  PrefabRemaps:
+    []
+  Name: MessagingBridge
+  Enabled: true
+  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/1ead4bb2-7dc0-45e3-b090-709a175eb501>
+  PrefabRemaps:
+    []
+  Name: LEAF Plugin Bridge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 19affdb4-719a-43b0-a105-0c6f00237023
 - !<RenderMeshVisual/1f969daa-5809-4500-b314-98d91ccba131>
   PrefabRemaps:
     []
@@ -786,7 +818,7 @@
   PrefabRemaps:
     []
   Name: Echoes Signal Arch
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -24.250000, z: -90.000000}
@@ -1023,37 +1055,6 @@
     - !<own> bf2095b6-c6f8-48c8-b840-e0a6cec0dc99
   Components:
     []
-- !<ScriptComponent/59f75cf6-ac68-40c5-a662-d907be3a73e2>
-  PrefabRemaps:
-    []
-  Name: MessagingBridge
-  Enabled: true
-  ScriptAsset: !<reference> 9aa407db-2872-4afc-a162-cf7faf2a0f29
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
-- !<SceneObject/5e4c89f8-66bd-40b2-b090-27ff29b60c2d>
-  PrefabRemaps:
-    []
-  Name: LEAF Plugin Bridge
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 59f75cf6-ac68-40c5-a662-d907be3a73e2
 - !<ScriptComponent/5f153ad7-2baa-4fd9-a298-0dcfad86da3b>
   PrefabRemaps:
     []
@@ -1078,6 +1079,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/5f5cea95-10c0-479f-9f09-749c608c508e>
+  PrefabRemaps:
+    []
+  Name: Echoes 40897 Guide
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -8.000000, z: -90.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ccb82b96-7f7e-4346-965a-55190be8c174
 - !<ScriptComponent/62967490-d66e-4479-8829-e5c9da5b5b57>
   PrefabRemaps:
     []
@@ -2078,6 +2094,22 @@
     - !<own> 0a0e1d78-8246-4f5b-ab1a-fdc51837956d
   Components:
     []
+- !<ScriptComponent/ccb82b96-7f7e-4346-965a-55190be8c174>
+  PrefabRemaps:
+    []
+  Name: EchoesGuideHero
+  Enabled: true
+  ScriptAsset: !<reference> 9aad4216-83bc-4667-a564-5c05ca207409
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<Skin/ccf4d3bc-d3c2-4580-b9c5-62f164ef7eef>
   PrefabRemaps:
     []

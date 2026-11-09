@@ -11,6 +11,8 @@ import {Dc4ReplayCleanly} from "./Dc4ReplayCleanly"
 import {Dc4UndoLatest} from "./Dc4UndoLatest"
 import {Dc5FullStory} from "./Dc5FullStory"
 import {Dc5SequenceGuards} from "./Dc5SequenceGuards"
+import {Dg1GuideHeroControls} from "./Dg1GuideHeroControls"
+import {Dg2GuideStepFlow} from "./Dg2GuideStepFlow"
 
 @component
 export class LeafIndex extends BaseScriptComponent {
@@ -24,5 +26,7 @@ export class LeafIndex extends BaseScriptComponent {
     {id: "dc4-replay-cleanly", typename: Dc4ReplayCleanly.getTypeName()},
     {id: "dc5-sequence-guards", typename: Dc5SequenceGuards.getTypeName()},
     {id: "dc5-full-story", typename: Dc5FullStory.getTypeName()},
+    {id: "dg1-guide-hero-controls", typename: Dg1GuideHeroControls.getTypeName()},
+    {id: "dg2-guide-step-flow", typename: Dg2GuideStepFlow.getTypeName()},
   ]
 }
