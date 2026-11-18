@@ -1,5 +1,7 @@
 # Echoes: guidance beside the work
 
+![Echoes portfolio cover: inspect a brick connection before manually marking a build step complete](docs/portfolio-hero.png)
+
 Echoes explores how SPECS could help with everyday tasks. This working example is a seven-step spatial brick-building guide for the lower assembly of LEGO 40897. It demonstrates how an inspectable model can explain where a piece goes while keeping the current step and progress close to the task.
 
 **Current demonstration:** an enlarged virtual guide in Lens Studio's desktop Preview. The broader everyday-task concept is the goal; other task modules and physical perception are not implemented.
@@ -25,10 +27,12 @@ After all seven steps have been manually marked:
 
 ## Run it
 
-1. Use **Lens Studio 5.23.2**. This ZIP contains materialized assets; extract it and open `Echoes.esproj`. If later obtaining a Git checkout, use Git LFS to materialize assets.
+1. Use **Lens Studio 5.23.2**, Git and Git LFS. Clone this repository with `git clone https://github.com/m2ai-portfolio/echoes-specs`, enter `echoes-specs`, then run `git lfs pull` before opening `Echoes.esproj`. If you use an export ZIP instead, check that it contains materialized assets rather than LFS pointer files.
 2. Keep **Echoes 40897 Guide** enabled and **Echoes Signal Arch** disabled in the scene.
 3. In Preview, select the third input icon (Interactive), choose **Plane**, and use **SPECS 27**. Refresh Preview to start at step 1 with zero marks.
 4. Click the large controls to operate them; drag in the center to orbit. At each step, Inspect the joints, Return, then click **I placed it**.
+
+**First-use check:** refresh to step 1 with zero marks, inspect one joint, Return, and mark the step. Back should preserve your mark; Restart should clear it. Reaching “All marked” records your confirmations, not physical verification. If assets do not compile, resolve missing LFS assets and use the recorded Lens Studio version before interpreting a Preview failure as a guide bug.
 
 See the [setup and rehearsal instructions](devpost/run-instructions.md). No SPECS headset is required for desktop Preview.
 
